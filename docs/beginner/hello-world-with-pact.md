@@ -8,7 +8,7 @@ In this tutorial you will build a "Hello World" smart contract using Pact.
 * Hello World code deep dive
 * Key terms 
 
-It also introduces important ideas that will prepare you to create more complicated smart contracts.
+The goal is to introduce important topics that will prepare you to create more complicated smart contracts.
 
 !!! Summary "Key Takeaway"
     The Pact online editor provides boiler plate code that allows you to quickly deploy a “Hello World” smart contract.
