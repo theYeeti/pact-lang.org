@@ -127,7 +127,7 @@ format "Hello {}!" [name]
 
 This line outputs a string to the REPL that says `Hello` followed by whatever is specified by the function parameter `name`.
 
-This line completes the module for this smart contract! While this module is pretty simple, it gives you a great start to begin building more complex smart contracts. The next step 
+This line completes the module for this smart contract! While this module is pretty simple, it gives you a great start to begin building more complex smart contracts. 
 
 ___
 
