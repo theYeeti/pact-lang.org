@@ -18,7 +18,7 @@ The goal is to help you get familiar with the important Pact concepts needed to 
     Pact smart contracts are made up of keysets and modules. Keysets define who has access to the contract and modules define the logic of the smart contract.
 ___
 
-## **Video | Hello World with Pact Tutorial**
+## **Hello World with Pact Tutorial**
 The following video covers everything you need to get you up and running with your “Hello World” Pact smart contract. You can also follow this tutorial using the text provided below the video.
 
 <div align="center">
