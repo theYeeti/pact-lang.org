@@ -52,7 +52,7 @@ nav:
 - Home: 'index.md'
         
 - Beginner:
-        - 'Welcome to Pact': './beginner/introduction-to-pact.md'
+        - 'Welcome to Pact': './beginner/welcome-to-pact.md'
         - 'Standard Library': './beginner/pact-standard-library.md'
         - 'Online Editor': './beginner/pact-online-editor.md'
         - 'Hello World': './beginner/hello-world-with-pact.md'

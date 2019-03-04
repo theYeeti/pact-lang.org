@@ -2,6 +2,8 @@
 
 In this tutorial you will build a "Hello World" smart contract using Pact.
 
+In this tutorial, we’ll introduce Pact, explain some of its core features, and help you take your first steps toward becoming a Pact smart contract developer.
+
 **This tutorial covers the following topics:**
 
 * Hello World Overview
