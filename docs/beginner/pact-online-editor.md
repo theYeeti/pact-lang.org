@@ -42,7 +42,7 @@ Each of these features helps provide an intuitive developer experience. These fe
 
 You can locate the navigation bar at the top of the screen. It allows you to load your contract into the REPL, refresh the REPL, or to deploy the contract to a live network. It also shows the Pact version number and links to both the documentation and the Kadena homepage.
 
-![3-code-editor](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/3-code-editor.jpeg?token=AJvlAI4T9yBFYGUWX43_D0hrYCCFGa4gks5ckx7NwA%3D%3D)
+![15-nav-bar](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/15-nav-bar.jpeg?token=AJvlANJu27Imlf5sYx3UZKubP44Rxmgkks5ckyCXwA%3D%3D)
 
 ### **Load into REPL**
 
@@ -56,7 +56,7 @@ There are times you may want to reset the REPL. You can clear commands you have 
 
 The deploy button is used to deploy smart contracts onto the blockchain. Select Deploy to view the features available to you. Here you’ll have the option to choose a server, set a few settings, sign the transaction and more. This tutorial doesn't go over the details of each of these options. If you'd like, view Hello World with Pact for a full description of smart contract deployment with the Online Editor.
 
-IMAGE
+![16-deploy]()
 
 You can close this window by either hitting cancel or the X on the top right. 
 
@@ -82,13 +82,13 @@ You can also explore [Kadena.io](https://kadena.io/) to explore more about the K
 
 The code editor provides a familiar editing interface. It comes equipped with both **inline error reporting** and **formal verification**.
 
-IMAGE
+![3-code-editor](LINK)
 
 #### **Inline Error Reporting**
 
 Inline error reporting ensures that you have clear direction on how to fix errors that may exist in your code. 
 
-IMAGE
+![8-inline-error](LINK)
 
 For example, if you look at line 17 of your smart contract you’ll see the error shown above. This and other errors types state the issue and help you to fix problems that may be affecting your smart contract.
 
@@ -105,19 +105,19 @@ Formal verification is a tremendous innovation for smart contract languages. For
 
 The tool panel gives you access to many beneficial features while developing smart contracts. It helps you set-up your environment, run commands in the interactive REPL, read messages, and explore other modules that exist on the network.
 
-IMAGE
+![4-tool-panel](LINK)
 
 ### **ENV**
 
 The first option available to you in the tool panel is the environment. Select **Env** to view sections for addressing errors and creating and managing **data** and **wallets** from the UI.
 
-IMAGE
+![17-env](LINK)
 
 #### **Manage Errors**
 
 Errors can be viewed and fixed using the errors section. As you can see here, it currently shows an error that there is no such key in the message ‘admin-keyset’. This error is the same as what you saw previously in the editor. 
 
-IMAGE
+![6-errors](LINK)
 
 To fix this error, select the fix button on the right side of the screen. As you’ll see, this creates a keyset for you in the data section below. This along with many other errors and warnings can be fixed using this simple tool.
 
@@ -127,7 +127,7 @@ Coming up you’ll see how to create this keyset manually. Remove the admin-keys
 
 The data section allows you to create and manage keysets. To get started, select the input **Enter Keyset Name** > type **admin-keyset** > then click **create**.
 
-IMAGE
+![9-admin-keyset](LINK)
 
 You should now see admin-keyset appear under your list of available keysets.
 
@@ -140,13 +140,13 @@ You’ll also see a dropdown that allows you to select keys-all, keys-2, and key
 
 Each key created has a JSON representation available for programmatic access. In the **Result** tab, you can see the keys you have created shown in JSON. 
 
-IMAGE
+![10-result](LINK)
 
 #### **Raw**
 
 You can also create keysets using the JSON format rather than the user interface. Creating keysets with JSON is done using the **Raw** tab.
 
-IMAGE
+![11-raw](LINK)
 
 To create a new key, specify a keyset **name**, **keys**, and **pred**, similar to the format seen in the **Result** tab.
 
@@ -154,11 +154,11 @@ To create a new key, specify a keyset **name**, **keys**, and **pred**, similar 
       Pred Stands for “Predicate Function”. A predicate function is a boolean value function evaluating to either true or false. In this case, it will be one of the options **keys-any**, **keys-2**, or **keys-all** as you had seen in the keysets tab. Predicate functions specify which keys need to sign the transaction for it to be valid.
 
 
-#### **Wallet**
+#### **Add Key**
 
 As the name suggests, keysets are used to hold keys. You can create these keys in the section below Data named Wallet. To create a wallet, first, enter a key name then select **Generate**. I’ll name mine admin-key, but you can choose whatever you’d like
 
-IMAGE
+![12-add-key](LINK)
 
 You should now see the key name, the public key, and the private key you generated. This key is useful any time you'd like to deploy or interact with a smart contract.
 
@@ -167,7 +167,7 @@ You should now see the key name, the public key, and the private key you generat
 
 A great way to get started with Pact is to jump in and start writing code for yourself. The REPL helps you to do this quickly and allows you to run Pact commands from directly within the browser.
 
-IMAGE
+![18-REPL](LINK)
 
 Try running some of the commands shown below to get started with the REPL.
 
@@ -195,7 +195,7 @@ pact > (+ "Hello" " REPL")
 
 It’s also possible to run REPL commands from the **code editor**. To get started, delete the existing code from the code editor and select REPL from the tool panel.
 
-IMAGE
+![7-repl](LINK)
 
 To run commands using the editor, enter a command and then select Load into REPL at the top of the screen. Experiment with other commands yourself by running some of the ones shown previously.
 
@@ -203,7 +203,7 @@ To run commands using the editor, enter a command and then select Load into REPL
 
 Code editors often provide messages to developers that help them identify errors and log outputs. These are useful ways to debug programs and fix potential issues with your contract. In the Pact Online Editor, these messages can be seen in the messages tab in the Toolbar.
 
-IMAGE
+![19-messages](LINK)
 
 ### **Module Explorer**
 
@@ -211,7 +211,7 @@ Another powerful tool provided by the editor is the **Module Explorer**. The **m
 
 Click on the button **module explorer** to get started. Here you’ll see a section for **example contracts** and a section for **deployed contracts**.
 
-IMAGE
+![20-module-explorer](LINK)
 
 ### **Example Contracts**
 
@@ -226,12 +226,12 @@ When you first loaded [pact.kadena.io/](pact.kadena.io/) the Formal Verification
 
 You can view a summary of functions that exist within any smart contract from within the **module explorer**. After selecting **View**, you will see an overview of these functions. The image below shows the functions in the example  **Simple Payment**.
 
-IMAGE
+![14-examples](LINK)
 
 #### **Deployed Contracts**
 You can also view any contract that has been deployed to the network using the module explorer.
 
-IMAGE
+![16-deploy](LINK)
 
 You can search by name, by chain, or by navigating the pages using the arrow buttons. 
 
