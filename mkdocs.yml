@@ -39,26 +39,9 @@ extra:
 #google_analytics:
   #- 'CODE HERE'
   #- 'auto'
-
+  
+# Extensions
 markdown_extensions:
-  - pymdownx.arithmatex
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.critic
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
-  - pymdownx.inlinehilite
-  - pymdownx.magiclink
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
-
-  markdown_extensions:
   - admonition
   - codehilite:
       guess_lang: true
@@ -68,7 +51,7 @@ markdown_extensions:
 nav:
 - Home: 'index.md'
         
-- Beginning Pact:
+- Beginner:
         # - 'Welcome to Pact': './beginner/introduction-to-pact.md'
         # - 'Standard Library': './beginner/pact-standard-library.md'
         - 'Pact Online Editor': './beginner/pact-online-editor.md'
