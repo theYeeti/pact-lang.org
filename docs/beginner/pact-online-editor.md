@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # **Pact Online Editor**
 
 Welcome to the Pact Online Editor!
@@ -263,3 +264,5 @@ Take some time now to explore each of the features we discussed and get used to 
 Throughout these tutorials, you’ll use this tool very often. By getting used to these core features, you're on your way to making amazing new applications using Pact.
 
 
+=======
+>>>>>>> 5ab5bf40ca652597b22ef6b73a366560403d6ac4
