@@ -22,7 +22,9 @@ ___
 
 The Pact Online Editor is a web-based REPL that allows you to write Pact code, manage keysets, deploy smart contracts, and explore other smart contracts. These and many other features make the online editor an ideal place to build, test, and deploy your smart contracts.
 
-To get started with the Pact Online Editor, navigate to [pact.kadena.io/](pact.kadena.io/). 
+To get started with the Pact Online Editor, navigate to <a href="https://pact.kadena.io/" target="_blank">pact.kadena.io/</a>. 
+
+
 
 ![1-pact-kadena](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/1-pact-kadena.jpeg?token=AJvlABk8BIQXFZabymGNuzE0GmTWxf_Aks5ckx5uwA%3D%3D)
 
@@ -74,15 +76,16 @@ At the time of this tutorial, Pact is currently on version 2.6.1. As this contin
 
 **View the Documentation**
 
-Links to both the [Pact Developer Documentation](https://pact-language.readthedocs.io/en/latest/) and Kadena homepage exist on the navigation bar. Feel free to check out the documentation for an in-depth look at the Pact programming language.
+Links to both the <a href="https://pact-language.readthedocs.io/en/latest/" target="_blank">Pact Developer Documentation</a> and Kadena homepage exist on the navigation bar. Feel free to check out the documentation for an in-depth look at the Pact programming language.
 
 **Visit Kadena.io**
 
-You can also explore [Kadena.io](https://kadena.io/) to explore more about the Kadena blockchain, which is the enterprise-grade blockchain that Pact runs on.
-
+You can also explore <a href="https://kadena.io/" target="_blank">Kadena.io</a> to explore more about the Kadena blockchain, which is the enterprise-grade blockchain that Pact runs on.
 
 !!! Tip "Newsletter"
-      You can also join the newsletter to stay up to date on the latest Kadena and Pact information [here](http://kadena.io/newsletter).
+      You can also join the newsletter to stay up to date on the latest Kadena and Pact information <a href="http://kadena.io/newsletter" target="_blank">here</a>.
+
+
 
 ___
 
@@ -107,8 +110,7 @@ For example, if you look at line 17 of your smart contract you’ll see the erro
 
 The online editor also supports formal verification. Formal verification is a process for automatically testing the correctness of your code. It mathematically proves that your contract has absolutely no security vulnerabilities. It also alerts you to any potential errors and vulnerabilities helping you create secure code quickly and effectively.
 
-Formal verification is a tremendous innovation for smart contract languages. For more information on how this helps you develop safer smart contracts, read our Medium post [Pact Formal Verification: Making Blockchain Smart Contracts Safer.](https://medium.com/kadena-io/pact-formal-verification-for-blockchain-smart-contracts-done-right-889058bd8c3f)
-
+Formal verification is a tremendous innovation for smart contract languages. For more information on how this helps you develop safer smart contracts, read our Medium post <a href="https://medium.com/kadena-io/pact-formal-verification-for-blockchain-smart-contracts-done-right-889058bd8c3f" target="_blank">Pact Formal Verification: Making Blockchain Smart Contracts Safer.</a>
 ___
 
 ## **Tool Panel**
@@ -197,7 +199,7 @@ pact > (+ "Hello" " REPL")
 ```
 
 !!! Tip "Try More Commands"
-      You can view many more commands in the [Pact Syntax Documentation](https://pact-language.readthedocs.io/en/latest/pact-reference.html#syntax) and [Build-in Functions Documentation](https://pact-language.readthedocs.io/en/latest/pact-functions.html). Try running a few for yourself to learn more about the Pact programming langauge.
+      You can view many more commands in the <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#syntax" target="_blank">Pact Syntax Documentation</a>pact-reference.html#syntax) and <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html" target="_blank">Build-in Functions Documentation</a>. Try running a few for yourself to learn more about the Pact programming langauge.
 
 **Run Commands from the Code Editor**
 
@@ -225,7 +227,9 @@ Click on the button **module explorer** to get started. Here you’ll see a sect
 
 The example contracts section allows you to load example contracts directly into your editor. You can use this code however you’d like, and can always come back here to reload the code again if needed.
 
-When you first loaded [pact.kadena.io/](pact.kadena.io/) the Formal Verification contract shown here is automatically loaded. Select **view > open** to reload this contract.
+
+
+When you first loaded <a href="https://pact.kadena.io/" target="_blank">pact.kadena.io/</a> the Formal Verification contract shown here is automatically loaded. Select **view > open** to reload this contract.
 
 !!! Tip "View other Smart Contracts"
       You can also view other smart contracts. Select **View > Open** on any smart contract to load its code into the code editor.
