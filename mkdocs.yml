@@ -17,8 +17,8 @@ theme:
   name: 'material'
   language: 'en'
   palette:
-    primary: 'White'
-    accent: 'Black'
+    primary: 'Cyan'
+    accent: 'Cyan'
   feature:
     tabs: true
   font:
@@ -51,20 +51,20 @@ markdown_extensions:
 nav:
 - Home: 'index.md'
         
-- Beginner:
-        - 'Welcome to Pact': './beginner/introduction-to-pact.md'
-        - 'Standard Library': './beginner/pact-standard-library.md'
-        - 'Online Editor': './beginner/pact-online-editor.md'
-        - 'Hello World': './beginner/hello-world-with-pact.md'
-        - 'Functions': './beginner/pact-functions.md'
-        - 'Modules': './beginner/pact-modules.md'
-        - 'Keysets': './beginner/pact-keysets.md'
-        - 'Schemas and Tables': './beginner/pact-schemas-and-tables.md'
-        - 'Accounts and Transfers': './beginner/pact-accounts-and-transfers.md'
-        - 'Contract Interaction': './beginner/pact-contract-interaction.md'
-        - 'Atom SDK': './beginner/atom-sdk.md'
-        - 'Testing in the SDK': './beginner/testing-in-the-sdk.md'
-        - 'Pact and Javascript': './beginner/pact-and-javascript.md'
-        - 'Series Review': './beginner/series-review.md'
+- Beginning Pact:
+        # - 'Welcome to Pact': './beginner/introduction-to-pact.md'
+        # - 'Standard Library': './beginner/pact-standard-library.md'
+        - 'Pact Online Editor': './beginner/pact-online-editor.md'
+        # - 'Hello World': './beginner/hello-world-with-pact.md'
+        # - 'Functions': './beginner/pact-functions.md'
+        # - 'Modules': './beginner/pact-modules.md'
+        # - 'Keysets': './beginner/pact-keysets.md'
+        # - 'Schemas and Tables': './beginner/pact-schemas-and-tables.md'
+        # - 'Accounts and Transfers': './beginner/pact-accounts-and-transfers.md'
+        # - 'Contract Interaction': './beginner/pact-contract-interaction.md'
+        # - 'Atom SDK': './beginner/atom-sdk.md'
+        # - 'Testing in the SDK': './beginner/testing-in-the-sdk.md'
+        # - 'Pact and Javascript': './beginner/pact-and-javascript.md'
+        # - 'Series Review': './beginner/series-review.md'
         
        
