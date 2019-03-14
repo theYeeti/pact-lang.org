@@ -22,14 +22,12 @@ The Pact Online Editor is a web-based REPL that allows you to write Pact code, m
 
 To get started with the Pact Online Editor, navigate to [pact.kadena.io/](pact.kadena.io/). 
 
-![1-pact-kadena](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/assets/beginner-tutorials/welcome-to-pact/pact-smart-contracts.png?token=AJvlAN_SWsryh0Wr386MP6HYjs-oSL2zks5ckxwewA%3D%3D)
-
-IMAGE
+![1-pact-kadena](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/1-pact-kadena.jpeg?token=AJvlABk8BIQXFZabymGNuzE0GmTWxf_Aks5ckx5uwA%3D%3D)
 
 ### **Basic Layout**
 Here you'll see a clean and intuitive layout, giving you access to the tools you need without cluttering the developer experience.
 
-IMAGE
+![2-overview](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/2-overview.jpeg?token=AJvlAPVW6GmUNVDWDm--p_VLMsPmGrnNks5ckx6cwA%3D%3D)
 
 The interface consists of three main sections; the code editor, the navigation bar, and the tool panel.
 
@@ -44,7 +42,7 @@ Each of these features helps provide an intuitive developer experience. These fe
 
 You can locate the navigation bar at the top of the screen. It allows you to load your contract into the REPL, refresh the REPL, or to deploy the contract to a live network. It also shows the Pact version number and links to both the documentation and the Kadena homepage.
 
-IMAGE
+![3-code-editor](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/3-code-editor.jpeg?token=AJvlAI4T9yBFYGUWX43_D0hrYCCFGa4gks5ckx7NwA%3D%3D)
 
 ### **Load into REPL**
 
