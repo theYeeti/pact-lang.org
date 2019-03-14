@@ -14,7 +14,7 @@ In this tutorial, you’ll learn about the Pact Online editor, a powerful tool f
 The goal of this tutorial is to get you familiar with each of the editor’s powerful features so that you can use it to build smart contracts using pact. 
 
 !!! Summary "Key Takeaway"
-      The Pact online editor is a robust development environment for Pact. It gives you access to many useful features for smart contract development. These features allow you to easily build and test contracts before deploying them to either your private chain or <a href="https://medium.com/kadena-io/security-kadena-chainweb-blockchain-97e5bdf88c29" target="_blank">chainweb</a>.
+      The Pact online editor is a robust development environment for Pact. It gives you access to many useful features for smart contract development. These features allow you to easily build and test contracts before deploying them to either your private chain or <a href="https://medium.com/kadena-io/security-kadena-chainweb-blockchain-97e5bdf88c29" target="_blank">Chainweb</a>.
 
 ___
 
