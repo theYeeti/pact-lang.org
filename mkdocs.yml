@@ -33,9 +33,6 @@ extra:
     - type: 'twitter'
       link: 'https://twitter.com/kadena_io'
 
-extra:
-  disqus: 'joenyzio'
-
 #google_analytics:
   #- 'CODE HERE'
   #- 'auto'
