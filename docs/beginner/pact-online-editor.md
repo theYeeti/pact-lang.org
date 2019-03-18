@@ -1,6 +1,6 @@
 # Pact Online Editor
 
-Welcome to the Pact Online Editor!
+Welcome to this tutorial on the Pact Online Editor!
 
 In this tutorial, you’ll learn about the Pact Online editor, a powerful tool for developing smart contracts with Pact.
 

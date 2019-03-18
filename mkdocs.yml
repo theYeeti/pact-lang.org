@@ -52,7 +52,7 @@ nav:
         # - 'Welcome to Pact': './beginner/introduction-to-pact.md'
         # - 'Standard Library': './beginner/pact-standard-library.md'
         - 'Pact Online Editor': './beginner/pact-online-editor.md'
-        # - 'Hello World': './beginner/hello-world-with-pact.md'
+        - 'Hello World with Pact': './beginner/hello-world-with-pact.md'
         # - 'Functions': './beginner/pact-functions.md'
         # - 'Modules': './beginner/pact-modules.md'
         # - 'Keysets': './beginner/pact-keysets.md'
