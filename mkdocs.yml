@@ -33,9 +33,9 @@ extra:
     - type: 'twitter'
       link: 'https://twitter.com/kadena_io'
 
-#google_analytics:
-  #- 'CODE HERE'
-  #- 'auto'
+google_analytics:
+  - 'UA-127512784-3'
+  - 'auto'
   
 # Extensions
 markdown_extensions:
