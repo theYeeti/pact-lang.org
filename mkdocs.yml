@@ -3,7 +3,7 @@ site_name: 'Pact Developer Tutorials'
 
 site_description: 'Pact Developer Tutorials'
 site_author: 'Kadena'
-# site_url: 'URL GOES HERE'
+# site_url: 'pactlang.org'
 
 # Repository
 repo_name: 'kadena-io/pact'
@@ -50,7 +50,7 @@ nav:
         
 - Beginner:
         - 'Welcome to Pact': './beginner/welcome-to-pact.md'        
-        - 'Pact Online Editor': './beginner/pact-online-editor.md'
+        - 'Online Editor': './beginner/online-editor.md'
         - 'Hello World with Pact': './beginner/hello-world-with-pact.md'
         # - 'Standard Library': './beginner/pact-standard-library.md'
         # - 'Functions': './beginner/pact-functions.md'
