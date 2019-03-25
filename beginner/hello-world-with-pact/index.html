@@ -827,7 +827,7 @@
 <p class="admonition-title">Error</p>
 <p>If you look on line 16 line you will notice the following error. No such key in message: “admin-keyset”</p>
 </div>
-<p><img alt="1-error-message-image" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/1-error-message-image.png?token=AJvlACvkTdN5WIh185kFRWqWpd-efc-Yks5comwnwA%3D%3D" /></p>
+<p><img alt="1-error-message-image" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/1-error-message-image.png?token=AJvlAHdo1z0v_EqOVo-zZ7dcGLNXfSD_ks5conRNwA%3D%3D" /></p>
 <p>This error exists because you are reading a keyset that does not exist. To get rid of this error you need to create a keyset named <strong>admin-keyset</strong> using the panel on the right.</p>
 <h5 id="steps-to-create-a-keyset">Steps to create a keyset<a class="headerlink" href="#steps-to-create-a-keyset" title="Permanent link">&para;</a></h5>
 <ul>
@@ -835,7 +835,7 @@
 <li>Enter admin-keyset</li>
 <li>Click Create</li>
 </ul>
-<p><img alt="2-admin-keyset-create-image" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/2-admin-keyset-create-image.png?token=AJvlAJul0ecBGTbE9YnUq7gwdq52I185ks5comvMwA%3D%3D" /></p>
+<p><img alt="2-admin-keyset-create-image" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/2-admin-keyset-create-image.png?token=AJvlAPP7FYFcrHDWBGmZwSKKVteO8BkYks5conRdwA%3D%3D" /></p>
 <p>The error message should now be gone.</p>
 <h3 id="create-the-module"><strong>Create the Module</strong><a class="headerlink" href="#create-the-module" title="Permanent link">&para;</a></h3>
 <p>Now that you have created a keyset, it’s time to build the module for your smart contract. <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#module-declaration" target="_blank">Modules</a> are essential in Pact. They contain all the logic needed to run your smart contract.</p>
@@ -874,7 +874,7 @@
 <p>Having written the smart contract, you are ready to load it into the REPL. </p>
 <p>A REPL is an interactive computing environment. It stands for read, eval, print, loop. This REPL exists within the online editor allowing you to run Pact code from within the browser.</p>
 <p>To load a contract into the REPL, select the Load into REPL button at the top of your editor.</p>
-<p><img alt="3-load-into-repl-image" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/3-load-into-repl-image.png?token=AJvlACnN-blEMtOCZc9R38e07H6ItaBVks5cmE8awA%3D%3D" /></p>
+<p><img alt="3-load-into-repl-image" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/3-load-into-repl-image.png?token=AJvlAE1xVygXayy3Y8uR0itA214paIljks5conSNwA%3D%3D" /></p>
 <p>If everything is working correctly, you will see the REPL open up on the right side of your screen with the <code>Hello World</code> message as shown below.</p>
 <div class="codehilite"><pre><span></span>;; Welcome to the Pact interactive repl
 ;; Use &#39;LOAD into REPL&#39; button to execute editor text
@@ -921,7 +921,7 @@ pact&gt;
 <h3 id="update-admin-keyset-name"><strong>Update admin-keyset Name</strong><a class="headerlink" href="#update-admin-keyset-name" title="Permanent link">&para;</a></h3>
 <p>Along with a unique module name, you’ll also need a unique <strong>keyset</strong> name. This unique keyset ensures that only users with the keyset you define can gain access to the module. Delete the <strong>admin-keyset</strong> and create a new keyset with any unique name you like. </p>
 <p>The example below shows a new keyset named <strong>admin-keyset-helloworld</strong>.</p>
-<p><img alt="5-admin-keyset-hello-world" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/5-admin-keyset-hello-world.png?token=AJvlAE41W68v9Xyxf4L8YddaSvNUsylSks5cmE8swA%3D%3D" /></p>
+<p><img alt="5-admin-keyset-hello-world" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/5-admin-keyset-hello-world.png?token=AJvlAIEEhehXXZ5fBzKQX5GNL7IzGBcrks5conSnwA%3D%3D" /></p>
 <h3 id="update-code"><strong>Update Code</strong><a class="headerlink" href="#update-code" title="Permanent link">&para;</a></h3>
 <p>Having created a new keyset, you now need to update the code to match the name of the keyset you created. This name appears a few times in the smart contract so be careful to update each one.</p>
 <div class="codehilite"><pre><span></span><span class="p">(</span><span class="nf">define-keyset</span> <span class="ss">&#39;admin-keyset-helloworld</span> <span class="p">(</span><span class="nf">read-keyset</span> <span class="s">&quot;admin-keyset-helloworld&quot;</span><span class="p">))</span>
@@ -945,12 +945,12 @@ pact&gt;
 <li>Click <strong>Generate</strong></li>
 </ul>
 <p>A simple convention for creating your key is to name it similar to the keyset.</p>
-<p><img alt="6-admin-key-helloworld" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/6-admin-key-helloworld.png?token=AJvlAKjhllTVYWfCdAc1XcECzazdJQ17ks5cmE85wA%3D%3D" /></p>
+<p><img alt="6-admin-key-helloworld" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/6-admin-key-helloworld.png?token=AJvlAEzvpwcfC5pSOXAISwoVDnHi5P16ks5conUuwA%3D%3D" /></p>
 <p>After creating your key, you’ll see a checkbox appear under the <strong>admin-keyset</strong> with the name of the key. Select this checkbox to associate this key with the keyset.</p>
 <h3 id="set-your-deployment-settings"><strong>Set your deployment settings</strong><a class="headerlink" href="#set-your-deployment-settings" title="Permanent link">&para;</a></h3>
 <p>At the top of the screen, select <strong>Deploy</strong>. This will open a box that allows you to set your deployment settings.</p>
 <p>Once in the deployment settings, select either <strong>test-chain-01</strong> or <strong>test-chain-02</strong> to deploy your contract. Next, select the checkbox to sign this deployment with the key you created. Finally, select "deploy contract". </p>
-<p><img alt="7-deploy-a-contract" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/7-deploy-a-contract.png?token=AJvlAHZ1FVMvEs7qhbyRYSThRfb9SI_nks5cmE9MwA%3D%3D" /></p>
+<p><img alt="7-deploy-a-contract" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/7-deploy-a-contract.png?token=AJvlAFYEvpl10FqGEOMQWckjkHIb14d_ks5conVOwA%3D%3D" /></p>
 <p>If everything worked correctly, you should now see the string “Hello World!” appear on the right panel as a message.</p>
 <p>At this point, you have deployed your Hello World smart contract with Pact. Congratulations!</p>
 <hr />
@@ -959,10 +959,10 @@ pact&gt;
 <h3 id="module-explorer"><strong>Module Explorer</strong><a class="headerlink" href="#module-explorer" title="Permanent link">&para;</a></h3>
 <p>To do this, you’ll need to first find the contract from the module explorer.</p>
 <p>Start by selecting the <strong>module explorer</strong> from the tool panel. Once there, navigate to the <strong>Deployed Contracts</strong> section and type the name of your contract. The name of your contract will be the same name as the module you created. After it appears, select view to see functions that are available for your smart contract.</p>
-<p><img alt="8-find-the-contract" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/8-find-the-contract.png?token=AJvlAHkXCKaYrlwEHbE6KdrvUhqPoDyIks5cmE9owA%3D%3D" /></p>
+<p><img alt="8-find-the-contract" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/8-find-the-contract.png?token=AJvlAIOMzqtPduBUyGuOo4EgrvJhFlPuks5conVfwA%3D%3D" /></p>
 <h3 id="find-function"><strong>Find Function</strong><a class="headerlink" href="#find-function" title="Permanent link">&para;</a></h3>
 <p>After selecting <strong>view</strong>, you should see the function named <strong>hello</strong> as an available option. Click call to open the screen that allows you to place your inputs into this function.</p>
-<p><img alt="9-find-function" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/9-find-function.png?token=AJvlAFfubEvwPXh032YjsPlUlzTeX1Tfks5cmE92wA%3D%3D" /></p>
+<p><img alt="9-find-function" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/9-find-function.png?token=AJvlADPSYvxHLfZJ6wYWt3JaK6Fudy1rks5conVswA%3D%3D" /></p>
 <h3 id="call-function"><strong>Call Function</strong><a class="headerlink" href="#call-function" title="Permanent link">&para;</a></h3>
 <p>Once on the <strong>Function: hello</strong> screen, you’re ready to call your function.</p>
 <p><strong>Steps to call a function</strong></p>
@@ -971,10 +971,10 @@ pact&gt;
 <li>Select the checkbox to sign this call with the key.</li>
 <li>Click call to call your function.</li>
 </ul>
-<p><img alt="10-call-function" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/10-call-function.png?token=AJvlAKKU1nrx5v2nLD2SpULw4GHfgtllks5cmE-EwA%3D%3D" /></p>
+<p><img alt="10-call-function" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/10-call-function.png?token=AJvlADRWs56b206XpWPSlKhF-D-vU2aFks5conV9wA%3D%3D" /></p>
 <h3 id="see-the-output"><strong>See the Output</strong><a class="headerlink" href="#see-the-output" title="Permanent link">&para;</a></h3>
 <p>If everything worked out correctly, you should see the new function call appear as a new message! </p>
-<p><img alt="11-see-the-output" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/11-see-the-output.png?token=AJvlAHqeVelchfznYjCSOd_hVlBu9lNNks5cmE-QwA%3D%3D" /></p>
+<p><img alt="11-see-the-output" src="https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/11-see-the-output.png?token=AJvlAMXWrtaVUjkLOg4OM64hpmRVTT_vks5conWRwA%3D%3D" /></p>
 <p>Now you can you call functions on the code you’ve written, and you can call that code after it exists on the blockchain.</p>
 <p>You can use this same idea to call functions on any other contracts that have been deployed to the blockchain. Try for yourself to see if you can make function calls on other smart contracts.</p>
 <hr />
