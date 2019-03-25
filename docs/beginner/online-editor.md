@@ -14,7 +14,7 @@ In this tutorial, you’ll learn about the Pact Online editor, a powerful tool f
 The goal of this tutorial is to get you familiar with each of the editor’s powerful features so that you can use it to build smart contracts using pact. 
 
 !!! Summary "Key Takeaway"
-      The Pact online editor is a robust development environment for Pact. It gives you access to many useful features for smart contract development. These features allow you to easily build and test contracts before deploying them to either your private chain or <a href="https://medium.com/kadena-io/security-kadena-chainweb-blockchain-97e5bdf88c29" target="_blank">Chainweb</a>.
+      The Pact Online Editor is a robust development environment for Pact. It gives you access to many useful features for smart contract development. These features allow you to easily build and test contracts before deploying them to either your private chain or <a href="https://medium.com/kadena-io/all-about-chainweb-101-and-faqs-6bd88c325b45" target="_blank">Chainweb</a>.
 
 ___
 
@@ -38,7 +38,7 @@ The interface consists of three main sections; the **code editor**, the **naviga
 |                |                                                                                                                              |
 |----------------|------------------------------------------------------------------------------------------------------------------------------|
 | **Code Editor**    | An area for writing and editing your smart contracts.                                                                        |
-| **Navigation Bar** | Includes relevant documentation links and allows you to load code into the REPL, refresh the repl, or deploy smart contract. |
+| **Navigation Bar** | Includes relevant documentation links and allows you to load code into the REPL or deploy smart contract. |
 | **Tool Panel**     | Provides essential functionality needed to manage keys, interact with the REPL, view messages, explore modules, and more.    |
 
 Each of these features helps provide an intuitive developer experience. These features make smart contract development both fun and rewarding.
@@ -46,17 +46,13 @@ Each of these features helps provide an intuitive developer experience. These fe
 
 ## **Navigation Bar**
 
-You can locate the navigation bar at the top of the screen. It allows you to load your contract into the REPL, refresh the REPL, or to deploy the contract to a live network. It also shows the Pact version number and links to both the documentation and the Kadena homepage.
+You can locate the navigation bar at the top of the screen. It allows you to load your contract into the REPL, or to deploy the contract to a live network. It also shows the Pact version number and links to these tutorials, the Pact language documentation and the Kadena homepage.
 
 ![15-nav-bar](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/15-nav-bar.jpeg?token=AJvlANJu27Imlf5sYx3UZKubP44Rxmgkks5ckyCXwA%3D%3D)
 
 ### **Load into REPL**
 
 Selecting “Load into REPL” loads text from the editor into the REPL and executes the commands. After selecting this button, you’ll also notice that it opens an interactive terminal you can use to run Pact commands. You’ll use this feature often when exploring the REPL later in this tutorial.
-
-### **Reset**
-
-There are times you may want to reset the REPL. You can clear commands you have run by selecting the reset button from the navigation bar.
 
 ### **Deploy**
 
@@ -74,18 +70,17 @@ The navigation bar also provides some necessary information and links to help yo
 
 At the time of this tutorial, Pact is currently on version 2.6.1. As this continues to update its likely that some of the features we explore will continue to improve.
 
-**View the Documentation**
+#### **Available Links**
+Links to the Pact tutorials, developer documentation and Kadena homepage can also be found on the navigation bar. 
 
-Links to both the <a href="https://pact-language.readthedocs.io/en/latest/" target="_blank">Pact Developer Documentation</a> and Kadena homepage exist on the navigation bar. Feel free to check out the documentation for an in-depth look at the Pact programming language.
-
-**Visit Kadena.io**
-
-You can also explore <a href="https://kadena.io/" target="_blank">Kadena.io</a> to explore more about the Kadena blockchain, which is the enterprise-grade blockchain that Pact runs on.
+|               |                                                                                                       |
+|---------------|-------------------------------------------------------------------------------------------------------|
+| <a href="https://pact-language.readthedocs.io/en/latest/" target="_blank">Documentation</a> | Provides an in-depth look at the Pact programming language.                                           |
+| <a href="https://pactlang.org/" target="_blank">Tutorials</a>     | Learn more about Pact by completing tutorials like this.                                              |
+| <a href="https://kadena.io/" target="_blank">Kadena</a>        | Explore the Kadena blockchain, which is the enterprise-grade blockchain that Pact runs on. |
 
 !!! Tip "Newsletter"
       You can also join the newsletter to stay up to date on the latest Kadena and Pact information <a href="http://kadena.io/newsletter" target="_blank">here</a>.
-
-
 
 ___
 
@@ -119,7 +114,7 @@ The tool panel gives you access to many beneficial features while developing sma
 
 ![4-tool-panel](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/4-tool-panel.jpeg?token=AJvlANsYOJJ5cXImR076loeFD-9lQ9VCks5ckyQVwA%3D%3D)
 
-### **ENV**
+### **Env**
 
 The first option available to you in the tool panel is the environment. Select **Env** to view sections for addressing errors and creating and managing **data** and **wallets** from the UI.
 
@@ -191,6 +186,7 @@ Pact uses prefix notation for math operators. Prefix notation is standard in LIS
 ```
 
 **Strings**
+
 Concatenate strings using +. Try saying Hello REPL.
 
 ``` terminal
@@ -241,7 +237,7 @@ You can view a summary of functions that exist within any smart contract from wi
 ![14-examples](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/14-examples.jpeg?token=AJvlAKo2QvLz85GDeUkT3bRjsCE15iGYks5ckyS6wA%3D%3D)
 
 #### **Deployed Contracts**
-You can also view any contract that has been deployed to the network using the module explorer.
+You can also view any contract that has been deployed to the network using the Module Explorer.
 
 ![13-deployed-contracts](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/13-deployed-contracts.jpeg?token=AJvlAIpO0YZ9c4W4HW4KkMNL-mA_S8fCks5ckyU0wA%3D%3D)
 

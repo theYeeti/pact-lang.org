@@ -79,7 +79,7 @@ Line 16 (shown below) defines and reads a keyset named admin-keyset.
 !!! Error
       If you look on line 16 line you will notice the following error. No such key in message: “admin-keyset”
 
-![1-error-message-image](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/1-error-message-image.png?token=AJvlADuR3ja6YQNDjOCRJ0QYcdYo0Z-Hks5cmE7ywA%3D%3D)
+![1-error-message-image](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/1-error-message-image.png?token=AJvlACvkTdN5WIh185kFRWqWpd-efc-Yks5comwnwA%3D%3D)
 
 This error exists because you are reading a keyset that does not exist. To get rid of this error you need to create a keyset named **admin-keyset** using the panel on the right.
 
@@ -88,7 +88,7 @@ This error exists because you are reading a keyset that does not exist. To get r
 * Enter admin-keyset
 * Click Create
 
-![2-admin-keyset-create-image](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/2-admin-keyset-create-image.png?token=AJvlAB9O3arMqAiTDTdASEhM13QR5dUjks5cmE8GwA%3D%3D)
+![2-admin-keyset-create-image](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/2-admin-keyset-create-image.png?token=AJvlAJul0ecBGTbE9YnUq7gwdq52I185ks5comvMwA%3D%3D)
 
 The error message should now be gone.
 
