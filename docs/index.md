@@ -1,20 +1,22 @@
-# Welcome to Pact Developer Tutorials
+# Welcome to the Pact Developer Tutorials
 
 ### **What is Pact?**
 
-Pact is a human readable smart contract language. It lets anyone write clearly, directly and safely onto a blockchain—a true advance for secure and simple contract development. Pact supports entirely new business models and on-chain services.
+Pact is a human-readable smart contract language. 
+
+It allows anyone to write clearly, directly and safely onto a blockchain — a true innovation for secure and simple smart contract development. Pact will enable you to create entirely new business models and on-chain services.
 
 ### **How to use the Pact Developer Tutorials**
 
-Pact Developer Tutorials offer the training needed to learn the Pact programming language. It teaches skills from beginner to advanced that are needed to develop blockchain applications with Pact.
+Pact Developer Tutorials offer the training needed to learn the Pact programming language. They teach skills from beginner to advanced that are to help you develop blockchain applications with Pact.
 
-These free tutorials have no prerequisites. Learn whenever you want, and however you want with documentation and complementary videos for each lesson.
+### **Prerequisites**
+
+These free tutorials have no prerequisites. Learn whenever and however you want using the documentation and complimentary videos for each lesson.
 
 ### **Get Started**
 
-Start with our Beginner Series which covers Pact’s fundamental concepts, followed by real smart contract projects you can deploy to our Testnet.
-
-Select “Next” below to start the first tutorial, “Welcome To Pact”
+Start with our <a href="https://pactlang.org/beginner/welcome-to-pact/" target="_blank">Beginner Tutorial Series</a> which covers Pact’s fundamental concepts, followed by real smart contract projects you can deploy to our Testnet.
 
 ### **Connect with our community**
 
