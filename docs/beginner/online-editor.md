@@ -25,7 +25,6 @@ The Pact Online Editor is a web-based REPL that allows you to write Pact code, m
 To get started with the Pact Online Editor, navigate to <a href="https://pact.kadena.io/" target="_blank">pact.kadena.io/</a>. 
 
 
-
 ![1-pact-kadena](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/1-pact-kadena.jpeg?token=AJvlAJs50tMRBpYGIPU0d13GnF71_c8xks5conXmwA%3D%3D)
 
 ### **Basic Layout**
