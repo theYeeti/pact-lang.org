@@ -18,7 +18,7 @@ The goal is to familiarize you with what Pact is, how its used, and some critica
 
 ___
 
-## **Pact Online Editor Tutorial**
+## **Welcome to Pact Tutorial**
 
 <iframe width="720" height="405" src="https://www.youtube.com/embed/BedEHtwLLes" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
