@@ -19,6 +19,14 @@ The goal of this tutorial is to help you get familiar with the essential Pact co
 
 ___
 
+## **Hello World with Pact Tutorial**
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/bUqJJ3q-OLM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Subscribe to our <a href="https://www.youtube.com/channel/UCB6-MaxD2hlcGLL70ukHotA" target="_blank">YouTube channel </a> to access the latest Pact tutorials.
+
+___
+
 ## **Hello World Overview**
 
 To get started, navigate to the Pact online editor at <a href="pact.kadena.io/" target="_blank">pact.kadena.io/</a>. Once on the site, you can open the “Hello World” module. To do this, navigate to the module explorer on the tool panel and open the “Hello World” example.
