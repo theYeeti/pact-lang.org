@@ -18,6 +18,14 @@ The goal of this tutorial is to get you familiar with each of the editor’s pow
 
 ___
 
+## **Pact Online Editor Tutorial**
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/BedEHtwLLes" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Subscribe to our <a href="https://www.youtube.com/channel/UCB6-MaxD2hlcGLL70ukHotA" target="_blank">YouTube channel </a> to access the latest Pact tutorials.
+
+___
+
 ## **Introduction to the Editor**
 
 The Pact Online Editor is a web-based REPL that allows you to write Pact code, manage keysets, deploy smart contracts, and explore other smart contracts. These and many other features make the online editor an ideal place to build, test, and deploy your smart contracts.
