@@ -8,7 +8,6 @@ In this tutorial, you’ll learn about Pact, get introduced to its core features
 
 * Introduction to Pact
 * Pact Key Features
-* Other Features
 * Learn More About Pact
 
 The goal is to familiarize you with what Pact is, how its used, and some critical decisions that influenced the design of this new language.
@@ -55,18 +54,10 @@ There are many valuable features make Pact such a safe and high-performance lang
 * Human Readable
 * Upgradable Contracts
 * Formal Verification
-
-
-First, Pact is a **Turing incomplete** language with deliberate constraints. This supports its design goal of “just enough” power for blockchain solutions without exposing you to attacks.
-
-
-All Pact code gets stored as written in a **human-readable** form on the ledger. Pact smart contracts install directly onto the blockchain. This allows you to review the running code as it was written and be sure of exactly what it's doing.
-
-Pact also supports **upgradable contracts**. This allows you to offer new features, adapt to new workflow requirements, and fix bugs as they are discovered.
-
-Finally, Pact comes equipped with a powerful validation tool suite in the form of <a href="https://medium.com/kadena-io/pact-formal-verification-for-blockchain-smart-contracts-done-right-889058bd8c3f" target="_blank">formal verification</a>. Pact uses Z3, an open-source tool developed by Microsoft, to mathematically verify and test for bugs present in the code.
-
-These features come along with Pact's unique tooling ecosystem and developer community. All this makes writing smart contracts with Pact both fun and productive. The rest of the tutorial will explore each of these features in a little more detail.
+* Type Inference
+* Total Governance
+* RDBMS Integration
+* Pacts
 
 ___
 
@@ -86,7 +77,9 @@ ___
 
 Pact smart contracts are human readable.
 
-Smart contracts solve business problems that require both technical and non-technical expertise. Building the best smart contract solution requires everyone to understand and contribute to the development of the smart contract.
+All Pact code gets stored as written in a **human-readable** form on the ledger. Pact smart contracts install directly onto the blockchain. This allows you to review the running code as it was written and be sure of exactly what it's doing.
+
+This is important because smart contracts solve business problems that require both technical and non-technical expertise. Building the best smart contract solution requires everyone to understand and contribute to the development of the smart contract.
 
 For that reason, Pact was built to be simple to read and write. This simplicity helps provide complete transparency for the logic within its smart contracts. This approach also encourages shorter programs. The code executes directly on the ledger where it can be read easily by anyone. As a result, Pact is easy to understand.
 
@@ -122,31 +115,35 @@ ___
 
 ### **Formal Verification**
 
-Pact is supported by formal verification, a system to mathematically prove that your code is safe.
+Pact comes equipped with a powerful validation tool suite in the form of <a href="https://medium.com/kadena-io/pact-formal-verification-for-blockchain-smart-contracts-done-right-889058bd8c3f" target="_blank">formal verification</a>. Pact uses Z3, an open-source tool developed by Microsoft, to mathematically verify and test for bugs present in the code.
 
 This means that Pact allows smart contract authors to express, automatically check, and formally verify that their code does not contain any bugs. Formal verification is the same system used to protect mission-critical environments like nuclear power plants or air and space autopilot systems. You now have this same high level of security in every smart contract you write with Pact.
 
-Formal verification is a huge topic that’s been covered exceptionally well in the Kadena blog. See our blog post - <a href="https://medium.com/kadena-io/pact-formal-verification-for-blockchain-smart-contracts-done-right-889058bd8c3f" target="_blank">Pact Formal Verification: Making Blockchain Smart Contracts Safer</a> for more information on this topic.
+Formal verification is a huge topic that’s been covered well in the Kadena blog. See the blog post - <a href="https://medium.com/kadena-io/pact-formal-verification-for-blockchain-smart-contracts-done-right-889058bd8c3f" target="_blank">Pact Formal Verification: Making Blockchain Smart Contracts Safer</a> for more information on this topic.
 
 ___
 
-## **Other Pact Features**
+### **Type Inference**
 
-There are many other features that Pact supports to help make your developer experience as rewarding as possible.
+Pact includes type inference. 
 
-#### **Type Inference**
+This feature makes it possible for code to be strongly-typed without declaring type information. It also has the added benefit of limiting run-time type enforcement. Developers can use a typecheck to add “just enough types”.  Typecheck eliminates warnings and only enforces types at runtime where needed.
 
-Pact includes type inference. This feature makes it possible for code to be strongly-typed without declaring type information. It also has the added benefit of limiting run-time type enforcement. Developers can use a typecheck to add “just enough types”.  Typecheck eliminates warnings and only enforces types at runtime where needed.
+___
 
-#### **Atomic Transaction Execution**
+### **Total Governance**
 
-Similar to RDBMS systems, Pact offers the benefit of atomic execution. This benefit allows changes to commit to the database only if the code runs successfully. Any errors roll back changes, abort execution, and avoid costly mistakes.
+Similar to RDBMS systems, Pact offers the benefit of total governance. This benefit allows changes to commit to the database only if the code runs successfully. Any errors roll back changes, abort execution, and avoid costly mistakes.
 
-#### **RDBMS Integration**
+___
+
+### **RDBMS Integration**
 
 Pact is also designed to allow direct integration with an industrial RDBMS. This design is helpful in cases that need efficient publication of historical data.
 
-#### **Confidential Computing with “Pacts”**
+___
+
+### **Confidential Computing with “Pacts”**
 
 The Pact programming language comes from one of its key features, known as “Pacts”. “Pacts” solve a significant blockchain problem in privacy-preserving blockchains. To maintain privacy on a blockchain, participants can only run a subset of smart contracts. In these cases, the databases of each of the participants become disjointed.
 
