@@ -18,6 +18,14 @@ The goal is to familiarize you with what Pact is, how its used, and some critica
 
 ___
 
+## **Pact Online Editor Tutorial**
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/BedEHtwLLes" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Subscribe to our <a href="https://www.youtube.com/channel/UCB6-MaxD2hlcGLL70ukHotA" target="_blank">YouTube channel </a> to access the latest Pact tutorials.
+
+___
+
 ## **Introduction to Pact**
 
 Pact is an open-source programming language for writing **smart contracts**. 
