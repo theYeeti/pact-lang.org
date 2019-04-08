@@ -32,8 +32,7 @@ The Pact Online Editor is a web-based REPL that allows you to write Pact code, m
 
 To get started with the Pact Online Editor, navigate to <a href="https://pact.kadena.io/" target="_blank">pact.kadena.io/</a>. 
 
-
-![1-pact-kadena](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/1-pact-kadena.jpeg?token=AJvlAJs50tMRBpYGIPU0d13GnF71_c8xks5conXmwA%3D%3D)
+![1-pact-kadena](../assets/beginner-tutorials/pact-online-editor/1-pact-kadena.jpeg)
 
 ### **Basic Layout**
 Here you'll see a clean and intuitive layout, giving you access to the tools you need without cluttering the developer experience.
@@ -55,7 +54,7 @@ Each of these features helps provide an intuitive developer experience. These fe
 
 You can locate the navigation bar at the top of the screen. It allows you to load your contract into the REPL, or to deploy the contract to a live network. It also shows the Pact version number and links to these tutorials, the Pact language documentation and the Kadena homepage.
 
-![15-nav-bar](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/15-nav-bar.jpeg?token=AJvlABXjxlSdyO9Rqw0Ky0pgJkhS9ze7ks5conYYwA%3D%3D)
+![15-nav-bar](../assets/beginner-tutorials/pact-online-editor/15-nav-bar.jpeg)
 
 ### **Load into REPL**
 
@@ -65,7 +64,7 @@ Selecting “Load into REPL” loads text from the editor into the REPL and exec
 
 The deploy button is used to deploy smart contracts onto the blockchain. Select Deploy to view the features available to you. Here you’ll have the option to choose a server, set a few settings, sign the transaction and more. This tutorial doesn't go over the details of each of these options. If you'd like, view Hello World with Pact for a full description of smart contract deployment with the Online Editor.
 
-![16-deploy](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/16-deploy.png?token=AJvlALSWtHoDO3ym0YBVeBQ6UKyb6lc9ks5conYnwA%3D%3D)
+![16-deploy](../assets/beginner-tutorials/pact-online-editor/16-deploy.jpeg)
 
 You can close this window by either hitting cancel or the X on the top right. 
 
@@ -95,13 +94,13 @@ ___
 
 The code editor provides a familiar editing interface. It comes equipped with both **inline error reporting** and **formal verification**.
 
-![3-code-editor](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/3-code-editor.jpeg?token=AJvlAD1jSkGq9-gU0LAf1WCtHdXUHQBPks5conY-wA%3D%3D)
+![3-code-editor](../assets/beginner-tutorials/pact-online-editor/3-code-editor.jpeg)
 
 #### **Inline Error Reporting**
 
 Inline error reporting ensures that you have clear direction on how to fix errors that may exist in your code. 
 
-![8-inline-error](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/8-inline-error.jpeg?token=AJvlAErhoy4VhnYvM_7UP4h4TwiaT_vFks5conZYwA%3D%3D)
+![8-inline-error](../assets/beginner-tutorials/pact-online-editor/8-inline-error.jpeg)
 
 For example, if you look at line 17 of your smart contract you’ll see the error shown above. This and other errors types state the issue and help you to fix problems that may be affecting your smart contract.
 
@@ -119,7 +118,7 @@ ___
 
 The tool panel gives you access to many beneficial features while developing smart contracts. It helps you set-up your environment, run commands in the interactive REPL, read messages, and explore other modules that exist on the network.
 
-![4-tool-panel](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/4-tool-panel.jpeg?token=AJvlAJS35qX9ijMCb5CjAaZXvxjo_Z6fks5conZ2wA%3D%3D)
+![4-tool-panel](../assets/beginner-tutorials/pact-online-editor/4-tool-panel.jpeg)
 
 ### **Env**
 
@@ -129,7 +128,7 @@ The first option available to you in the tool panel is the environment. Select *
 
 Errors can be viewed and fixed using the errors section. As you can see here, it currently shows an error that there is no such key in the message ‘admin-keyset’. This error is the same as what you saw previously in the editor. 
 
-![6-errors](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/6-errors.jpeg?token=AJvlAPVlH0LRFjpm5bwpa-HKuCXAO0j7ks5ckyQxwA%3D%3D)
+![6-errors](../assets/beginner-tutorials/pact-online-editor/6-errors.jpeg)
 
 To fix this error, select the fix button on the right side of the screen. As you’ll see, this creates a keyset for you in the data section below. This along with many other errors and warnings can be fixed using this simple tool.
 
@@ -139,7 +138,7 @@ Coming up you’ll see how to create this keyset manually. Remove the admin-keys
 
 The data section allows you to create and manage keysets. To get started, select the input **Enter Keyset Name** > type **admin-keyset** > then click **create**.
 
-![9-admin-keyset](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/9-admin-keyset.jpeg?token=AJvlAJfTEOQS7qXF-eCnxBBzRLqQZ7Gnks5conaGwA%3D%3D)
+![9-admin-keyset](../assets/beginner-tutorials/pact-online-editor/9-admin-keyset.jpeg)
 
 You should now see admin-keyset appear under your list of available keysets.
 
@@ -152,13 +151,13 @@ You’ll also see a dropdown that allows you to select keys-all, keys-2, and key
 
 Each key created has a JSON representation available for programmatic access. In the **Result** tab, you can see the keys you have created shown in JSON. 
 
-![10-result](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/10-result.jpeg?token=AJvlAMeBHLf7tuzDAnVGj9mLGpqBcWzBks5conaUwA%3D%3D)
+![10-result](../assets/beginner-tutorials/pact-online-editor/10-result.jpeg)
 
 #### **Raw**
 
 You can also create keysets using the JSON format rather than the user interface. Creating keysets with JSON is done using the **Raw** tab.
 
-![11-raw](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/11-raw.jpeg?token=AJvlAL6tzmbO2CaqqAYYpfs7A2oBl5S-ks5conbuwA%3D%3D)
+![11-raw](../assets/beginner-tutorials/pact-online-editor/11-raw.jpeg)
 
 To create a new key, specify a keyset **name**, **keys**, and **pred**, similar to the format seen in the **Result** tab.
 
@@ -170,7 +169,7 @@ To create a new key, specify a keyset **name**, **keys**, and **pred**, similar 
 
 As the name suggests, keysets are used to hold keys. You can create these keys in the section below Data named Wallet. To create a wallet, first, enter a key name then select **Generate**. I’ll name mine admin-key, but you can choose whatever you’d like
 
-![12-add-key](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/12-add-key.jpeg?token=AJvlAHfMUw0dYj74EDB56IkVOHPzG56jks5conb7wA%3D%3D)
+![12-add-key](../assets/beginner-tutorials/pact-online-editor/12-add-key.jpeg)
 
 You should now see the key name, the public key, and the private key you generated. This key is useful any time you'd like to deploy or interact with a smart contract.
 
@@ -179,7 +178,7 @@ You should now see the key name, the public key, and the private key you generat
 
 A great way to get started with Pact is to jump in and start writing code for yourself. The REPL helps you to do this quickly and allows you to run Pact commands from directly within the browser.
 
-![18-REPL](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/18-REPL.png?token=AJvlAFy_O_M7KAo-ojfOJ0nesbR34KoBks5concKwA%3D%3D)
+![18-REPL](../assets/beginner-tutorials/pact-online-editor/18-REPL.jpeg)
 
 Try running some of the commands shown below to get started with the REPL.
 
@@ -208,7 +207,7 @@ pact > (+ "Hello" " REPL")
 
 It’s also possible to run REPL commands from the **code editor**. To get started, delete the existing code from the code editor and select REPL from the tool panel.
 
-![7-repl](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/7-repl.jpeg?token=AJvlAL_LHsgyHXYfDj3mbRLnWiVtUzmKks5concZwA%3D%3D)
+![7-repl](../assets/beginner-tutorials/pact-online-editor/7-repl.jpeg)
 
 To run commands using the editor, enter a command and then select Load into REPL at the top of the screen. Experiment with other commands yourself by running some of the ones shown previously.
 
@@ -216,7 +215,7 @@ To run commands using the editor, enter a command and then select Load into REPL
 
 Code editors often provide messages to developers that help them identify errors and log outputs. These are useful ways to debug programs and fix potential issues with your contract. In the Pact Online Editor, these messages can be seen in the messages tab in the Toolbar.
 
-![19-messages](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/19-messages.png?token=AJvlAP5Ed9PEyi28k8ab2TvqouxVYAY4ks5concwwA%3D%3D)
+![19-messages](../assets/beginner-tutorials/pact-online-editor/19-messages.jpeg)
 
 ### **Module Explorer**
 
@@ -224,7 +223,7 @@ Another powerful tool provided by the editor is the **Module Explorer**. The **m
 
 Click on the button **module explorer** to get started. Here you’ll see a section for **example contracts** and a section for **deployed contracts**.
 
-![20-module-explorer](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/20-module-explorer.jpeg?token=AJvlABuayCIMQwMh4KqZ5htN2Fkhmg8wks5ckySmwA%3D%3D)
+![20-module-explorer](../assets/beginner-tutorials/pact-online-editor/20-module-explorer.jpeg)
 
 ### **Example Contracts**
 
@@ -241,12 +240,12 @@ When you first loaded <a href="https://pact.kadena.io/" target="_blank">pact.kad
 
 You can view a summary of functions that exist within any smart contract from within the **module explorer**. After selecting **View**, you will see an overview of these functions. The image below shows the functions in the example  **Simple Payment**.
 
-![14-examples](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/14-examples.jpeg?token=AJvlAKkswi3eoQV7LSK7Y_Q8Pc8E7zoWks5condEwA%3D%3D)
+![14-examples](../assets/beginner-tutorials/pact-online-editor/14-examples.jpeg)
 
 #### **Deployed Contracts**
 You can also view any contract that has been deployed to the network using the Module Explorer.
 
-![13-deployed-contracts](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/13-deployed-contracts.jpeg?token=AJvlALLnMuafOVx4ygbDWggxaAeCQth2ks5condUwA%3D%3D)
+![13-deployed-contracts](../assets/beginner-tutorials/pact-online-editor/13-deployed-contracts.jpeg)
 
 You can search by name, by chain, or by navigating the pages using the arrow buttons. 
 

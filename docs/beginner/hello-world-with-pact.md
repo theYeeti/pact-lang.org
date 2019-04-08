@@ -87,7 +87,7 @@ Line 16 (shown below) defines and reads a keyset named admin-keyset.
 !!! Error
       If you look on line 16 line you will notice the following error. No such key in message: “admin-keyset”
 
-![1-error-message-image](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/1-error-message-image.png?token=AJvlAHdo1z0v_EqOVo-zZ7dcGLNXfSD_ks5conRNwA%3D%3D)
+![1-error-message-image](../assets/beginner-tutorials/hello-world-with-pact/1-error-message-image.png)
 
 This error exists because you are reading a keyset that does not exist. To get rid of this error you need to create a keyset named **admin-keyset** using the panel on the right.
 
@@ -96,7 +96,7 @@ This error exists because you are reading a keyset that does not exist. To get r
 * Enter admin-keyset
 * Click Create
 
-![2-admin-keyset-create-image](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/2-admin-keyset-create-image.png?token=AJvlAPP7FYFcrHDWBGmZwSKKVteO8BkYks5conRdwA%3D%3D)
+![2-admin-keyset-create-image](../assets/beginner-tutorials/hello-world-with-pact/2-admin-keyset-create-image.png)
 
 The error message should now be gone.
 
@@ -155,7 +155,7 @@ A REPL is an interactive computing environment. It stands for read, eval, print,
 To load a contract into the REPL, select the Load into REPL button at the top of your editor.
 
 
-![3-load-into-repl-image](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/3-load-into-repl-image.png?token=AJvlAE1xVygXayy3Y8uR0itA214paIljks5conSNwA%3D%3D)
+![3-load-into-repl-image](../assets/beginner-tutorials/hello-world-with-pact/3-load-into-repl-image.png)
 
 If everything is working correctly, you will see the REPL open up on the right side of your screen with the `Hello World` message as shown below.
 
@@ -215,7 +215,7 @@ Along with a unique module name, you’ll also need a unique **keyset** name. Th
 
 The example below shows a new keyset named **admin-keyset-helloworld**.
 
-![5-admin-keyset-hello-world](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/5-admin-keyset-hello-world.png?token=AJvlAIEEhehXXZ5fBzKQX5GNL7IzGBcrks5conSnwA%3D%3D)
+![5-admin-keyset-hello-world](../assets/beginner-tutorials/hello-world-with-pact/5-admin-keyset-hello-world.png)
 
 ### **Update Code**
 
@@ -248,7 +248,7 @@ You can create a key by completing the following steps.
 
 A simple convention for creating your key is to name it similar to the keyset.
 
-![6-admin-key-helloworld](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/6-admin-key-helloworld.png?token=AJvlAEzvpwcfC5pSOXAISwoVDnHi5P16ks5conUuwA%3D%3D)
+![6-admin-key-helloworld](../assets/beginner-tutorials/hello-world-with-pact/6-admin-key-helloworld.png)
 
 After creating your key, you’ll see a checkbox appear under the **admin-keyset** with the name of the key. Select this checkbox to associate this key with the keyset.
 
@@ -258,7 +258,7 @@ At the top of the screen, select **Deploy**. This will open a box that allows yo
 
 Once in the deployment settings, select either **test-chain-01** or **test-chain-02** to deploy your contract. Next, select the checkbox to sign this deployment with the key you created. Finally, select "deploy contract". 
 
-![7-deploy-a-contract](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/7-deploy-a-contract.png?token=AJvlAFYEvpl10FqGEOMQWckjkHIb14d_ks5conVOwA%3D%3D)
+![7-deploy-a-contract](../assets/beginner-tutorials/hello-world-with-pact/7-deploy-a-contract.png)
 
 If everything worked correctly, you should now see the string “Hello World!” appear on the right panel as a message.
 
@@ -276,13 +276,13 @@ To do this, you’ll need to first find the contract from the module explorer.
 
 Start by selecting the **module explorer** from the tool panel. Once there, navigate to the **Deployed Contracts** section and type the name of your contract. The name of your contract will be the same name as the module you created. After it appears, select view to see functions that are available for your smart contract.
 
-![8-find-the-contract](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/8-find-the-contract.png?token=AJvlAIOMzqtPduBUyGuOo4EgrvJhFlPuks5conVfwA%3D%3D)
+![8-find-the-contract](../assets/beginner-tutorials/hello-world-with-pact/8-find-the-contract.png)
 
 ### **Find Function**
 
 After selecting **view**, you should see the function named **hello** as an available option. Click call to open the screen that allows you to place your inputs into this function.
 
-![9-find-function](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/9-find-function.png?token=AJvlADPSYvxHLfZJ6wYWt3JaK6Fudy1rks5conVswA%3D%3D)
+![9-find-function](../assets/beginner-tutorials/hello-world-with-pact/9-find-function.png)
 
 ### **Call Function**
 
@@ -294,13 +294,13 @@ Once on the **Function: hello** screen, you’re ready to call your function.
 * Select the checkbox to sign this call with the key.
 * Click call to call your function.
 
-![10-call-function](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/10-call-function.png?token=AJvlADRWs56b206XpWPSlKhF-D-vU2aFks5conV9wA%3D%3D)
+![10-call-function](../assets/beginner-tutorials/hello-world-with-pact/10-call-function.png)
 
 ### **See the Output**
 
 If everything worked out correctly, you should see the new function call appear as a new message! 
 
-![11-see-the-output](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/hello-world-with-pact/11-see-the-output.png?token=AJvlAMXWrtaVUjkLOg4OM64hpmRVTT_vks5conWRwA%3D%3D)
+![11-see-the-output](../assets/beginner-tutorials/hello-world-with-pact/11-see-the-output.png)
 
 Now you can you call functions on the code you’ve written, and you can call that code after it exists on the blockchain.
 

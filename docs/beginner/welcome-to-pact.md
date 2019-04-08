@@ -32,7 +32,9 @@ Pact is an open-source programming language for writing **smart contracts**.
 
 It’s designed from the ground up to support the unique challenges of developing solutions to run on a blockchain. Pact empowers developers to create robust and high-performance logic for transactions. It facilitates execution of mission-critical business operations quickly and effectively. 
 
-![1-pact-smart-contract](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/welcome-to-pact/1-pact-smart-contract.png?token=AJvlAI5xfzFVkGusaOm3uBVkvOq44ZVcks5condwwA%3D%3D)
+
+
+![1-pact-smart-contract](../assets/beginner-tutorials/welcome-to-pact/1-pact-smart-contract.png)
 
 Pact is designed with safety in mind. Its design is informed by existing approaches to smart contracts as well as stored procedure languages like SQL and LISP. Pact resembles a general-purpose, Turing-complete language. It includes LISP-like syntax, user functions, modules, and imperative style. 
 

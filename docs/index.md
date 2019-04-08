@@ -8,7 +8,7 @@ It allows anyone to write clearly, directly and safely onto a blockchain — a t
 
 ### **How to use the Pact Developer Tutorials**
 
-Pact Developer Tutorials offer the training needed to learn the Pact programming language. They teach skills from beginner to advanced that are to help you develop blockchain applications with Pact.
+Pact Developer Tutorials offer the training needed to learn the Pact programming language. They teach skills from beginner to advanced that are designed to help you develop blockchain applications with Pact.
 
 ### **Prerequisites**
 
