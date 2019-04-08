@@ -37,7 +37,7 @@ To get started with the Pact Online Editor, navigate to <a href="https://pact.ka
 ### **Basic Layout**
 Here you'll see a clean and intuitive layout, giving you access to the tools you need without cluttering the developer experience.
 
-![2-overview](https://raw.githubusercontent.com/kadena-io/pact-lang.org/master/docs/assets/beginner-tutorials/pact-online-editor/2-overview.jpeg?token=AJvlACuq7eumVFOx8y_SNOZGP9HeHN4-ks5conX4wA%3D%3D)
+![2-overview](../assets/beginner-tutorials/pact-online-editor/2-overview.jpeg)
 
 The interface consists of three main sections; the **code editor**, the **navigation bar**, and the **tool panel**.
 
@@ -64,7 +64,7 @@ Selecting “Load into REPL” loads text from the editor into the REPL and exec
 
 The deploy button is used to deploy smart contracts onto the blockchain. Select Deploy to view the features available to you. Here you’ll have the option to choose a server, set a few settings, sign the transaction and more. This tutorial doesn't go over the details of each of these options. If you'd like, view Hello World with Pact for a full description of smart contract deployment with the Online Editor.
 
-![16-deploy](../assets/beginner-tutorials/pact-online-editor/16-deploy.jpeg)
+![16-deploy](../assets/beginner-tutorials/pact-online-editor/16-deploy.png)
 
 You can close this window by either hitting cancel or the X on the top right. 
 
@@ -178,7 +178,7 @@ You should now see the key name, the public key, and the private key you generat
 
 A great way to get started with Pact is to jump in and start writing code for yourself. The REPL helps you to do this quickly and allows you to run Pact commands from directly within the browser.
 
-![18-REPL](../assets/beginner-tutorials/pact-online-editor/18-REPL.jpeg)
+![18-REPL](../assets/beginner-tutorials/pact-online-editor/18-REPL.png)
 
 Try running some of the commands shown below to get started with the REPL.
 
@@ -215,7 +215,7 @@ To run commands using the editor, enter a command and then select Load into REPL
 
 Code editors often provide messages to developers that help them identify errors and log outputs. These are useful ways to debug programs and fix potential issues with your contract. In the Pact Online Editor, these messages can be seen in the messages tab in the Toolbar.
 
-![19-messages](../assets/beginner-tutorials/pact-online-editor/19-messages.jpeg)
+![19-messages](../assets/beginner-tutorials/pact-online-editor/19-messages.png)
 
 ### **Module Explorer**
 
