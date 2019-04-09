@@ -1,0 +1,1195 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Pact Developer Tutorials">
+      
+      
+      
+        <meta name="author" content="Kadena">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+    
+    
+      
+        <title>Pact Keysets - Pact Developer Tutorials</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#00bcd4">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.8c900955.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica:300,400,400i,700|Helvetica">
+        <style>body,input{font-family:"Helvetica","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Helvetica","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="cyan" data-md-color-accent="cyan">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#pact-keysets" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Pact Developer Tutorials" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Pact Developer Tutorials
+              </span>
+              <span class="md-header-nav__topic">
+                Pact Keysets
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/kadena-io/pact/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      kadena-io/pact
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../welcome-to-pact/" title="Beginner" class="md-tabs__link md-tabs__link--active">
+          Beginner
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../intermediate/coming-soon/" title="Intermediate" class="md-tabs__link">
+          Intermediate
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../advanced/coming-soon/" title="Advanced" class="md-tabs__link">
+          Advanced
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Pact Developer Tutorials" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Pact Developer Tutorials
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/kadena-io/pact/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      kadena-io/pact
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Beginner
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Beginner
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../welcome-to-pact/" title="Welcome to Pact" class="md-nav__link">
+      Welcome to Pact
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../online-editor/" title="Pact Online Editor" class="md-nav__link">
+      Pact Online Editor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hello-world-with-pact/" title="Hello World with Pact" class="md-nav__link">
+      Hello World with Pact
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-language-basics/" title="Pact Language Basics" class="md-nav__link">
+      Pact Language Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-modules/" title="Pact Modules" class="md-nav__link">
+      Pact Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Pact Keysets
+      </label>
+    
+    <a href="./" title="Pact Keysets" class="md-nav__link md-nav__link--active">
+      Pact Keysets
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-keysets" title="Introduction to Keysets" class="md-nav__link">
+    Introduction to Keysets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-keyset" title="Create a Keyset" class="md-nav__link">
+    Create a Keyset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-and-read-a-keyset" title="Define and Read a Keyset" class="md-nav__link">
+    Define and Read a Keyset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-keys" title="Create Keys" class="md-nav__link">
+    Create Keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-functions" title="Predicate Functions" class="md-nav__link">
+    Predicate Functions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#which-option-to-choose" title="Which option to choose?" class="md-nav__link">
+    Which option to choose?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result" title="Result" class="md-nav__link">
+    Result
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raw" title="Raw" class="md-nav__link">
+    Raw
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sign-to-deploy-a-contract" title="Sign to Deploy a Contract" class="md-nav__link">
+    Sign to Deploy a Contract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sign-to-call-a-function" title="Sign to Call a Function" class="md-nav__link">
+    Sign to Call a Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sign-to-call-a-function_1" title="Sign to Call a Function" class="md-nav__link">
+    Sign to Call a Function
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enforce-keyset" title="Enforce-keyset" class="md-nav__link">
+    Enforce-keyset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enforce-one-keyset" title="Enforce-one Keyset" class="md-nav__link">
+    Enforce-one Keyset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-the-contract" title="Deploy the Contract" class="md-nav__link">
+    Deploy the Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployed-payments-contract-function-call" title="Deployed Payments Contract Function Call" class="md-nav__link">
+    Deployed Payments Contract Function Call
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review" title="Review" class="md-nav__link">
+    Review
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../local-pact-environment/" title="Local Pact Environment" class="md-nav__link">
+      Local Pact Environment
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Intermediate
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Intermediate
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../intermediate/coming-soon/" title="Coming Soon" class="md-nav__link">
+      Coming Soon
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/coming-soon/" title="Coming Soon" class="md-nav__link">
+      Coming Soon
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-keysets" title="Introduction to Keysets" class="md-nav__link">
+    Introduction to Keysets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-keyset" title="Create a Keyset" class="md-nav__link">
+    Create a Keyset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-and-read-a-keyset" title="Define and Read a Keyset" class="md-nav__link">
+    Define and Read a Keyset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-keys" title="Create Keys" class="md-nav__link">
+    Create Keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-functions" title="Predicate Functions" class="md-nav__link">
+    Predicate Functions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#which-option-to-choose" title="Which option to choose?" class="md-nav__link">
+    Which option to choose?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result" title="Result" class="md-nav__link">
+    Result
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raw" title="Raw" class="md-nav__link">
+    Raw
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sign-to-deploy-a-contract" title="Sign to Deploy a Contract" class="md-nav__link">
+    Sign to Deploy a Contract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sign-to-call-a-function" title="Sign to Call a Function" class="md-nav__link">
+    Sign to Call a Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sign-to-call-a-function_1" title="Sign to Call a Function" class="md-nav__link">
+    Sign to Call a Function
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enforce-keyset" title="Enforce-keyset" class="md-nav__link">
+    Enforce-keyset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enforce-one-keyset" title="Enforce-one Keyset" class="md-nav__link">
+    Enforce-one Keyset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-the-contract" title="Deploy the Contract" class="md-nav__link">
+    Deploy the Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployed-payments-contract-function-call" title="Deployed Payments Contract Function Call" class="md-nav__link">
+    Deployed Payments Contract Function Call
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review" title="Review" class="md-nav__link">
+    Review
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kadena-io/pact/edit/master/docs/beginner/pact-keysets.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="pact-keysets">Pact Keysets<a class="headerlink" href="#pact-keysets" title="Permanent link">&para;</a></h1>
+<p>This tutorial introduces another essential feature in Pact known as keysets. We’ll discuss what keysets are, why they’re important, and how they help regulate access to Pact modules.</p>
+<p><strong>Tutorial Overview</strong></p>
+<ul>
+<li>Introduction to Keysets</li>
+<li>Create a Keyset</li>
+<li>Define and Read a Keyset</li>
+<li>Create Keys</li>
+<li>Sign to Deploy a Contract</li>
+<li>Sign to Call a Function</li>
+<li>Sign to Run a Contract</li>
+</ul>
+<div class="admonition summary">
+<p class="admonition-title">Key Takeaway</p>
+<p>Pact <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#confidential-keysets" target="_blank">Keysets</a> specify authorization to different parts of the smart contract. They determine which accounts have access to which parts of the program. They also contain keys which are an important part of acquiring the signatures needed to verify a transaction.</p>
+</div>
+<hr />
+<h3 id="introduction-to-keysets"><strong>Introduction to Keysets</strong><a class="headerlink" href="#introduction-to-keysets" title="Permanent link">&para;</a></h3>
+<p>Pact <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#confidential-keysets" target="_blank">Keysets</a> specify authorization to different parts of the smart contract. They determine which accounts have access to and update various parts of the program.</p>
+<hr />
+<h3 id="create-a-keyset"><strong>Create a Keyset</strong><a class="headerlink" href="#create-a-keyset" title="Permanent link">&para;</a></h3>
+<p>The first step toward working with keysets is to create one. Creating a keyset can be done using the online editor within the environment section.</p>
+<p>Navigate to <a href="https://pact.kadena.io/" target="_blank">pact.kadena.io</a></p>
+<p><strong>Steps to create a keyset</strong></p>
+<ul>
+<li>On the right panel navigate to <strong>ENV &gt; Data &gt; Keysets &gt; Enter a Keyset Name</strong></li>
+<li>Enter <strong>admin-keyset</strong></li>
+<li>Click <strong>Create</strong></li>
+</ul>
+<p><img alt="1-create-a-keyset" src="../../assets/beginner-tutorials/pact-keysets/1-create-a-keyset.png" /></p>
+<p>You should now see <strong>admin-keyset</strong> appear under your list of available keysets.</p>
+<p>This keyset is now added into the browser’s local storage. When you begin working locally, this keyset will need to exist in the .repl file that you create along with your .pact file. You will learn more about this process in later tutorials.</p>
+<hr />
+<h2 id="define-and-read-a-keyset"><strong>Define and Read a Keyset</strong><a class="headerlink" href="#define-and-read-a-keyset" title="Permanent link">&para;</a></h2>
+<p>After creating a keyset, you need to both define and read this keyset from within the smart contract you create. This is done using a pair of built-in functions; <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html#define-keyset" target="_blank">define-keyset</a> and <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html#read-keyset" target="_blank">read-keyset</a>.</p>
+<p><img alt="2-define-and-read-a-keyset" src="../../assets/beginner-tutorials/pact-keysets/2-define-and-read-a-keyset.png" /></p>
+<p>Here is the syntax used to define and read a keyset named “admin-keyset”.</p>
+<div class="codehilite"><pre><span></span><span class="p">(</span><span class="nf">define-keyset</span> <span class="ss">&#39;admin-keyset</span> <span class="p">(</span><span class="nf">read-keyset</span> <span class="s">&quot;admin-keyset&quot;</span><span class="p">))</span>
+</pre></div>
+
+
+<p>Keysets guard the logic encoded within a module, these functions should be placed above the module and will fail if written within the module code. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The single quote, ‘, preceding the <strong>admin-keyset</strong> is an alternative way to represent a string rather than using double quotes. It is, in this case, referred to as a <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#symbols" target="_blank">symbol</a> and helps syntactically represent a unique item during runtime. </p>
+</div>
+<hr />
+<h2 id="create-keys"><strong>Create Keys</strong><a class="headerlink" href="#create-keys" title="Permanent link">&para;</a></h2>
+<p>The keyset you have created is meant to hold keys. These keys are used to sign and verify transactions that occur from within the module. </p>
+<p><strong>Steps to create a key</strong></p>
+<ul>
+<li>On the right panel navigate to <strong>ENV &gt; Wallet &gt; Enter a key name</strong></li>
+<li>Enter <strong>admin-key</strong></li>
+<li>Click <strong>Generate</strong></li>
+</ul>
+<p><img alt="3-create-keys" src="../../assets/beginner-tutorials/pact-keysets/3-create-keys.png" /></p>
+<p>You should now see the key name, the public key, and the private key of the key you generated. </p>
+<p>While one key is enough to get started, this tutorial will show you some other key options that are available to you. For that reason, take some time now to generate two more keys. </p>
+<p><strong>Generate two more keys</strong></p>
+<ul>
+<li>admin-key-2 </li>
+<li>admin-key-3</li>
+</ul>
+<p><img alt="4-keyset-plus-keys" src="../../assets/beginner-tutorials/pact-keysets/4-keyset-plus-keys.png" /></p>
+<p>After creating these keys, notice that they are all available as checkboxes under the <strong>admin-keyset</strong>. Select each of these checkboxes now.</p>
+<p>You’re now ready to use these keys to help understand predicate functions.</p>
+<hr />
+<h2 id="predicate-functions"><strong>Predicate Functions</strong><a class="headerlink" href="#predicate-functions" title="Permanent link">&para;</a></h2>
+<p>Alongside the keyset you created, you will see a dropdown that allows you to select <strong>keys-all, keys-2, and keys-any</strong>. </p>
+<p><img alt="5-predicate-functions" src="../../assets/beginner-tutorials/pact-keysets/5-predicate-functions.png" /></p>
+<p>These options are referred to as the predicate functions in your keyset. </p>
+<p>A predicate function is a boolean value function evaluating to either true or false. In this case, it will be one of the options <strong>keys-any</strong>, <strong>keys-2</strong>, or <strong>keys-all</strong> as you had seen in the keysets tab. </p>
+<p>Predicate functions specify which keys need to sign the transaction for it to be valid. </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>keys-all</strong></td>
+<td>All available keys must sign the transaction to verify it.</td>
+</tr>
+<tr>
+<td><strong>keys-2</strong></td>
+<td>Two keys must sign the transaction to verify it.</td>
+</tr>
+<tr>
+<td><strong>keys-any</strong></td>
+<td>Any single key can sign the transaction to verify it.</td>
+</tr>
+</tbody>
+</table>
+<p>The keys that the predicate function is referring to are those you selected with the checkboxes </p>
+<h3 id="which-option-to-choose"><strong>Which option to choose?</strong><a class="headerlink" href="#which-option-to-choose" title="Permanent link">&para;</a></h3>
+<p>Determining which is appropriate for your application depends on what you are trying to accomplish. </p>
+<p>In cases where all members of a group are equal, and it is important for each of them to sign the transaction, then you will use keys-all. If there are many members of the group but only a few need to verify the transaction, keys-2 could work well. And if anyone signing is enough to verify the transaction, select keys-any. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In simple smart contracts, you will generally have a simple keyset, a single key, and a default value of <strong>keys-all</strong> for your predicate function. </p>
+</div>
+<hr />
+<h3 id="result"><strong>Result</strong><a class="headerlink" href="#result" title="Permanent link">&para;</a></h3>
+<p>Each key created has an equivalent JSON representation you can view from the Result tab.</p>
+<p><img alt="6-result" src="../../assets/beginner-tutorials/pact-keysets/6-result.png" /></p>
+<p>Notice that this JSON object includes the name of your keyset, the public key of each of the keys you added to the keyset, and the current value of the predicate function you selected. </p>
+<hr />
+<h3 id="raw"><strong>Raw</strong><a class="headerlink" href="#raw" title="Permanent link">&para;</a></h3>
+<p>You can also create keysets using the JSON format rather than the user interface. Creating keysets with JSON is done using the <strong>Raw</strong> tab.</p>
+<p>This format will be used in real DApps or in .repl files for simulation. It allows you to copy your JSON formatted keysets to test and deploy on pact-web, allowing you simply copy and paste into this box rather than re-creating everything from scratch.</p>
+<p><img alt="7-raw" src="../../assets/beginner-tutorials/pact-keysets/7-raw.png" /></p>
+<p>To create a new key, specify a keyset <strong>name</strong>, <strong>keys</strong>, and <strong>pred</strong>, similar to the format seen in the <strong>Result</strong> tab. </p>
+<p>While keysets tab is a simple way to create new keysets on the website, raw tab is a simpler way of inputting keysets that already exist.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Keysets created here will not appear in the <strong>Keysets</strong> tab, but they will appear in the <strong>Result</strong> tab.</p>
+</div>
+<hr />
+<h2 id="sign-to-deploy-a-contract"><strong>Sign to Deploy a Contract</strong><a class="headerlink" href="#sign-to-deploy-a-contract" title="Permanent link">&para;</a></h2>
+<p>Verifying transactions with keysets is important when deploying a smart contract. You can check this out for yourself from the deployment screen in the online editor.</p>
+<p><strong>Where to find the sign tab</strong></p>
+<ul>
+<li>From <a href="https://pact.kadena.io/" target="_blank">pact.kadena.io</a> select <strong>Deploy</strong></li>
+<li>From the deployment settings screen, choose <strong>Sign</strong></li>
+</ul>
+<p>You should now see the following screen, which includes the keysets and specified keys from within the module.</p>
+<p><img alt="8-choose-a-server" src="../../assets/beginner-tutorials/pact-keysets/8-choose-a-server.png" /></p>
+<p>To deploy the smart contract, you will need to select a number of keys using the checkbox to the right as specified in the predicate function. This will ensure that your smart contract is successfully verified.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are a few necessary changes you will need to make to your smart contract to deploy it that are unrelated to keysets. For that reason, you won’t be deploying your contract in this tutorial. You can check out the Hello World with Pact tutorial if you’d like support on deploying a smart contract. </p>
+</div>
+<hr />
+<h2 id="sign-to-call-a-function"><strong>Sign to Call a Function</strong><a class="headerlink" href="#sign-to-call-a-function" title="Permanent link">&para;</a></h2>
+<p>Calling a function on a deployed contract is another time where key signatures become valuable. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You cannot call any functions from the <strong>sample contracts</strong> in the Online Editors Module Explorer. Contracts must first be deployed to a blockchain before you are able to call them. For this and future examples, be sure to look under deployed contracts to call functions.</p>
+</div>
+<p>To get started, view the <strong>helloWorld</strong> smart contract in the module explorer and call the <strong>hello</strong> function.</p>
+<p><strong>Steps to call the hello function</strong></p>
+<ul>
+<li>Select <strong>Module Explorer</strong></li>
+<li>Search <strong>helloWorld</strong></li>
+<li>Select <strong>View</strong></li>
+<li>Select <strong>&gt;_Call</strong></li>
+</ul>
+<p>After calling the function, you should see a screen showing the Parameters of the function.</p>
+<p><img alt="9-parameters" src="../../assets/beginner-tutorials/pact-keysets/9-parameters.png" /></p>
+<p>Select the <strong>Sign</strong> tab to the right of <strong>Parameters</strong> to view the keys available to use for signatures.</p>
+<p><img alt="10-sign" src="../../assets/beginner-tutorials/pact-keysets/10-sign.png" /></p>
+<p>Here you should again see each of the keys you have available to sign the transaction. In this case, the <strong>helloWorld</strong> contract does not have any signature restrictions so you can call the function without these. That said, it’s also fine to sign with a key now to get some practice. </p>
+<p>Select the checkbox next to one of the <strong>admin-keys</strong>, and go back to the function parameters screen. </p>
+<p>Type “Pact Keys” (or whatever you prefer) as a Parameter and click <strong>Call</strong> to call the function. </p>
+<p>After calling the function, you should see “Hello Pact Keys” appear in the messages tab.</p>
+<p><img alt="11-pact-keys" src="../../assets/beginner-tutorials/pact-keysets/11-pact-keys.png" /></p>
+<p><img alt="12-server-result" src="../../assets/beginner-tutorials/pact-keysets/12-server-result.png" /></p>
+<p>You have now verified a transaction using a key signature on a deployed smart contract. Again, it wasn’t required for this specific contract but this is a very simple way to get familiar with the process for when you need it later.</p>
+<hr />
+<h2 id="sign-to-call-a-function_1"><strong>Sign to Call a Function</strong><a class="headerlink" href="#sign-to-call-a-function_1" title="Permanent link">&para;</a></h2>
+<p>It’s helpful to go through a process where you actually have restrictions on running code based on the keysets you have available. These restrictions can affect both your ability to load a contract into the REPL and the ability to call functions on a deployed contract. </p>
+<p>One example that does a good job exploring keysets and restrictions is the <strong>Simple Payment</strong> example. </p>
+<p><strong>Navigate to Simple Payment example</strong></p>
+<ul>
+<li>Select <strong>Module Explorer &gt; Examples &gt; Simple Payment &gt; Open</strong></li>
+</ul>
+<p><img alt="13-simple-payment" src="../../assets/beginner-tutorials/pact-keysets/13-simple-payment.png" /></p>
+<p>You will be building a smart contract like this for yourself in a later tutorial. For now, you’ll focus on a few critical areas that illustrate how to set keyset restrictions from within a module. </p>
+<h3 id="enforce-keyset"><strong>Enforce-keyset</strong><a class="headerlink" href="#enforce-keyset" title="Permanent link">&para;</a></h3>
+<p>Throughout the module, you’ll notice the following built-in function.</p>
+<p><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=enforce-keyset#enforce-keyset" target="_blank">enforce-keyset</a></p>
+<p>This function executes a guard or defined keyset name to enforce desired predicate logic.</p>
+<p>You can find an example of this on <strong>row 28</strong> of the <strong>Simple Payments</strong> smart contract which is summarized below.</p>
+<div class="codehilite"><pre><span></span><span class="nv">...code</span>
+
+<span class="c1">;; row 14: define keyset to guard module</span>
+<span class="p">(</span><span class="nf">define-keyset</span> <span class="ss">&#39;admin-keyset</span> <span class="p">(</span><span class="nf">read-keyset</span> <span class="s">&quot;admin-keyset&quot;</span><span class="p">))</span>
+
+
+<span class="nv">...code</span>
+
+<span class="p">(</span><span class="nf">defun</span> <span class="nv">create-account</span> <span class="p">(</span><span class="nf">id</span> <span class="nv">initial-balance</span> <span class="nv">keyset</span><span class="p">)</span>
+     <span class="c1">;; row 27: &quot;Must be administrator.&quot;</span>
+     <span class="p">(</span><span class="nf">enforce-keyset</span> <span class="ss">&#39;admin-keyset</span><span class="p">)</span>
+
+<span class="nv">...code</span>
+</pre></div>
+
+
+<p><strong>Here is how the code sample above is working</strong></p>
+<ul>
+<li>Before the module, the <strong>admin-keyset</strong> is defined and read. </li>
+<li>Once in the contract, a function named <strong>create-account</strong> is created that takes <strong>keyset</strong> as a parameter.</li>
+<li>
+<p>Upon running the function, <strong>enforce-keyset</strong> is called to check the caller is the owner of <strong>admin-keyset</strong>.</p>
+</li>
+<li>
+<p>If the caller is the owner of admin-keyset, the function continues.</p>
+</li>
+<li>If the caller is not the owner of the admin-keyset, the function fails. </li>
+</ul>
+<p>Using this method, you can check that the caller of any function is the owner of a keyset that you specify. </p>
+<div class="admonition warning">
+<p class="admonition-title">Challenge</p>
+<p>Try running this code in the online editor using Load into REPL. You’ll notice an error appear. Can you fix the error based on what you have learned so far?</p>
+</div>
+<p>When you get the following response you have successfully fixed the first error.</p>
+<div class="codehilite"><pre><span></span>&lt;interactive&gt;:61:31: No such key in message: &quot;sarah-keyset&quot;
+</pre></div>
+
+
+<p>!!! Feeling Stuck?
+      Create a keyset named admin-keyset from within the Env to remove this error.</p>
+<p>In the next section, you will address the remaining errors.</p>
+<hr />
+<h3 id="enforce-one-keyset"><strong>Enforce-one Keyset</strong><a class="headerlink" href="#enforce-one-keyset" title="Permanent link">&para;</a></h3>
+<p>Another useful built-in function for checking keysets is known as <strong>enforce-one</strong>. </p>
+<p><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=enforce-one#enforce-one" target="_blank">enforce-one</a></p>
+<p>This built-in function runs a series of tests in a specific order to check that one of the following statements are true. </p>
+<p>You can find an example of this on row row 38 of the <em>Simple Payments</em> contract and is summarized below.</p>
+<div class="codehilite"><pre><span></span><span class="nv">...code</span>
+
+<span class="c1">;; row 14: define keyset to guard module</span>
+<span class="p">(</span><span class="nf">define-keyset</span> <span class="ss">&#39;admin-keyset</span> <span class="p">(</span><span class="nf">read-keyset</span> <span class="s">&quot;admin-keyset&quot;</span><span class="p">))</span>
+
+
+<span class="nv">...code</span>
+
+<span class="c1">;; Row 34: define keyset to guard module</span>
+  <span class="p">(</span><span class="nf">defun</span> <span class="nv">get-balance</span> <span class="p">(</span><span class="nf">id</span><span class="p">)</span>
+    <span class="s">&quot;Only users or admin can read balance.&quot;</span>
+    <span class="p">(</span><span class="nf">with-read</span> <span class="nv">payments-table</span> <span class="nv">id</span>
+      <span class="p">{</span> <span class="s">&quot;balance&quot;</span><span class="ss">:=</span> <span class="nv">balance</span>, <span class="s">&quot;keyset&quot;</span><span class="ss">:=</span> <span class="nv">keyset</span> <span class="p">}</span>
+      <span class="p">(</span><span class="nf">enforce-one</span> <span class="s">&quot;Access denied&quot;</span>
+
+       <span class="p">[(</span><span class="nf">enforce-keyset</span> <span class="nv">keyset</span><span class="p">)</span>
+         <span class="p">(</span><span class="nf">enforce-keyset</span> <span class="ss">&#39;admin-keyset</span><span class="p">)])</span>
+      <span class="nv">balance</span><span class="p">))</span>
+
+
+<span class="nv">...code</span>
+
+<span class="c1">;; row 60: create accounts</span>
+
+<span class="p">(</span><span class="nf">create-account</span> <span class="s">&quot;Sarah&quot;</span> <span class="mf">100.25</span> <span class="p">(</span><span class="nf">read-keyset</span> <span class="s">&quot;sarah-keyset&quot;</span><span class="p">))</span>
+<span class="p">(</span><span class="nf">create-account</span> <span class="s">&quot;James&quot;</span> <span class="mf">250.0</span> <span class="p">(</span><span class="nf">read-keyset</span> <span class="s">&quot;james-keyset&quot;</span><span class="p">))</span>
+
+<span class="nv">...code</span>
+</pre></div>
+
+
+<p>Similar to the previous example, this example is enforcing that the caller be the owner of the <strong>admin-keyset</strong>. Unlike the previous example, it is also allowing the caller to be the owner of their account. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Enforce-one</strong> is meant for running all types of tests. It is not specific to checking for keysets. In this context, it is running tests to check keysets and works as an effective way to enforce that a specific keyset exists.</p>
+</div>
+<p>Notice how it is doing this using <strong>enforce-one</strong> paired with <strong>enforce-keyset</strong>. </p>
+<p><strong>Enforce-one</strong> starts a series of tests to check that any of the following lines are true. </p>
+<p>If one of them is true, the caller will gain access to run the rest of the function. If neither of them is true, the caller will get a response that their request has been denied since they are not the owner of one of the required keys.</p>
+<p>What this means is that both the admin and owner of the account can view their balance, but no one else can. </p>
+<div class="admonition bug">
+<p class="admonition-title">Bug</p>
+<p>Try running the code in the online editor using Load into REPL. You’ll notice an error appear. Can you fix the error based on what you have learned so far?</p>
+</div>
+<p>When you get the following response you have successfully fixed the first error.</p>
+<div class="codehilite"><pre><span></span>James&#39;s balance is 275.0
+</pre></div>
+
+
+<div class="admonition success">
+<p class="admonition-title">Solution</p>
+<p>Create two keysets from within the Env to remove this error.</p>
+<ul>
+<li>sarah-keyset</li>
+<li>james-keyset</li>
+</ul>
+</div>
+<p>After creating these keysets the response signifies that you have successfully deployed the smart contract into the REPL.</p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Investigate the smart contract to try and determine why you are getting the response that James's balance is 275.0. Can you tell what is happening in this smart contract to produce this outcome?</p>
+<p>If you cannot tell, don’t worry. You will get a much more detailed overview of this smart contract in a later tutorial.</p>
+</div>
+<hr />
+<h3 id="deploy-the-contract"><strong>Deploy the Contract</strong><a class="headerlink" href="#deploy-the-contract" title="Permanent link">&para;</a></h3>
+<p>You are now ready to deploy the <strong>Simple Payments</strong> smart contract. For information on deploying a smart contract, view <a href="https://pactlang.org/beginner/hello-world-with-pact/#deploy-to-the-testnet" target="_blank">Deploy to the Testnet</a> from the Hello World with Pact tutorial. </p>
+<h3 id="deployed-payments-contract-function-call"><strong>Deployed Payments Contract Function Call</strong><a class="headerlink" href="#deployed-payments-contract-function-call" title="Permanent link">&para;</a></h3>
+<p>Now that you have the appropriate keys and keysets, you can also run the deployed version of this smart contract.</p>
+<p>From the module explorer, view the module deployed in the previous section.</p>
+<p><img alt="14-payments" src="../../assets/beginner-tutorials/pact-keysets/14-payments.png" /></p>
+<p>Select the <strong>get-balance</strong> function to attempt to view <strong>James’</strong> balance. To do this, select parameters, and type <strong>“James”</strong> as the id. </p>
+<p><img alt="15-james" src="../../assets/beginner-tutorials/pact-keysets/15-james.png" /></p>
+<p>Next, sign the contract with either the <strong>admin-key</strong> or the <strong>james-key</strong>. As shown earlier, each of these should have the authority to read James’ account balance.</p>
+<p><img alt="16-sign-admin-key" src="../../assets/beginner-tutorials/pact-keysets/16-sign-admin-key.png" /></p>
+<p>After selecting call, you should see the James’ balance displayed. If you’d like to test that it is working correctly, you can also try to make this function call by signing with <strong>sarah-key</strong>. When doing this, you should receive an error since Sarah is only permitted to view her own balance. </p>
+<p>Using these ideas, you can call any function on the smart contract by giving the proper function parameters and signing the transactions with the appropriate keys.</p>
+<hr />
+<h2 id="review"><strong>Review</strong><a class="headerlink" href="#review" title="Permanent link">&para;</a></h2>
+<p>That wraps up this tutorial on Pact Keysets.</p>
+<p>As you learned, Pact <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#confidential-keysets" target="_blank">Keysets</a> allow you to specify authorization to different parts of the smart contract. They help determine which accounts have access to which parts of the programs you create. </p>
+<p>Throughout this tutorial you to created, defined, and read keysets. You also created keys, were introduced to predicate functions, and learned a few other options available to work with keys from the online editor. You also saw where to go to utilize these keys both when deploying a contract and calling a function. Finally, you experimented with running an existing smart contracts that had built-in keyset restrictions.</p>
+<p>Managing permissions can be difficult, and really depends on the needs of your application. For that reason, it’s difficult to show all of the possibilities that may come up with keysets. That said, this tutorial tried to give a strong foundation for what options are available, and variations of these ideas will come up often in later tutorials. </p>
+<p>Take some time now to experiment with keys and keysets, and when you’re ready, move on to our next tutorial.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../pact-modules/" title="Pact Modules" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Pact Modules
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../local-pact-environment/" title="Local Pact Environment" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Local Pact Environment
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 - 2019 Kadena
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/kadena-io" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/kadena_io" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.b41f3d20.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-127512784-3","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+  </body>
+</html>
