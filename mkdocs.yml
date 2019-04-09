@@ -57,7 +57,7 @@ nav:
         # - 'Schemas and Tables': './beginner/pact-schemas-and-tables.md'
         # - 'Accounts and Transfers': './beginner/pact-accounts-and-transfers.md'
         # - 'Contract Interaction': './beginner/pact-contract-interaction.md'
-        # - 'Atom SDK': './beginner/atom-sdk.md'
+        - 'Local Pact Environment': './beginner/local-pact-environment.md'
         # - 'Testing in the SDK': './beginner/testing-in-the-sdk.md'
         # - 'Pact and Javascript': './beginner/pact-and-javascript.md'
         # - 'Series Review': './beginner/series-review.md'
