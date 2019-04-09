@@ -48,11 +48,11 @@ markdown_extensions:
 nav:    
 - Beginner:
         - 'Welcome to Pact': './beginner/welcome-to-pact.md'        
-        - 'Online Editor': './beginner/online-editor.md'
+        - 'Pact Online Editor': './beginner/online-editor.md'
         - 'Hello World with Pact': './beginner/hello-world-with-pact.md'
         - 'Pact Language Basics': './beginner/pact-language-basics.md'
         # - 'Functions': './beginner/pact-functions.md'
-        # - 'Modules': './beginner/pact-modules.md'
+        - 'Pact Modules': './beginner/pact-modules.md'
         # - 'Keysets': './beginner/pact-keysets.md'
         # - 'Schemas and Tables': './beginner/pact-schemas-and-tables.md'
         # - 'Accounts and Transfers': './beginner/pact-accounts-and-transfers.md'

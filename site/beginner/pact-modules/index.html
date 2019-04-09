@@ -1,0 +1,896 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Pact Developer Tutorials">
+      
+      
+      
+        <meta name="author" content="Kadena">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+    
+    
+      
+        <title>Pact Modules - Pact Developer Tutorials</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#00bcd4">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.8c900955.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica:300,400,400i,700|Helvetica">
+        <style>body,input{font-family:"Helvetica","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Helvetica","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="cyan" data-md-color-accent="cyan">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#pact-modules" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Pact Developer Tutorials" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Pact Developer Tutorials
+              </span>
+              <span class="md-header-nav__topic">
+                Pact Modules
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/kadena-io/pact/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      kadena-io/pact
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../welcome-to-pact/" title="Beginner" class="md-tabs__link md-tabs__link--active">
+          Beginner
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../intermediate/coming-soon/" title="Intermediate" class="md-tabs__link">
+          Intermediate
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../advanced/coming-soon/" title="Advanced" class="md-tabs__link">
+          Advanced
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Pact Developer Tutorials" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Pact Developer Tutorials
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/kadena-io/pact/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      kadena-io/pact
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Beginner
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Beginner
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../welcome-to-pact/" title="Welcome to Pact" class="md-nav__link">
+      Welcome to Pact
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../online-editor/" title="Pact Online Editor" class="md-nav__link">
+      Pact Online Editor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hello-world-with-pact/" title="Hello World with Pact" class="md-nav__link">
+      Hello World with Pact
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-language-basics/" title="Pact Language Basics" class="md-nav__link">
+      Pact Language Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Pact Modules
+      </label>
+    
+    <a href="./" title="Pact Modules" class="md-nav__link md-nav__link--active">
+      Pact Modules
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-pact-modules" title="Introduction to Pact Modules" class="md-nav__link">
+    Introduction to Pact Modules
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-vs-smart-contract" title="Module vs Smart Contract" class="md-nav__link">
+    Module vs Smart Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-module" title="Create a Module" class="md-nav__link">
+    Create a Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-modules" title="Example Modules" class="md-nav__link">
+    Example Modules
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hello-world" title="Hello World" class="md-nav__link">
+    Hello World
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-payment" title="Simple Payment" class="md-nav__link">
+    Simple Payment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explore-other-modules" title="Explore Other Modules" class="md-nav__link">
+    Explore Other Modules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review" title="Review" class="md-nav__link">
+    Review
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Intermediate
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Intermediate
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../intermediate/coming-soon/" title="Coming Soon" class="md-nav__link">
+      Coming Soon
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/coming-soon/" title="Coming Soon" class="md-nav__link">
+      Coming Soon
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-pact-modules" title="Introduction to Pact Modules" class="md-nav__link">
+    Introduction to Pact Modules
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-vs-smart-contract" title="Module vs Smart Contract" class="md-nav__link">
+    Module vs Smart Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-module" title="Create a Module" class="md-nav__link">
+    Create a Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-modules" title="Example Modules" class="md-nav__link">
+    Example Modules
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hello-world" title="Hello World" class="md-nav__link">
+    Hello World
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-payment" title="Simple Payment" class="md-nav__link">
+    Simple Payment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explore-other-modules" title="Explore Other Modules" class="md-nav__link">
+    Explore Other Modules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review" title="Review" class="md-nav__link">
+    Review
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kadena-io/pact/edit/master/docs/beginner/pact-modules.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="pact-modules">Pact Modules<a class="headerlink" href="#pact-modules" title="Permanent link">&para;</a></h1>
+<p>This tutorial introduces an essential feature in Pact known as modules. We’ll discuss what modules are, why they’re important, and how they relate to smart contracts.</p>
+<p><strong>Tutorial Overview</strong></p>
+<ul>
+<li>Introduction to Pact Modules</li>
+<li>Create a Module</li>
+<li>Example Modules</li>
+</ul>
+<div class="admonition summary">
+<p class="admonition-title">Key Takeaway</p>
+<p>A Pact Module contains the logic necessary to create your application. It is where all code is written to for a smart contract. All API and data definitions exist within the Module. </p>
+</div>
+<hr />
+<h2 id="introduction-to-pact-modules"><strong>Introduction to Pact Modules</strong><a class="headerlink" href="#introduction-to-pact-modules" title="Permanent link">&para;</a></h2>
+<p>A Pact <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#module-declaration" target="_blank">Module</a> contains the logic necessary to create your application. It is where all code is written to for a smart contract. All API and data definitions exist within the Module. </p>
+<p><strong>Modules contain the following code</strong></p>
+<ul>
+<li>Schema Definitions</li>
+<li>Table Definitions</li>
+<li>Functions Definitions</li>
+<li>Pact Special Functions</li>
+<li>Const Values</li>
+</ul>
+<p><strong>Modules do not contain the following code</strong></p>
+<p>While modules contain the code needed to create a smart contract, some things are not included in a module. </p>
+<ul>
+<li>Keysets</li>
+<li>Table Creation</li>
+<li>Function Calls</li>
+</ul>
+<p>For more information on keysets, see our Pact Keysets Tutorial.</p>
+<hr />
+<h3 id="module-vs-smart-contract"><strong>Module vs Smart Contract</strong><a class="headerlink" href="#module-vs-smart-contract" title="Permanent link">&para;</a></h3>
+<p>When starting with Pact, you’ll often create single modules that contain the full functionality of your smart contract. </p>
+<p><strong>This raises an important question...</strong></p>
+<p>Why aren’t modules called smart contracts?</p>
+<p>The reason for this becomes clear once you begin creating more complicated smart contracts. These smart contracts will often contain many modules that work together to create your application. The goal of each module should be to create a focused set of functionality and clear organization within your files.</p>
+<p>While one module can make one smart contract, many modules can also make one smart contract. For that reason, we refer to the logic within a Pact file as a module. </p>
+<p>For more information see <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#module-declaration" target="_blank">modules</a> in the developer documentation.</p>
+<hr />
+<h3 id="create-a-module"><strong>Create a Module</strong><a class="headerlink" href="#create-a-module" title="Permanent link">&para;</a></h3>
+<p>To create a module, you write the module keyword and name followed by the keyset that has access to call this module. </p>
+<p>Here is a module named <strong>example</strong> that gives access to an <strong>admin-keyset</strong>.</p>
+<div class="codehilite"><pre><span></span><span class="c1">;; define and read keysets</span>
+
+<span class="p">(</span><span class="nf">module</span> <span class="nv">example</span> <span class="ss">&#39;admin-keyset</span>
+    <span class="c1">;; module code goes here</span>
+<span class="p">)</span>
+
+<span class="c1">;; function calls</span>
+</pre></div>
+
+
+<p>The entire module is written within these parentheses. The top level code, like keysets, are defined outside of these parentheses. </p>
+<p>The basic idea of modules is simple, but the structure of the code and the actual logic within the module can get pretty complicated. For that reason, it’s helpful to start by focusing on the basic syntax and structure of existing modules. </p>
+<hr />
+<h3 id="example-modules"><strong>Example Modules</strong><a class="headerlink" href="#example-modules" title="Permanent link">&para;</a></h3>
+<p>You can find examples using the Module Explorer in the <a href="https://pact.kadena.io/" target="_blank">Pact Online Editor</a>.</p>
+<h4 id="hello-world"><strong>Hello World</strong><a class="headerlink" href="#hello-world" title="Permanent link">&para;</a></h4>
+<p>From the Module Explorer, open the Hello World Smart Contract. If you’re interested, this smart contract is explained in depth in the <a href="https://pactlang.org/beginner/hello-world-with-pact/" target="_blank">Hello World with Pact</a>.</p>
+<p>Notice that the pattern of this smart contract is similar to the outline described above.</p>
+<div class="codehilite"><pre><span></span><span class="c1">;; define and read keysets</span>
+<span class="p">(</span><span class="nf">define-keyset</span> <span class="ss">&#39;admin-keyset</span> <span class="p">(</span><span class="nf">read-keyset</span> <span class="s">&quot;admin-keyset&quot;</span><span class="p">))</span>
+
+<span class="p">(</span><span class="nf">module</span> <span class="nv">helloWorld</span> <span class="ss">&#39;admin-keyset</span>
+   <span class="c1">;; module code goes here</span>
+  <span class="p">(</span><span class="nf">defun</span> <span class="nv">hello</span> <span class="p">(</span><span class="nf">name</span><span class="p">)</span>
+    <span class="p">(</span><span class="nf">format</span> <span class="s">&quot;Hello {}!&quot;</span> <span class="p">[</span><span class="nv">name</span><span class="p">]))</span>
+<span class="p">)</span>
+
+<span class="c1">;; function calls</span>
+<span class="p">(</span><span class="nf">hello</span> <span class="s">&quot;world&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>In this case, the module code only contains a simple function named <strong>hello</strong>. Later modules will include much more complexity.</p>
+<h4 id="simple-payment"><strong>Simple Payment</strong><a class="headerlink" href="#simple-payment" title="Permanent link">&para;</a></h4>
+<p>Next, take some time to look through the simple payment module. From the Module Explorer, select <strong>open</strong> on <strong>Simple Payment</strong> to open this smart contract in the online editor.</p>
+<p>Once again, you’ll notice the same pattern. This time, the smart contract includes a few other features. </p>
+<p><strong>Included in the Simple Payment Smart Contract</strong></p>
+<ul>
+<li>Schema Definitions</li>
+<li>Table Definitions</li>
+<li>Table Creation</li>
+<li>Functions</li>
+<li>Function Calls</li>
+</ul>
+<p>View the summary of this contract below and take some time to investigate the actual code provided in the <strong>Simple Payment Module</strong>.</p>
+<div class="codehilite"><pre><span></span><span class="c1">;; define and read keysets</span>
+<span class="p">(</span><span class="nf">define-keyset</span> <span class="ss">&#39;admin-keyset</span> <span class="p">(</span><span class="nf">read-keyset</span> <span class="s">&quot;admin-keyset&quot;</span><span class="p">))</span>
+
+<span class="p">(</span><span class="nf">module</span> <span class="nv">payments</span> <span class="ss">&#39;admin-keyset</span>
+   <span class="c1">;; module code goes here</span>
+
+   <span class="c1">;; define schemas</span>
+   <span class="c1">;;    ex. defschema payments...</span>
+
+   <span class="c1">;; define tables</span>
+   <span class="c1">;;    ex. deftable payments-table:{payments})</span>
+
+   <span class="c1">;; define functions</span>
+   <span class="c1">;;    ex. defun create-account...</span>
+   <span class="c1">;;    ex. defun get-balance...</span>
+   <span class="c1">;;    ex. defun pay...</span>
+
+<span class="p">)</span>
+<span class="c1">;; create tables</span>
+    <span class="c1">;; ex. create-table payments-table</span>
+
+<span class="c1">;; function calls</span>
+    <span class="c1">;; ex. pay</span>
+    <span class="c1">;; ex. get-balance</span>
+</pre></div>
+
+
+<p>While you may not fully understand each line of code quite yet, there are a few important things to note here.</p>
+<p>First, schemas and tables are defined inside of modules, but tables are created outside of modules. Table and schema definitions include built in functions including defschema, deftable, and create-table. You’ll learn more about each of these functions in the <strong>Pact Schemas and Tables tutorial</strong>.</p>
+<p>Next, there are some new Pact built in functions that you may have not seen before. </p>
+<p><strong>Contract Built-in functions include:</strong></p>
+<ul>
+<li><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html#enforce" target="_blank">enforce</a></li>
+<li><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html#insert" target="_blank">insert</a></li>
+<li><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html#with-read" target="_blank">with-read</a></li>
+</ul>
+<p>We’ll also go over each of these in more detail in later tutorials. You can explore the <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html" target="_blank">Pact Language Reference built-in functions</a> to learn more about each of them now if you’d like. </p>
+<hr />
+<h3 id="explore-other-modules"><strong>Explore Other Modules</strong><a class="headerlink" href="#explore-other-modules" title="Permanent link">&para;</a></h3>
+<p>Other modules include the same basic framework as those included in these simple smart contracts. Take some time now to explore each of the other Smart Contract examples to get more familiar with how they work. </p>
+<p><strong>Example Modules</strong></p>
+<ul>
+<li>International Payment</li>
+<li>Verification</li>
+<li>Accounts</li>
+</ul>
+<p>Focus on understanding the structure of each module. Gain some familiarity with the different techniques used to create each smart contract.</p>
+<hr />
+<h2 id="review"><strong>Review</strong><a class="headerlink" href="#review" title="Permanent link">&para;</a></h2>
+<p>That wraps up this tutorial on <strong>Pact Modules</strong>.</p>
+<p>In this tutorial you were introduced to modules, one of the core features of the Pact Programming Language. You learned what modules are, why they’re important, and went over a few examples.</p>
+<p>The goal for this tutorial wasn’t to help you learn all of the code that can possibly go into creating a module. That’s what most of the entire Pact programming language is built to accomplish. You’ll learn much more about this in later tutorials.</p>
+<p>For now, the important takeaway is to understand what a module is, as well as to recognize the key elements that belong inside and outside of Pact modules. </p>
+<p>Take some time now to continue exploring the examples provided in the Pact Online Editor. When you’re ready, you can learn more about the Pact programming language in our next tutorial.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../pact-language-basics/" title="Pact Language Basics" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Pact Language Basics
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../intermediate/coming-soon/" title="Coming Soon" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Coming Soon
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 - 2019 Kadena
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/kadena-io" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/kadena_io" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.b41f3d20.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-127512784-3","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+  </body>
+</html>
