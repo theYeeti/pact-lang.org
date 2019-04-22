@@ -48,19 +48,17 @@ markdown_extensions:
 nav:    
 - Beginner:
         - 'Welcome to Pact': './beginner/welcome-to-pact.md'        
-        - 'Pact Online Editor': './beginner/online-editor.md'
-        - 'Hello World with Pact': './beginner/hello-world-with-pact.md'
-        - 'Pact Language Basics': './beginner/pact-language-basics.md'
-        # - 'Functions': './beginner/pact-functions.md'
-        - 'Pact Modules': './beginner/pact-modules.md'
-        - 'Pact Keysets': './beginner/pact-keysets.md'
-        # - 'Schemas and Tables': './beginner/pact-schemas-and-tables.md'
+        - 'Online Editor': './beginner/online-editor.md'
+        - 'Hello World': './beginner/hello-world-with-pact.md'
+        - 'Language Basics': './beginner/pact-language-basics.md'
+        - 'Modules': './beginner/pact-modules.md'
+        - 'Keysets': './beginner/pact-keysets.md'
+        - 'Schemas and Tables': './beginner/pact-schemas-and-tables.md'
         # - 'Accounts and Transfers': './beginner/pact-accounts-and-transfers.md'
         # - 'Contract Interaction': './beginner/pact-contract-interaction.md'
-        - 'Local Pact Environment': './beginner/local-pact-environment.md'
+        - 'Atom SDK': './beginner/local-pact-environment.md'
         # - 'Testing in the SDK': './beginner/testing-in-the-sdk.md'
-        # - 'Pact and Javascript': './beginner/pact-and-javascript.md'
-        # - 'Series Review': './beginner/series-review.md'
+      
 - Intermediate:
         - 'Coming Soon': './intermediate/coming-soon.md'        
 - Advanced:

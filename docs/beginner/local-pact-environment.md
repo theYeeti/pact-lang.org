@@ -28,6 +28,8 @@ This tutorial will go over the details of getting up and running on a Mac operat
 !!! Warning "Windows and Linux Users"
       More instructions on installing Pact with **Windows** or **Linux** can be found on the <a href="https://github.com/kadena-io/pact" target="_blank">GitHub</a> page.
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/J-GuviTE3qo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### **Install Pact**
 
 To get started with Pact you’ll first need to install the Pact programming language.

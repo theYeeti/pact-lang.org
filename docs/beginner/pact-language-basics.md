@@ -19,15 +19,19 @@ In this tutorial you'll learn some fundamental ideas needed started with Pact. Y
        Open the online editor at <a href="https://pact.kadena.io/" target="_blank">pact.kadena.io</a> to follow along with this tutorial. You can run each of the commands described to get more familiar with the Pact programming language. 
        
        View the <a href="https://pactlang.org/beginner/online-editor/" target="_blank">Pact Online Code Editor Tutorial</a> for more information on running Pact commands.
-      
-
 ___
 
 ## **Pact Language Basics Tutorial**
 
-To get started with the Pact Language Basics, navigate to the <a href="https://pact-language.readthedocs.io/en/latest/" target="_blank">Pact Smart Contract Language reference</a>.
+<iframe width="720" height="405" src="https://www.youtube.com/embed/jILGrrIqP2w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-The Pact Smart Contract Language reference describes the syntax and semantics of the Pact language.
+Subscribe to our <a href="https://www.youtube.com/channel/UCB6-MaxD2hlcGLL70ukHotA" target="_blank">YouTube channel </a> to access the latest Pact tutorials.
+
+___
+
+## **Get Started**
+
+To get started with the Pact Language Basics, navigate to the <a href="https://pact-language.readthedocs.io/en/latest/" target="_blank">Pact Smart Contract Language reference</a>. The Pact Smart Contract Language reference describes the syntax and semantics of the Pact language.
 
 ![1-pact-language-reference](../assets/beginner-tutorials/pact-language-basics/1-pact-language-reference.png)
 
