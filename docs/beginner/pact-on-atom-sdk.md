@@ -1,6 +1,6 @@
 # Pact Development on Atom SDK
 
-This tutorial will get you up and running with the Pact programming language on your local environment.
+This tutorial will get you up and running with the Pact programming language on the Atom SDK.
 
 **Topics covered in this tutorial**
 
@@ -19,7 +19,7 @@ The goal of this tutorial is to get you up and running with the Pact environment
 
 ___
 
-## **Pact in your Local Environment Tutorial**
+## **Pact Development on Atom SDK Tutorial**
 
 Getting started with Pact on your local device allows you to work in a powerful development environment to run your smart contracts locally. This environment can be set up on Mac, Windows, and Linux operating systems.
 
@@ -188,7 +188,7 @@ ___
 
 ## **Review**
 
-That wraps up this tutorial. The goal of this tutorial was to get you up and running with Pact on your local device. 
+That wraps up this tutorial. The goal of this tutorial was to get you up and running with Pact on the Atom SDK. 
 
 In this tutorial, you got started with Pact locally. You installed Homebrew, Atom, the language-pact package, and the Pact language. You also ran your first hello-world Pact program on your local computer. 
 

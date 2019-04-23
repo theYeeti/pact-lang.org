@@ -189,13 +189,13 @@ For this example, imagine you had the following table and you wanted to read the
 
 |    key      |      balance   |   ccy  |
 |----------|---------|-----|
-| entity-1 | 4.00    | USD |
-| entity-2 | 3.00    | USD |
+| account-1 | 4.00    | USD |
+| account-2 | 3.00    | USD |
 
 Using read, you can specify the id and you’ll get back the information you request.
 
 ``` clojure
-(read accounts 1 ['balance 'ccy])
+(read accounts account-1 ['balance 'ccy])
 ```
 
 Here is an example of how to get similar functionality by using read from within a function. 
