@@ -1,4 +1,4 @@
-# Local Pact Environment
+# Pact Development on Atom SDK
 
 This tutorial will get you up and running with the Pact programming language on your local environment.
 
