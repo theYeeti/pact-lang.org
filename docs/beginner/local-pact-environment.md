@@ -192,7 +192,7 @@ That wraps up this tutorial. The goal of this tutorial was to get you up and run
 
 In this tutorial, you got started with Pact locally. You installed Homebrew, Atom, the language-pact package, and the Pact language. You also ran your first hello-world Pact program on your local computer. 
 
-Depending on your needs, you can now use both the online editor and the Atom editor to create Pact programs.
+Depending on your needs, you can now use both the online editor and the Atom editor to create Pact programs. 
 
 
 
