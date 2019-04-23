@@ -4,7 +4,7 @@ This tutorial will get you up and running with the Pact programming language on 
 
 **Topics covered in this tutorial**
 
-* Pact in your Local Environment
+* Pact in Atom SDK Overview
 * Install Homebrew
 * Install the Pact Programming Language
 * Install Atom
