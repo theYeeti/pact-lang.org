@@ -44,7 +44,7 @@ ___
 
 ## **Project Environment Setup**
 
-To get started, choose a project directory and clone the <a href=“https://github.com/kadena-io/pact-lang.org-code” target="_blank">pact-lang.org-code</a> resources into your local environment. 
+To get started, choose a project directory and clone the project resources into your local environment. 
 
 ``` terminal
 git clone https://github.com/kadena-io/pact-lang.org-code.git
@@ -86,7 +86,7 @@ The first step is to create the module and keysets for your smart contract.
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/1-module-and-keyset/solution.pact" target="_blank">Solution</a>
 
 !!! Note
-    If you’re unfamiliar with modules and keyset, our <a href="https://pactlang.org/beginner/pact-modules/" target="_blank">modules tutorial</a> is a great place to get started. 
+    If you’re unfamiliar with modules and keyset, our <a href="https://pactlang.org/beginner/pact-modules/" target="_blank">Pact Modules Tutorial</a> is a great place to get started. 
 
 ___
 
@@ -101,7 +101,7 @@ The loans smart contract will consist of 3 tables as shown below.
 For this challenge, you’ll see each table presented as fields and types. Your goal is to create the schema definition for each of these tables.
 
 !!! Note
-    Schema definitions are introduced in the <a href=“https://pactlang.org/beginner/pact-schemas-and-tables/#define-schemas” target="_blank">Pact Schemas and Tables tutorial</a>.
+    Schema definitions are introduced in the <a href="https://pactlang.org/beginner/pact-schemas-and-tables/#define-schemas" target="_blank">Pact Schemas and Tables Tutorial</a>.
 
 ### **2.1 Loan Schema**
 
@@ -172,7 +172,7 @@ Having defined each of the schemas for each table in your smart contract, you ar
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/3-define-tables/solution.pact" target="_blank">Solution</a>
 
 !!! Note
-    Table definitions are covered in the <a href=“https://pactlang.org/beginner/pact-schemas-and-tables/#define-tables” target="_blank">Schemas and Tables tutorial</a>.
+    Table definitions are covered in the <a href="https://pactlang.org/beginner/pact-schemas-and-tables/#define-tables" target="_blank">Pact Schemas and Tables Tutorial</a>.
 
 ___
 
@@ -207,7 +207,7 @@ When working with tables, there are four useful types of functions that you’ll
 The functions you’ll create in the loans smart contract will use combinations of these built in functions to insert, update, and read data from the tables in your smart contract.
 
 !!! Note
-    You can review each of these function types in the <a href=“https://pactlang.org/beginner/pact-schemas-and-tables/#table-built-in-functions” target="_blank">Schemas and Tables tutorial</a>.
+    You can review each of these function types in the <a href="https://pactlang.org/beginner/pact-schemas-and-tables/#table-built-in-functions" target="_blank">Pact Schemas and Tables Tutorial</a>.
 
 ### **Utility Functions**
 
@@ -389,10 +389,12 @@ ___
 
 Congratulations, at this point you have completed the Loans smart contract! 
 
-If you’d like, you can try deploying this smart contract. You can deploy this contract using the <a href=“https://pact.kadena.io/” target="_blank">Pact online editor</a> or from the <a href=“https://github.com/kadena-io/pact#quick-start-atom” target="_blank">Pact Atom SDK</a>. If you choose to deploy this locally, you’ll need the REPL file which you can find inside of the repository you cloned.
+If you’d like, you can try deploying this smart contract. You can deploy this contract using the **Pact Onine Editor** or from the **Pact Atom SDK**. If you choose to deploy this locally, you’ll need the REPL file which you can find inside of the repository you cloned.
 
-For help getting started and deploying in each of these environments, see our <a href=“https://pactlang.org/beginner/online-editor/” target="_blank">Pact Online Editor Tutorial</a> and our <a href=“https://pactlang.org/beginner/pact-on-atom-sdk/” target="_blank">Pact Development on Atom SDK Tutorial</a>.
+For help getting started and deploying in each of these environments, try the following tutorials. 
 
+* <a href="https://pactlang.org/beginner/online-editor/" target="_blank">Pact Online Editor</a>
+* <a href="https://pactlang.org/beginner/pact-on-atom-sdk/" target="_blank">Pact Development on Atom SDK Tutorial</a>
 ___
 
 ## **Review**
