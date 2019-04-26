@@ -786,7 +786,7 @@
                 
                 
                 <h1 id="pact-accounts-and-transfers">Pact Accounts and Transfers<a class="headerlink" href="#pact-accounts-and-transfers" title="Permanent link">&para;</a></h1>
-<p>Welcome to this tutorial on Accounts and Transfers with Pact.</p>
+<p>Welcome to this tutorial on Accounts and Transfers with Pact!</p>
 <p><strong>This tutorial covers the following topics</strong></p>
 <ul>
 <li>Project Environment Setup</li>
@@ -796,6 +796,7 @@
 <li>Create Table</li>
 <li>Create Accounts</li>
 <li>Make Payments</li>
+<li>Deploy Smart Contract</li>
 </ul>
 <p>The goal of this tutorial is to help you build an application that transfers value between two accounts. To do this, you’ll build a smart contract that implements this functionality named Simple Payments. This is an important function of smart contracts and will set you up to create more complex applications using accounts and transfers.</p>
 <div class="admonition summary">
@@ -853,10 +854,6 @@
 </tbody>
 </table>
 <p>Each of these options are meant to help support you as you work through these challenges. Feel free to use them however you’d like to.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For an overview of each of the challenges, start <a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/1-start/payments.pact” target="_blank">here</a>, and if you’d like to view the complete smart contract, you can go here<a href=“LINK” target="_blank">https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/3-finish/payments.pact</a>.</p>
-</div>
 <hr />
 <h2 id="1-module-and-keyset"><strong>1. Module and Keyset</strong><a class="headerlink" href="#1-module-and-keyset" title="Permanent link">&para;</a></h2>
 <p>The first step is to set up the module and keysets for the smart contract. </p>
@@ -864,8 +861,8 @@
 <p class="admonition-title">Code Challenge</p>
 <p>Define and read the admin-keyset, create the payments module, and give the admin-keyset access to the module. </p>
 <ul>
-<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/1-module-and-keysets/challenge.pact” target="_blank">Challenge</a></li>
-<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/1-module-and-keysets/solution.pact” target="_blank">Solution</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/1-module-and-keysets/challenge.pact" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/1-module-and-keysets/solution.pact" target="_blank">Solution</a></li>
 </ul>
 </div>
 <div class="admonition note">
@@ -899,8 +896,8 @@
 <p class="admonition-title">Code Challenge</p>
 <p>Define a schema and table with columns <strong>balance</strong> and <strong>keyset</strong>.</p>
 <ul>
-<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/2-schema-and-table/challenge.pact” target="_blank">Challenge</a></li>
-<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/2-schema-and-table/solution.pact” target="_blank">Solution</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/2-schema-and-table/challenge.pact" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/2-schema-and-table/solution.pact" target="_blank">Solution</a></li>
 </ul>
 </div>
 <div class="admonition note">
@@ -912,7 +909,7 @@
 <p>This smart contract will contain 3 functions create-account, get-balance, and pay. Each of these are essential functions to allow users to manage their accounts. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can review each of the function types in the <a href=“https://pactlang.org/beginner/pact-schemas-and-tables/#table-built-in-functions” target="_blank">Schemas and Tables Tutorial</a> as well as the <a href=“https://pactlang.org/beginner/pact-language-basics/#built-in-functions” target="_blank">Pact Language Basics Tutorial</a>.</p>
+<p>You can review each of the function types in the <a href="https://pactlang.org/beginner/pact-schemas-and-tables/#table-built-in-functions" target="_blank">Schemas and Tables Tutorial</a> as well as the <a href="https://pactlang.org/beginner/pact-language-basics/#built-in-functions" target="_blank">Pact Language Basics Tutorial</a>.</p>
 </div>
 <h3 id="31-create-account"><strong>3.1 Create Account</strong><a class="headerlink" href="#31-create-account" title="Permanent link">&para;</a></h3>
 <p>First, add a function that allows the administrator to create accounts. This will allow you to add as many accounts as you’d like.</p>
@@ -920,13 +917,13 @@
 <p class="admonition-title">Code Challenge</p>
 <p>Create a function <strong>create-account</strong> that allows administrator to create accounts.</p>
 <ul>
-<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.1-create-account/challenge.pact” target="_blank">Challenge</a></li>
-<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.1-create-account/solution.pact” target="_blank">Solution</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.1-create-account/challenge.pact" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.1-create-account/solution.pact" target="_blank">Solution</a></li>
 </ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Try using <a href=“https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=enforce#enforce” target="_blank">enforce</a> to regulate who has access to create an account. </p>
+<p>Try using <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=enforce#enforce" target="_blank">enforce</a> to regulate who has access to create an account. </p>
 </div>
 <h3 id="32-get-balance"><strong>3.2 Get Balance</strong><a class="headerlink" href="#32-get-balance" title="Permanent link">&para;</a></h3>
 <p>Now that you can create accounts, it is helpful to be able to view the balance of these accounts. In this case, we’ll allow both users and administrators to view the balance. </p>
@@ -934,8 +931,8 @@
 <p class="admonition-title">Code Challenge</p>
 <p>Create a function <strong>get-balance</strong> that allows administrators and users to view the balance of their account.</p>
 <ul>
-<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.2-function-get-balance/challenge.pact” target="_blank">Challenge</a></li>
-<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.2-function-get-balance/solution.pact” target="_blank">Solution</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.2-function-get-balance/challenge.pact" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.2-function-get-balance/solution.pact" target="_blank">Solution</a></li>
 </ul>
 </div>
 <h3 id="33-pay"><strong>3.3 Pay</strong><a class="headerlink" href="#33-pay" title="Permanent link">&para;</a></h3>
@@ -944,8 +941,8 @@
 <p class="admonition-title">Code Challenge</p>
 <p>Create a function <strong>pay</strong> that allows an account to pay another account.</p>
 <ul>
-<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.3-function-pay/challenge.pact” target="_blank">Challenge</a></li>
-<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.3-function-pay/solution.pact” target="_blank">Solution</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.3-function-pay/challenge.pact" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.3-function-pay/solution.pact" target="_blank">Solution</a></li>
 </ul>
 </div>
 <hr />
@@ -955,8 +952,8 @@
 <p class="admonition-title">Code Challenge</p>
 <p>Create the <strong>payments-table</strong>.</p>
 <ul>
-<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/4-create-table/challenge.pact” target="_blank">Challenge</a></li>
-<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/4-create-table/solution.pact” target="_blank">Solution</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/4-create-table/challenge.pact" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/4-create-table/solution.pact" target="_blank">Solution</a></li>
 </ul>
 </div>
 <div class="admonition note">
@@ -974,8 +971,8 @@
 <p class="admonition-title">Code Challenge</p>
 <p>Call the <strong>create-account</strong> function to create accounts for <strong>Sarah</strong> and <strong>James</strong>.</p>
 <ul>
-<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/5-create-accounts/challenge.pact” target="_blank">Challenge</a></li>
-<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/5-create-accounts/solution.pact” target="_blank">Solution</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/5-create-accounts/challenge.pact" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/5-create-accounts/solution.pact" target="_blank">Solution</a></li>
 </ul>
 </div>
 <hr />
@@ -985,8 +982,8 @@
 <p class="admonition-title">Code Challenge</p>
 <p>Use the pay function to transfer <strong>25.0</strong> to <strong>James</strong> from <strong>Sarah’s</strong> account. After making the payment, read the balance of both Sarah and James. </p>
 <ul>
-<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/6-make-payment/challenge.pact” target="_blank">Challenge</a></li>
-<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/6-make-payment/solution.pact” target="_blank">Solution</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/6-make-payment/challenge.pact" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/6-make-payment/solution.pact" target="_blank">Solution</a></li>
 </ul>
 </div>
 <hr />
