@@ -54,11 +54,12 @@ nav:
         - 'Modules': './beginner/pact-modules.md'
         - 'Keysets': './beginner/pact-keysets.md'
         - 'Schemas and Tables': './beginner/pact-schemas-and-tables.md'
-        # - 'Accounts and Transfers': './beginner/pact-accounts-and-transfers.md'
+        - 'Accounts and Transfers': './beginner/pact-accounts-and-transfers.md'
         # - 'Contract Interaction': './beginner/pact-contract-interaction.md'
         - 'Atom SDK': './beginner/pact-on-atom-sdk.md'
         # - 'Testing in the SDK': './beginner/testing-in-the-sdk.md'
         - 'Project: Loans': './beginner/project-loans.md'
+        
       
 - Intermediate:
         - 'Coming Soon': './intermediate/coming-soon.md'        

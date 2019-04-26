@@ -1,6 +1,6 @@
 # Pact Development on Atom SDK
 
-This tutorial will get you up and running with the Pact programming language on the Atom SDK.
+Welcome to this tutorial on Pact Development on Atom SDK! 
 
 **Topics covered in this tutorial**
 
