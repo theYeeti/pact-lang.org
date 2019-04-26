@@ -238,12 +238,16 @@ First, you’ll need to create a function to create a loan.
 
 Creating a loan can be done by populating specific columns with the appropriate loan data. Take a look at the tables below to see each of the columns that you will insert data into. 
 
+**loans-table**
+
 | column-name      | value       |
 |------------------|-------------|
 | loanName         | loanName    |
 | entityName       | entityName  |
 | loanAmount       | loanAmount  |
 | Status           | INITIATED   |
+
+**loan-inventory-table**
 
 | column-name      | value       |
 |------------------|-------------|
