@@ -1,0 +1,1102 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Pact Developer Tutorials">
+      
+      
+      
+        <meta name="author" content="Kadena">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+    
+    
+      
+        <title>Accounts and Transfers - Pact Developer Tutorials</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#00bcd4">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.8c900955.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica:300,400,400i,700|Helvetica">
+        <style>body,input{font-family:"Helvetica","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Helvetica","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="cyan" data-md-color-accent="cyan">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#pact-accounts-and-transfers" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Pact Developer Tutorials" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Pact Developer Tutorials
+              </span>
+              <span class="md-header-nav__topic">
+                Accounts and Transfers
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/kadena-io/pact/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      kadena-io/pact
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../welcome-to-pact/" title="Beginner" class="md-tabs__link md-tabs__link--active">
+          Beginner
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../intermediate/coming-soon/" title="Intermediate" class="md-tabs__link">
+          Intermediate
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../advanced/coming-soon/" title="Advanced" class="md-tabs__link">
+          Advanced
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Pact Developer Tutorials" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Pact Developer Tutorials
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/kadena-io/pact/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      kadena-io/pact
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Beginner
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Beginner
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../welcome-to-pact/" title="Welcome to Pact" class="md-nav__link">
+      Welcome to Pact
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../online-editor/" title="Online Editor" class="md-nav__link">
+      Online Editor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hello-world-with-pact/" title="Hello World" class="md-nav__link">
+      Hello World
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-language-basics/" title="Language Basics" class="md-nav__link">
+      Language Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-modules/" title="Modules" class="md-nav__link">
+      Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-keysets/" title="Keysets" class="md-nav__link">
+      Keysets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-schemas-and-tables/" title="Schemas and Tables" class="md-nav__link">
+      Schemas and Tables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Accounts and Transfers
+      </label>
+    
+    <a href="./" title="Accounts and Transfers" class="md-nav__link md-nav__link--active">
+      Accounts and Transfers
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-overview" title="Project Overview" class="md-nav__link">
+    Project Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-environment-setup" title="Project Environment Setup" class="md-nav__link">
+    Project Environment Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-module-and-keyset" title="1. Module and Keyset" class="md-nav__link">
+    1. Module and Keyset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-define-schema-and-table" title="2. Define Schema and Table" class="md-nav__link">
+    2. Define Schema and Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-functions" title="3. Functions" class="md-nav__link">
+    3. Functions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-create-account" title="3.1 Create Account" class="md-nav__link">
+    3.1 Create Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-get-balance" title="3.2 Get Balance" class="md-nav__link">
+    3.2 Get Balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-pay" title="3.3 Pay" class="md-nav__link">
+    3.3 Pay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-create-table" title="4. Create Table" class="md-nav__link">
+    4. Create Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-create-accounts" title="5. Create Accounts" class="md-nav__link">
+    5. Create Accounts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-make-payment" title="6. Make Payment" class="md-nav__link">
+    6. Make Payment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploy-the-smart-contract" title="Deploy the Smart Contract" class="md-nav__link">
+    Deploy the Smart Contract
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review" title="Review" class="md-nav__link">
+    Review
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-on-atom-sdk/" title="Atom SDK" class="md-nav__link">
+      Atom SDK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../project-loans/" title="Project: Loans" class="md-nav__link">
+      Project: Loans
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Intermediate
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Intermediate
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../intermediate/coming-soon/" title="Coming Soon" class="md-nav__link">
+      Coming Soon
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/coming-soon/" title="Coming Soon" class="md-nav__link">
+      Coming Soon
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-overview" title="Project Overview" class="md-nav__link">
+    Project Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-environment-setup" title="Project Environment Setup" class="md-nav__link">
+    Project Environment Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-module-and-keyset" title="1. Module and Keyset" class="md-nav__link">
+    1. Module and Keyset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-define-schema-and-table" title="2. Define Schema and Table" class="md-nav__link">
+    2. Define Schema and Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-functions" title="3. Functions" class="md-nav__link">
+    3. Functions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-create-account" title="3.1 Create Account" class="md-nav__link">
+    3.1 Create Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-get-balance" title="3.2 Get Balance" class="md-nav__link">
+    3.2 Get Balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-pay" title="3.3 Pay" class="md-nav__link">
+    3.3 Pay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-create-table" title="4. Create Table" class="md-nav__link">
+    4. Create Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-create-accounts" title="5. Create Accounts" class="md-nav__link">
+    5. Create Accounts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-make-payment" title="6. Make Payment" class="md-nav__link">
+    6. Make Payment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploy-the-smart-contract" title="Deploy the Smart Contract" class="md-nav__link">
+    Deploy the Smart Contract
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review" title="Review" class="md-nav__link">
+    Review
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kadena-io/pact/edit/master/docs/beginner/pact-accounts-and-transfers.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="pact-accounts-and-transfers">Pact Accounts and Transfers<a class="headerlink" href="#pact-accounts-and-transfers" title="Permanent link">&para;</a></h1>
+<p>Welcome to this tutorial on Accounts and Transfers with Pact.</p>
+<p><strong>This tutorial covers the following topics</strong></p>
+<ul>
+<li>Project Environment Setup</li>
+<li>Module and Keysets</li>
+<li>Define Schema and Table</li>
+<li>Functions</li>
+<li>Create Table</li>
+<li>Create Accounts</li>
+<li>Make Payments</li>
+</ul>
+<p>The goal of this tutorial is to help you build an application that transfers value between two accounts. To do this, you’ll build a smart contract that implements this functionality named Simple Payments. This is an important function of smart contracts and will set you up to create more complex applications using accounts and transfers.</p>
+<div class="admonition summary">
+<p class="admonition-title">Key Takeaway</p>
+<p>Accounts and transfers are a key feature of many smart contracts. Using Pact, you can define tables that track account keysets and values, allowing you to set and update these values as needed.</p>
+</div>
+<hr />
+<h2 id="project-overview"><strong>Project Overview</strong><a class="headerlink" href="#project-overview" title="Permanent link">&para;</a></h2>
+<p>To get started with this application, take a look at the visual overview. This provides a summary of each of the features you will be creating for the simple payment smart contract.</p>
+<p><img alt="1-project-overview" src="../../assets/beginner-tutorials/pact-accounts-and-transfers/1-project-overview.png" /></p>
+<p>As you can see, you will create a payments module including 3 functions; <strong>create-account</strong>, <strong>get-balance</strong>, and <strong>pay</strong>. These functions will store data on a <strong>payments-table</strong> which manages payments between 2 accounts <strong>Sarah</strong> and <strong>James</strong>.</p>
+<p>Now that you have a basic understanding of the requirements, you can start building the project for yourself!</p>
+<hr />
+<h2 id="project-environment-setup"><strong>Project Environment Setup</strong><a class="headerlink" href="#project-environment-setup" title="Permanent link">&para;</a></h2>
+<p>To get started, choose a project directory and clone the project resources into your local environment. </p>
+<div class="codehilite"><pre><span></span>git clone https://github.com/kadena-io/pact-lang.org-code.git
+</pre></div>
+
+
+<p>Change into the <strong>loans</strong> directory to begin working on this project.</p>
+<div class="codehilite"><pre><span></span>cd pact-lang.org-code/payments
+</pre></div>
+
+
+<p>Open this directory in atom to see each of the files provided.</p>
+<div class="codehilite"><pre><span></span>atom .
+</pre></div>
+
+
+<p>As you’ll see, there are a few separate folders available to you.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>start</strong></td>
+<td>Provides a starting point with all comments for every challenge.</td>
+</tr>
+<tr>
+<td><strong>challenges</strong></td>
+<td>Challenges in the demo are broken out into separate files, allowing you to build your application over time while having the flexibility to experiment with your own ideas.</td>
+</tr>
+<tr>
+<td><strong>finish</strong></td>
+<td>Includes all comments and code for the final application.</td>
+</tr>
+<tr>
+<td><strong>loans</strong></td>
+<td>Includes final application without the challenge comments.</td>
+</tr>
+</tbody>
+</table>
+<p>Each of these options are meant to help support you as you work through these challenges. Feel free to use them however you’d like to.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For an overview of each of the challenges, start <a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/1-start/payments.pact” target="_blank">here</a>, and if you’d like to view the complete smart contract, you can go here<a href=“LINK” target="_blank">https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/3-finish/payments.pact</a>.</p>
+</div>
+<hr />
+<h2 id="1-module-and-keyset"><strong>1. Module and Keyset</strong><a class="headerlink" href="#1-module-and-keyset" title="Permanent link">&para;</a></h2>
+<p>The first step is to set up the module and keysets for the smart contract. </p>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Define and read the admin-keyset, create the payments module, and give the admin-keyset access to the module. </p>
+<ul>
+<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/1-module-and-keysets/challenge.pact” target="_blank">Challenge</a></li>
+<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/1-module-and-keysets/solution.pact” target="_blank">Solution</a></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you’re unfamiliar with modules and keyset, our <a href="https://pactlang.org/beginner/pact-modules/" target="_blank">Pact Modules Tutorial</a> is a great place to get started. </p>
+</div>
+<hr />
+<h2 id="2-define-schema-and-table"><strong>2. Define Schema and Table</strong><a class="headerlink" href="#2-define-schema-and-table" title="Permanent link">&para;</a></h2>
+<p>The next step is to define the schema and table for the smart contract. </p>
+<p>The <strong>payments-table</strong>, will keep track of the balance of the accounts and associate that to the account’s keyset. </p>
+<p><strong>Payments Table</strong></p>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>fieldtype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>balance</td>
+<td>decimal</td>
+</tr>
+<tr>
+<td>keyset</td>
+<td>keyset</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Define a schema and table with columns <strong>balance</strong> and <strong>keyset</strong>.</p>
+<ul>
+<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/2-schema-and-table/challenge.pact” target="_blank">Challenge</a></li>
+<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/2-schema-and-table/solution.pact” target="_blank">Solution</a></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Schema definitions are introduced in the <a href="https://pactlang.org/beginner/pact-schemas-and-tables/#define-schemas" target="_blank">Pact Schemas and Tables Tutorial</a>.</p>
+</div>
+<hr />
+<h2 id="3-functions"><strong>3. Functions</strong><a class="headerlink" href="#3-functions" title="Permanent link">&para;</a></h2>
+<p>This smart contract will contain 3 functions create-account, get-balance, and pay. Each of these are essential functions to allow users to manage their accounts. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can review each of the function types in the <a href=“https://pactlang.org/beginner/pact-schemas-and-tables/#table-built-in-functions” target="_blank">Schemas and Tables Tutorial</a> as well as the <a href=“https://pactlang.org/beginner/pact-language-basics/#built-in-functions” target="_blank">Pact Language Basics Tutorial</a>.</p>
+</div>
+<h3 id="31-create-account"><strong>3.1 Create Account</strong><a class="headerlink" href="#31-create-account" title="Permanent link">&para;</a></h3>
+<p>First, add a function that allows the administrator to create accounts. This will allow you to add as many accounts as you’d like.</p>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Create a function <strong>create-account</strong> that allows administrator to create accounts.</p>
+<ul>
+<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.1-create-account/challenge.pact” target="_blank">Challenge</a></li>
+<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.1-create-account/solution.pact” target="_blank">Solution</a></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Try using <a href=“https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=enforce#enforce” target="_blank">enforce</a> to regulate who has access to create an account. </p>
+</div>
+<h3 id="32-get-balance"><strong>3.2 Get Balance</strong><a class="headerlink" href="#32-get-balance" title="Permanent link">&para;</a></h3>
+<p>Now that you can create accounts, it is helpful to be able to view the balance of these accounts. In this case, we’ll allow both users and administrators to view the balance. </p>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Create a function <strong>get-balance</strong> that allows administrators and users to view the balance of their account.</p>
+<ul>
+<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.2-function-get-balance/challenge.pact” target="_blank">Challenge</a></li>
+<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.2-function-get-balance/solution.pact” target="_blank">Solution</a></li>
+</ul>
+</div>
+<h3 id="33-pay"><strong>3.3 Pay</strong><a class="headerlink" href="#33-pay" title="Permanent link">&para;</a></h3>
+<p>Next, you’ll create the function that allows one account to pay another account. This allows accounts to transfer value from their account to another to begin making payments and managing their finances.</p>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Create a function <strong>pay</strong> that allows an account to pay another account.</p>
+<ul>
+<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.3-function-pay/challenge.pact” target="_blank">Challenge</a></li>
+<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.3-function-pay/solution.pact” target="_blank">Solution</a></li>
+</ul>
+</div>
+<hr />
+<h2 id="4-create-table"><strong>4. Create Table</strong><a class="headerlink" href="#4-create-table" title="Permanent link">&para;</a></h2>
+<p>You have now completed the module. Outside of the module you can create the table that you defined earlier.</p>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Create the <strong>payments-table</strong>.</p>
+<ul>
+<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/4-create-table/challenge.pact” target="_blank">Challenge</a></li>
+<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/4-create-table/solution.pact” target="_blank">Solution</a></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>At this point you have completed the module. You will notice the previous challenge containing a final parenthesis to close out the module. The remaining steps are meant to help you call functions from within the module you created to put your smart contract to use. </p>
+</div>
+<hr />
+<h2 id="5-create-accounts"><strong>5. Create Accounts</strong><a class="headerlink" href="#5-create-accounts" title="Permanent link">&para;</a></h2>
+<p>The next step is to create the accounts that will transfer value.</p>
+<p>For this tutorial, create 2 accounts. 
+<em> Sarah
+</em> James</p>
+<p>To do this, you use the <strong>create-account</strong> function built earlier. This function takes 3 arguments; <strong>id</strong>, <strong>initial-balance</strong>, and <strong>keyset</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Call the <strong>create-account</strong> function to create accounts for <strong>Sarah</strong> and <strong>James</strong>.</p>
+<ul>
+<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/5-create-accounts/challenge.pact” target="_blank">Challenge</a></li>
+<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/5-create-accounts/solution.pact” target="_blank">Solution</a></li>
+</ul>
+</div>
+<hr />
+<h2 id="6-make-payment"><strong>6. Make Payment</strong><a class="headerlink" href="#6-make-payment" title="Permanent link">&para;</a></h2>
+<p>The final step is to make a payment from one account to another. You can do this using the pay function created earlier. </p>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Use the pay function to transfer <strong>25.0</strong> to <strong>James</strong> from <strong>Sarah’s</strong> account. After making the payment, read the balance of both Sarah and James. </p>
+<ul>
+<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/6-make-payment/challenge.pact” target="_blank">Challenge</a></li>
+<li><a href=“https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/6-make-payment/solution.pact” target="_blank">Solution</a></li>
+</ul>
+</div>
+<hr />
+<h3 id="deploy-the-smart-contract"><strong>Deploy the Smart Contract</strong><a class="headerlink" href="#deploy-the-smart-contract" title="Permanent link">&para;</a></h3>
+<p>Congratulations, at this point you have completed the Simple Payment smart contract! </p>
+<p>If you’d like, you can try deploying this smart contract. You can deploy this contract using the <strong>Pact Onine Editor</strong> or from the <strong>Pact Atom SDK</strong>. If you choose to deploy this locally, you’ll need the REPL file which you can find inside of the repository you cloned.</p>
+<p>For help getting started and deploying in each of these environments, try the following tutorials. </p>
+<ul>
+<li><a href="https://pactlang.org/beginner/online-editor/" target="_blank">Pact Online Editor</a></li>
+<li><a href="https://pactlang.org/beginner/pact-on-atom-sdk/" target="_blank">Pact Development on Atom SDK Tutorial</a></li>
+</ul>
+<hr />
+<h2 id="review"><strong>Review</strong><a class="headerlink" href="#review" title="Permanent link">&para;</a></h2>
+<p>Congratulations on completing the <strong>Accounts and Transfers Tutorial</strong>!</p>
+<p>In this tutorial, you built a <strong>Simple Payment</strong> application that create accounts, view account balances, and make payments between accounts. This is an important function of smart contracts and will set you up to create more complex applications using accounts and transfers. </p>
+<p>This is a key feature of many smart contracts and can be extended into all types of use cases. Take some time now to experiment with these features to try them out in creative new ways.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../pact-schemas-and-tables/" title="Schemas and Tables" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Schemas and Tables
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../pact-on-atom-sdk/" title="Atom SDK" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Atom SDK
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 - 2019 Kadena
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/kadena-io" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/kadena_io" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.b41f3d20.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-127512784-3","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+  </body>
+</html>
