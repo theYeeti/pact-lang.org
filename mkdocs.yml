@@ -58,6 +58,7 @@ nav:
         # - 'Contract Interaction': './beginner/pact-contract-interaction.md'
         - 'Atom SDK': './beginner/pact-on-atom-sdk.md'
         # - 'Testing in the SDK': './beginner/testing-in-the-sdk.md'
+        - 'Project: Loans': './beginner/project-loans.md'
       
 - Intermediate:
         - 'Coming Soon': './intermediate/coming-soon.md'        
