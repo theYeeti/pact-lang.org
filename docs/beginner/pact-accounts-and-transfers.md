@@ -198,7 +198,7 @@ ___
 
 Congratulations, at this point you have completed the Simple Payment smart contract! 
 
-If you’d like, you can try deploying this smart contract. You can deploy this contract using the **Pact Onine Editor** or from the **Pact Atom SDK**. If you choose to deploy this locally, you’ll need the REPL file which you can find inside of the repository you cloned.
+If you’d like, you can try deploying this smart contract. You can deploy this contract using the **Pact Online Editor** or from the **Pact Atom SDK**. If you choose to deploy this locally, you’ll need the REPL file which you can find inside of the repository you cloned.
 
 For help getting started and deploying in each of these environments, try the following tutorials. 
 
@@ -211,7 +211,7 @@ ___
 
 Congratulations on completing the **Accounts and Transfers Tutorial**!
 
-In this tutorial, you built a **Simple Payment** application that create accounts, view account balances, and make payments between accounts. This is an important function of smart contracts and will set you up to create more complex applications using accounts and transfers. 
+In this tutorial, you built a **Simple Payment** application that creates accounts, views account balances, and makes payments between accounts. This is an important function of smart contracts and will set you up to create more complex applications using accounts and transfers. 
 
 This is a key feature of many smart contracts and can be extended into all types of use cases. Take some time now to experiment with these features to try them out in creative new ways.
 
