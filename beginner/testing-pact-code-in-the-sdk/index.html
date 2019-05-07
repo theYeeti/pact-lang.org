@@ -1,0 +1,1440 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Pact Developer Tutorials">
+      
+      
+      
+        <meta name="author" content="Kadena">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+    
+    
+      
+        <title>Test in the SDK - Pact Developer Tutorials</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#00bcd4">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.8c900955.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica:300,400,400i,700|Helvetica">
+        <style>body,input{font-family:"Helvetica","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Helvetica","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="cyan" data-md-color-accent="cyan">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#testing-pact-code-in-the-sdk" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Pact Developer Tutorials" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Pact Developer Tutorials
+              </span>
+              <span class="md-header-nav__topic">
+                Test in the SDK
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/kadena-io/pact/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      kadena-io/pact
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../welcome-to-pact/" title="Beginner" class="md-tabs__link md-tabs__link--active">
+          Beginner
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../intermediate/coming-soon/" title="Intermediate" class="md-tabs__link">
+          Intermediate
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../advanced/coming-soon/" title="Advanced" class="md-tabs__link">
+          Advanced
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Pact Developer Tutorials" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Pact Developer Tutorials
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/kadena-io/pact/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      kadena-io/pact
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Beginner
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Beginner
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../welcome-to-pact/" title="Welcome to Pact" class="md-nav__link">
+      Welcome to Pact
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../online-editor/" title="Online Editor" class="md-nav__link">
+      Online Editor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hello-world-with-pact/" title="Hello World" class="md-nav__link">
+      Hello World
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-language-basics/" title="Language Basics" class="md-nav__link">
+      Language Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-modules/" title="Modules" class="md-nav__link">
+      Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-keysets/" title="Keysets" class="md-nav__link">
+      Keysets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-schemas-and-tables/" title="Schemas and Tables" class="md-nav__link">
+      Schemas and Tables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-accounts-and-transfers/" title="Accounts and Transfers" class="md-nav__link">
+      Accounts and Transfers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-on-atom-sdk/" title="Atom SDK" class="md-nav__link">
+      Atom SDK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Test in the SDK
+      </label>
+    
+    <a href="./" title="Test in the SDK" class="md-nav__link md-nav__link--active">
+      Test in the SDK
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" title="Pre-requisites" class="md-nav__link">
+    Pre-requisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repl-overview" title="REPL Overview" class="md-nav__link">
+    REPL Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparison-to-online-editor" title="Comparison to Online Editor" class="md-nav__link">
+    Comparison to Online Editor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-functions" title="Built-in Functions" class="md-nav__link">
+    Built-in Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-environment-setup" title="Project Environment Setup" class="md-nav__link">
+    Project Environment Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-load-environment-data" title="1. Load Environment Data" class="md-nav__link">
+    1. Load Environment Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-load-environment-data_1" title="1. Load Environment Data" class="md-nav__link">
+    1. Load Environment Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-load-pact-file" title="2. Load Pact File" class="md-nav__link">
+    2. Load Pact File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-call-functions" title="3. Call Functions" class="md-nav__link">
+    3. Call Functions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-generate-data" title="3.1 Generate Data" class="md-nav__link">
+    3.1 Generate Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-read-loans" title="3.2. Read Loans" class="md-nav__link">
+    3.2. Read Loans
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-repl-file" title="Run REPL File" class="md-nav__link">
+    Run REPL File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-error-messages" title="Built-in Error Messages" class="md-nav__link">
+    Built-in Error Messages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pact-examples" title="Pact Examples" class="md-nav__link">
+    Pact Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review" title="Review" class="md-nav__link">
+    Review
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../project-rotatable-wallet/" title="Project: Rotatable Wallet" class="md-nav__link">
+      Project: Rotatable Wallet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../project-loans/" title="Project: Loans" class="md-nav__link">
+      Project: Loans
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Intermediate
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Intermediate
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../intermediate/coming-soon/" title="Coming Soon" class="md-nav__link">
+      Coming Soon
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/coming-soon/" title="Coming Soon" class="md-nav__link">
+      Coming Soon
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" title="Pre-requisites" class="md-nav__link">
+    Pre-requisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repl-overview" title="REPL Overview" class="md-nav__link">
+    REPL Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparison-to-online-editor" title="Comparison to Online Editor" class="md-nav__link">
+    Comparison to Online Editor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-functions" title="Built-in Functions" class="md-nav__link">
+    Built-in Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-environment-setup" title="Project Environment Setup" class="md-nav__link">
+    Project Environment Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-load-environment-data" title="1. Load Environment Data" class="md-nav__link">
+    1. Load Environment Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-load-environment-data_1" title="1. Load Environment Data" class="md-nav__link">
+    1. Load Environment Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-load-pact-file" title="2. Load Pact File" class="md-nav__link">
+    2. Load Pact File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-call-functions" title="3. Call Functions" class="md-nav__link">
+    3. Call Functions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-generate-data" title="3.1 Generate Data" class="md-nav__link">
+    3.1 Generate Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-read-loans" title="3.2. Read Loans" class="md-nav__link">
+    3.2. Read Loans
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-repl-file" title="Run REPL File" class="md-nav__link">
+    Run REPL File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-error-messages" title="Built-in Error Messages" class="md-nav__link">
+    Built-in Error Messages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pact-examples" title="Pact Examples" class="md-nav__link">
+    Pact Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review" title="Review" class="md-nav__link">
+    Review
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kadena-io/pact/edit/master/docs/beginner/testing-pact-code-in-the-sdk.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="testing-pact-code-in-the-sdk">Testing Pact Code in the SDK<a class="headerlink" href="#testing-pact-code-in-the-sdk" title="Permanent link">&para;</a></h1>
+<p>Welcome to this introduction to Testing in the SDK!</p>
+<p><strong>This tutorial covers the following topics</strong></p>
+<ul>
+<li>REPL Overview</li>
+<li>Built-in Functions</li>
+<li>Load Environment Data</li>
+<li>Note on Transactions</li>
+<li>Load Pact File</li>
+<li>Call Functions</li>
+<li>Run REPL file</li>
+<li>Built-in Error Messages</li>
+</ul>
+<p>In this tutorial, you will learn the basics of testing in the SDK to build your own REPL file. This is a great start to begin testing the smart contracts you build locally. </p>
+<div class="admonition summary">
+<p class="admonition-title">Key Takeaway</p>
+<p>Pact and the Atom SDK provide a powerful testing environment that allows you to build and test Pact programs locally.</p>
+</div>
+<h2 id="pre-requisites"><strong>Pre-requisites</strong><a class="headerlink" href="#pre-requisites" title="Permanent link">&para;</a></h2>
+<p>Before starting this tutorial, it helps to have completed the following pre-requisites.</p>
+<ul>
+<li>
+<p><a href="https://pactlang.org/beginner/pact-on-atom-sdk/" target="_blank">Pact Development on Atom SDK</a>: The SDK is required for testing in the SDK. You can get up and running with the SDK using this tutorial.</p>
+</li>
+<li>
+<p><a href="https://pactlang.org/beginner/project-loans/" target="_blank">Project: Loans</a>: You will be building a REPL file for the Loans project covered in a separate tutorial. This isn’t required but is a helpful way to better understand the smart contract used throughout this tutorial.</p>
+</li>
+</ul>
+<hr />
+<h2 id="repl-overview"><strong>REPL Overview</strong><a class="headerlink" href="#repl-overview" title="Permanent link">&para;</a></h2>
+<p>REPL files are used to load and run Pact files using the SDK. </p>
+<p>REPL stands for read - eval - print - loop. This acronym refers to the idea that given a Pact file, a REPL file is responsible for reading, evaluating, printing, and looping through the code as needed to both run and provide the output of the Pact file.</p>
+<p>These are a common part of LISP-like languages such as Pact and they allow you to quickly test the smart contracts you build.</p>
+<p>A simple way to load a REPL file is from your terminal as shown below. </p>
+<p><img alt="1-repl-overview" src="../../assets/beginner-tutorials/test-in-the-sdk/1-repl-overview.png" /></p>
+<p>Using your terminal window, you will load the REPL file. This includes code that both loads and runs the pact file. The pact file then returns data to the REPL file which  sends the output to your terminal window. </p>
+<h3 id="comparison-to-online-editor"><strong>Comparison to Online Editor</strong><a class="headerlink" href="#comparison-to-online-editor" title="Permanent link">&para;</a></h3>
+<p>To better grasp the importance of the REPL file, it helps to look at a tool you may be more familiar with - the <a href="https://pact.kadena.io/" target="_blank">online editor</a>.</p>
+<p><img alt="2-online-editor" src="../../assets/beginner-tutorials/test-in-the-sdk/2-online-editor.png" /></p>
+<p>Many features provided by the online editor’s UI are things that you will need to code for yourself in a local or production environment. Things like loading the pact file into the REPL, setting up the environment data and keys, and making function calls will all be done from within the REPL file.</p>
+<p><img alt="3-online-editor-callouts" src="../../assets/beginner-tutorials/test-in-the-sdk/3-online-editor-callouts.png" /></p>
+<p>You will complete all of this and other important testing features using the Pact REPL only built-in functions.</p>
+<hr />
+<h2 id="built-in-functions"><strong>Built-in Functions</strong><a class="headerlink" href="#built-in-functions" title="Permanent link">&para;</a></h2>
+<p>When building a REPL file, there are many built-in functions available to you. </p>
+<p>These functions are known as the <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=built%20in%20functions#repl-only-functions" target="_blank">REPL only functions</a> because they cannot be used in pact files. While all of these built-in functions are valuable, there are some that are more commonly used. </p>
+<p>Take some time now to review each of the functions in the documentation as well as the summary of commonly used functions provided below.</p>
+<table>
+<thead>
+<tr>
+<th>function</th>
+<th>purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html#begin-tx" target="_blank">begin-tx</a></td>
+<td>Begin a transaction.</td>
+</tr>
+<tr>
+<td><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html#commit-tx" target="_blank">commit-tx</a></td>
+<td>Commit a transaction.</td>
+</tr>
+<tr>
+<td><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html#env-data" target="_blank">env-data</a></td>
+<td>Set transaction data.</td>
+</tr>
+<tr>
+<td><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html#env-keys" target="_blank">env-keys</a></td>
+<td>Set transaction signature keys.</td>
+</tr>
+<tr>
+<td><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html#expect" target="_blank">expect</a></td>
+<td>Evaluate expression and verify that it equals what is expected.</td>
+</tr>
+<tr>
+<td><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html#load" target="_blank">load</a></td>
+<td>Load and evaluate a file.</td>
+</tr>
+</tbody>
+</table>
+<p>Coming up, you will create a .REPL file for yourself that uses many of the functions listed above.</p>
+<hr />
+<h2 id="project-environment-setup"><strong>Project Environment Setup</strong><a class="headerlink" href="#project-environment-setup" title="Permanent link">&para;</a></h2>
+<p>Throughout the rest of this tutorial, you will build a REPL file for yourself. </p>
+<p>To follow along from your local environment, clone the repo pact-lang.org-code GitHub repo. </p>
+<div class="codehilite"><pre><span></span>git clone https://github.com/kadena-io/pact-lang.org-code.git
+</pre></div>
+
+
+<p>Change into the <strong>test-in-sdk</strong> directory to begin working on this project.</p>
+<div class="codehilite"><pre><span></span>cd pact-lang.org-code/test-in-sdk
+</pre></div>
+
+
+<p>Open this directory in atom to see each of the files provided.</p>
+<div class="codehilite"><pre><span></span>atom .
+</pre></div>
+
+
+<p>As you’ll see, there are a few separate folders available to you.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>start</strong></td>
+<td>Provides a starting point with all comments for every challenge.</td>
+</tr>
+<tr>
+<td><strong>challenges</strong></td>
+<td>Challenges in the demo are broken out into separate files, allowing you to build your application over time while having the flexibility to experiment with your own ideas.</td>
+</tr>
+<tr>
+<td><strong>finish</strong></td>
+<td>Includes all comments and code for the final application.</td>
+</tr>
+<tr>
+<td><strong>loans</strong></td>
+<td>Includes final application without the challenge comments.</td>
+</tr>
+</tbody>
+</table>
+<p>Each of these options are meant to help support you as you work through these challenges. Feel free to use them however you’d like.</p>
+<hr />
+<h2 id="1-load-environment-data"><strong>1. Load Environment Data</strong><a class="headerlink" href="#1-load-environment-data" title="Permanent link">&para;</a></h2>
+<p>The first step in creating a .repl file is to load the environment keys and data. </p>
+<p>This is similar to what you have seen in the <a href="https://pact.kadena.io/" target="_blank">online editor</a>. Rather than creating this data from the UI like you did before, you now need to program this information into your .repl file. </p>
+<p>The online editor allowed you to create keys and keysets using the tool panel as shown below. The <strong>result tab</strong> shows data similar to what you will be writing into your .repl file. </p>
+<p><img alt="4-keysets" src="../../assets/beginner-tutorials/test-in-the-sdk/4-keysets.png" /></p>
+<p>You can view the code that represents your keys and keysets using the <strong>Result</strong> tab. </p>
+<p><img alt="5-result" src="../../assets/beginner-tutorials/test-in-the-sdk/5-result.png" /></p>
+<p>To set up this environment using the .repl file, you will use two separate built in functions; <strong>env-keys</strong> and <strong>env-data</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>function</th>
+<th>purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=built%20in%20functions#env-keys" target="_blank">env-keys</a></td>
+<td>Set transaction signature keys.</td>
+</tr>
+<tr>
+<td><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=built%20in%20functions#env-data" target="_blank">env-data</a></td>
+<td>Set transaction JSON data, either as encoded string, or as pact types coerced to JSON.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>env-keys example</strong></p>
+<div class="codehilite"><pre><span></span><span class="p">(</span><span class="nf">env-keys</span> <span class="p">[</span><span class="s">&quot;my-key&quot;</span> <span class="s">&quot;admin-key&quot;</span><span class="p">])</span> <span class="s">&quot;Setting transaction keys&quot;</span>
+</pre></div>
+
+
+<p><strong>env-data example</strong></p>
+<div class="codehilite"><pre><span></span><span class="p">(</span><span class="nf">env-data</span> <span class="p">{</span> <span class="s">&quot;keyset&quot;</span><span class="err">:</span> <span class="p">{</span> <span class="s">&quot;keys&quot;</span><span class="err">:</span> <span class="p">[</span><span class="s">&quot;my-key&quot;</span> <span class="s">&quot;admin-key&quot;</span><span class="p">]</span>, <span class="s">&quot;pred&quot;</span><span class="err">:</span> <span class="s">&quot;keys-any&quot;</span> <span class="p">}</span> <span class="p">})</span>
+<span class="s">&quot;Setting transaction data&quot;</span>
+</pre></div>
+
+
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>For this code challenge, you will use <strong>env-keys</strong> and <strong>env-data</strong> to load the keys and environment data into the .repl file. Use the comments to help guide you, and if you’re unsure how to move forward, take a look at the solution for more details. </p>
+<ul>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/test-in-sdk/2-challenges/1-load-environment-data/challenge.repl" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/test-in-sdk/2-challenges/1-load-environment-data/solution.repl" target="_blank">Solution</a></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Looking at the <strong>loans.pact</strong> file could be a helpful way to understand what you are trying to do in the <strong>loans.repl</strong> file. This file exists in the project directory under <strong>3-finish</strong>.</p>
+</div>
+<hr />
+<h2 id="1-load-environment-data_1"><strong>1. Load Environment Data</strong><a class="headerlink" href="#1-load-environment-data_1" title="Permanent link">&para;</a></h2>
+<p>Before moving on, there’s an important note to make about transactions. </p>
+<p>When working within REPL files, you can make as many calls to the pact code within a transaction as you like. Any command sent to the blockchain is a transaction, but a command too can have multiple calls, for instance, defining a module with <code>module</code> and creating its tables with <code>create-table</code> calls.</p>
+<p>To successfully execute a transaction you need to both begin the transaction and commit the transaction. This is done using <strong>begin-tx</strong> and <strong>commit-tx</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>function</th>
+<th>purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=built%20in%20functions#begin-tx" target="_blank">begin-tx</a></td>
+<td>Begin transaction with optional NAME.</td>
+</tr>
+<tr>
+<td><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=built%20in%20functions#commit-tx" target="_blank">commit-tx</a></td>
+<td>Commit transaction.</td>
+</tr>
+</tbody>
+</table>
+<p>It’s valuable to use these built-in functions to group calls into small transactions within your REPL file. </p>
+<p>Here’s why this is useful.</p>
+<p><strong>Error Example</strong></p>
+<p>Any error that occurs in a transaction will cause it to roll back and fail to run. </p>
+<p>While it's possible to place all of your calls within a single transaction, this isn’t a good habit to get into. This will make it difficult to tell where your file is failing and make it difficult to continue testing.</p>
+<p>For that reason, be sure to break up your test files into smaller transactions. </p>
+<div class="codehilite"><pre><span></span><span class="p">(</span><span class="nf">begin-tx</span><span class="p">)</span>
+<span class="c1">;; This could fail and I would know where the problem is</span>
+<span class="p">(</span><span class="nf">commit-tx</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nf">begin-tx</span><span class="p">)</span>
+<span class="c1">;; This could fail and I would know where the problem is</span>
+<span class="p">(</span><span class="nf">commit-tx</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nf">begin-tx</span><span class="p">)</span>
+<span class="c1">;; This could fail and I would know where the problem is</span>
+<span class="p">(</span><span class="nf">commit-tx</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Transactions can be grouped together however is most convenient for your testing. Try maintaining a logical order in your transactions for ease of maintenance and readability. </p>
+<hr />
+<h2 id="2-load-pact-file"><strong>2. Load Pact File</strong><a class="headerlink" href="#2-load-pact-file" title="Permanent link">&para;</a></h2>
+<p>Pact files are not run by your computer directly, they’re loaded into the .repl file and run from there. Now that you have loaded the environment data, you need to load the pact file into the .repl file. </p>
+<p>This is done using the built-in <strong>load</strong> function.</p>
+<table>
+<thead>
+<tr>
+<th>function</th>
+<th>purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=built%20in%20functions#load" target="_blank">load</a></td>
+<td>Load and evaluate FILE.</td>
+</tr>
+</tbody>
+</table>
+<p>The syntax for this is simple. </p>
+<p><strong>load example</strong></p>
+<div class="codehilite"><pre><span></span><span class="p">(</span><span class="nb">load </span><span class="s">&quot;accounts.pact&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>All you need to do type load then specify the file path as a string. Pact and REPL files are generally kept in the same folder so you usually only need to specify the name of the pact file.</p>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Load the loans.pact file into the REPL.</p>
+<ul>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/test-in-sdk/2-challenges/2-load-pact-file/challenge.repl" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/test-in-sdk/2-challenges/2-load-pact-file/solution.repl" target="_blank">Solution</a></li>
+</ul>
+</div>
+<hr />
+<h2 id="3-call-functions"><strong>3. Call Functions</strong><a class="headerlink" href="#3-call-functions" title="Permanent link">&para;</a></h2>
+<p>Now that the pact file is loaded into the REPL file, you are ready to start calling its functions.</p>
+<p>To do this, specify the module name with <strong>use</strong>, then call the functions from within the module.</p>
+<p><strong>Function Call Example</strong></p>
+<div class="codehilite"><pre><span></span><span class="p">(</span><span class="nf">begin-tx</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">use</span> <span class="nv">module-name</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">function-name</span> <span class="s">&quot;input-1&quot;</span> <span class="s">&quot;input-2&quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">commit-tx</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="31-generate-data"><strong>3.1 Generate Data</strong><a class="headerlink" href="#31-generate-data" title="Permanent link">&para;</a></h3>
+<p>For this code challenge, you will need to make calls to a few functions from the loans project. Here is a brief overview of each of the functions you will call.</p>
+<table>
+<thead>
+<tr>
+<th>function</th>
+<th>purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://pactlang.org/beginner/project-loans/#52-create-a-loan" target="_blank">create-a-loan</a></td>
+<td>Accepts parameters to add the appropriate information to each table</td>
+</tr>
+<tr>
+<td><a href="https://pactlang.org/beginner/project-loans/#53-assign-a-loan" target="_blank">assign-a-loan</a></td>
+<td>Assigns a loan to an entity.</td>
+</tr>
+<tr>
+<td><a href="https://pactlang.org/beginner/project-loans/#54-sell-a-loan" target="_blank">sell-a-loan</a></td>
+<td>Sell a loan and log details in the loan history table.</td>
+</tr>
+</tbody>
+</table>
+<p>Follow the links provided or view the loans.pact file for more details.</p>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Call the <strong>create-a-loan</strong>, <strong>assign-a-loan</strong>, and <strong>sell-a-loan</strong> functions from the loans.pact file and provide your own inputs as needed.</p>
+<ul>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/test-in-sdk/2-challenges/3-call-functions/3.1-generate-data/challenge.repl" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/test-in-sdk/2-challenges/3-call-functions/3.1-generate-data/solution.repl" target="_blank">Solution</a></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you have not already completed the <a href="https://pactlang.org/beginner/project-loans/" target="_blank">Project: Loans tutorial</a>, try working through this tutorial to build the entire Loans smart contract for yourself!</p>
+</div>
+<h3 id="32-read-loans"><strong>3.2. Read Loans</strong><a class="headerlink" href="#32-read-loans" title="Permanent link">&para;</a></h3>
+<p>After calling functions used to create, assign, and sell a loan, you can now read some of the data that you created. Similar to before, you will be calling functions from the loans.pact file. Feel free to reference the previous challenge for guidance. </p>
+<p>Here is a brief overview of the functions you will call in this challenge.</p>
+<table>
+<thead>
+<tr>
+<th>function</th>
+<th>purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://pactlang.org/beginner/project-loans/#59-read-loan-inventory" target="_blank">read-loan-inventory</a></td>
+<td>Reads all loans in the loan inventory table.</td>
+</tr>
+<tr>
+<td><a href="https://pactlang.org/beginner/project-loans/#510-read-loans-with-status" target="_blank">read-loans-with-status</a></td>
+<td>Reads all loans with a specific status.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Call the read-loan-inventory and read-loans-with-status functions from the loans.pact file and provide your inputs as needed.</p>
+<ul>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/test-in-sdk/2-challenges/3-call-functions/3.2-read-loans/challenge.repl" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/test-in-sdk/2-challenges/3-call-functions/3.2-read-loans/solution.repl" target="_blank">Solution</a></li>
+</ul>
+</div>
+<hr />
+<h2 id="run-repl-file"><strong>Run REPL File</strong><a class="headerlink" href="#run-repl-file" title="Permanent link">&para;</a></h2>
+<p>At this point you have completed the REPL file. Congratulations! The last step is to run the file from your terminal to view the output. </p>
+<p>To do this, open your terminal and navigate to the <strong>3-finish</strong> directory from your project folder.</p>
+<div class="codehilite"><pre><span></span>cd 3-finish
+</pre></div>
+
+
+<p>Run pact.</p>
+<div class="codehilite"><pre><span></span>pact
+</pre></div>
+
+
+<p>Loan the loans.repl file</p>
+<div class="codehilite"><pre><span></span>pact&gt; (load &quot;loans.repl&quot;)
+</pre></div>
+
+
+<p>You should see an output to your terminal similar to the data shown below. Notice the flags similar to those that you’ve seen throughout the challenges. This is to help you see where the code you wrote is corresponding to the output in the terminal. </p>
+<p>Take some time now to view the output and see how it aligns with the code you wrote in the REPL file.</p>
+<div class="codehilite"><pre><span></span>;; ========================================================
+;;                                       1-load-environment-data
+;; ========================================================
+
+&quot;Loading loans.repl...&quot;
+&quot;Setting transaction keys&quot;
+&quot;Setting transaction data&quot;
+&quot;&quot;
+&quot;&quot;
+;; ========================================================
+;;                                        2-load-pact-file
+;; ========================================================
+
+&quot;Loading loans.pact...&quot;
+&quot;Keyset defined&quot;
+&quot;Loaded module \&quot;loans\&quot;, hash \&quot;552198d5bc3a6cf8e84919a1b0f8c5cc764f65455e8dc687e3b6680b225e2684801fbfd42d6c734f798e3e210a03d5c9d6100c74433e3e16428903c95292466e\&quot;&quot;
+&quot;TableCreated&quot;
+&quot;TableCreated&quot;
+&quot;TableCreated&quot;
+&quot;&quot;
+&quot;&quot;
+&quot;&quot;
+&quot;&quot;
+;; ========================================================
+;;                                         3-call-functions
+;; ========================================================
+
+
+&quot;Using \&quot;loans\&quot;&quot;
+&quot;Write succeeded&quot;
+&quot;Write succeeded&quot;
+&quot;Write succeeded&quot;
+&quot;Write succeeded&quot;
+&quot;&quot;
+&quot;&quot;
+&quot;&quot;
+&quot;&quot;
+
+;; ========================================================
+;;                                          4-read-loans
+;; ========================================================
+
+&quot;Using \&quot;loans\&quot;&quot;
+[{&quot;inventory-key&quot;: &quot;loanId-1:Capital One&quot;, &quot;balance&quot;: 40000} {&quot;inventory-key&quot;: &quot;loanId-1:buyer1&quot;, &quot;balance&quot;: 6000} {&quot;inventory-key&quot;: &quot;loanId-1:buyer2&quot;, &quot;balance&quot;: 2000} {&quot;inventory-key&quot;: &quot;loanId-1:buyer3&quot;, &quot;balance&quot;: 2000}]
+[]
+[{&quot;entityName&quot;: &quot;Capital One&quot;, &quot;loanAmount&quot;: 50000, &quot;loanName&quot;: &quot;loan1&quot;, &quot;status&quot;: &quot;assigned&quot;}]
+&quot;&quot;
+&quot;&quot;
+</pre></div>
+
+
+<p>You can experiment with changing the .repl or .pact files to see how this changes the output in your terminal. </p>
+<hr />
+<h2 id="built-in-error-messages"><strong>Built-in Error Messages</strong><a class="headerlink" href="#built-in-error-messages" title="Permanent link">&para;</a></h2>
+<p>As you’ve seen, you can run REPL files from your terminal to test Pact code. </p>
+<p>Another valuable feature in the SDK is that it actually runs these files for you without using the terminal. This helps you spot errors from directly within Atom. Two features that help you spot errors are the error highlighting and the error message.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Error Highlighting</strong></td>
+<td>Shows up as red dot on line that includes error. REPL files with errors in them will have a red squiggly line under the file name.</td>
+</tr>
+<tr>
+<td><strong>Error Message</strong></td>
+<td>Gives details about the error source.</td>
+</tr>
+</tbody>
+</table>
+<p>These are both valuable ways to effectively test and debug your Pact code.</p>
+<h3 id="pact-examples"><strong>Pact Examples</strong><a class="headerlink" href="#pact-examples" title="Permanent link">&para;</a></h3>
+<p>To view these features take a look at our <strong>pact-examples</strong> repo. </p>
+<p>Change into your <strong>pact-examples</strong> directory or clone this repo into your project folder if you have not set this project up before. </p>
+<div class="codehilite"><pre><span></span>git clone https://github.com/kadena-io/pact-examples.git
+</pre></div>
+
+
+<p>Change into the <strong>pact-examples</strong> directory.</p>
+<div class="codehilite"><pre><span></span>cd pact-examples
+</pre></div>
+
+
+<p>Open this directory in atom.</p>
+<div class="codehilite"><pre><span></span>atom . 
+</pre></div>
+
+
+<p>Here you will see many more examples of REPL files along with the smart contracts they are testing. </p>
+<p><strong>Navigate to atoz &gt; keysets &gt; keysets.repl</strong> to view one of these examples.</p>
+<p><img alt="6-keysets-repl" src="../../assets/beginner-tutorials/test-in-the-sdk/6-keysets-repl.png" /></p>
+<p>In this file you will notice the use of a new built-in function named <strong>expect-failure</strong>. Both expect-failure and expect allow you to test if the outcome of an expression is what you would have expected.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html#expect" target="_blank">expect</a></td>
+<td>Evaluate expression and verify that it equals what is expected.</td>
+</tr>
+<tr>
+<td><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html#expect-failure" target="_blank">expect-failure</a></td>
+<td>Evaluates the expression and succeed only if it throws an error.</td>
+</tr>
+</tbody>
+</table>
+<p>On line 35, notice the line that states that it expects the real-keyset should fail. </p>
+<div class="codehilite"><pre><span></span><span class="p">(</span><span class="nf">expect-failure</span> <span class="s">&quot;real keyset should fail&quot;</span>
+  <span class="p">(</span><span class="nf">enforce-keyset</span> <span class="ss">&#39;keyset-real</span><span class="p">))</span>
+</pre></div>
+
+
+<p>You can tell that this test is passing because there is no error message or highlighting.</p>
+<p>To make this test fail, try changing <strong>keyset-real</strong> to <strong>keyset-carol</strong>. </p>
+<div class="codehilite"><pre><span></span><span class="p">(</span><span class="nf">expect-failure</span> <span class="s">&quot;real keyset should fail&quot;</span>
+  <span class="p">(</span><span class="nf">enforce-keyset</span> <span class="ss">&#39;keyset-carol</span><span class="p">))</span>
+</pre></div>
+
+
+<p>After making this change, the filename <strong>keysets.repl</strong> should now have a red squiggle under it and line 35 should have a red dot next to it. Both of these indicate that a test is failing within the REPL file. </p>
+<p><img alt="7-errors" src="../../assets/beginner-tutorials/test-in-the-sdk/7-errors.png" /></p>
+<p>To get more information, you can click the dot on line 35 and select the triangle to view the source of the error as shown below. Using this detailed information you can better test and debug the code from within your Pact smart contract. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To understand exactly what is failing and why, it helps to look through both the .pact and .repl files for more information. Take some time now to study the keyset example files as well as a few other examples to practice testing code and debugging errors.</p>
+</div>
+<hr />
+<h3 id="review"><strong>Review</strong><a class="headerlink" href="#review" title="Permanent link">&para;</a></h3>
+<p>Congratulations on completing this introduction to <strong>Testing Pact Code in the SDK</strong>!</p>
+<p>In this tutorial, you learned both the basics of testing in the SDK and how to build your own REPL file. This is a great start to begin testing the smart contracts you build locally. From here, you can experiment with changing the .repl or .pact files to see how this changes the output in your terminal. </p>
+<p>Using this workflow, you can begin building and testing files however you would like.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../pact-on-atom-sdk/" title="Atom SDK" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Atom SDK
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../project-rotatable-wallet/" title="Project: Rotatable Wallet" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Project: Rotatable Wallet
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 - 2019 Kadena
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/kadena-io" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/kadena_io" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.b41f3d20.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-127512784-3","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+  </body>
+</html>
