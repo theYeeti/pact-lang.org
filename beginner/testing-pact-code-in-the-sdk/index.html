@@ -414,6 +414,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../contract-interaction/" title="Contract Interaction" class="md-nav__link">
+      Contract Interaction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../pact-on-atom-sdk/" title="Atom SDK" class="md-nav__link">
       Atom SDK
     </a>
@@ -501,8 +513,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-load-environment-data_1" title="1. Load Environment Data" class="md-nav__link">
-    1. Load Environment Data
+  <a href="#note-about-transactions" title="Note About Transactions" class="md-nav__link">
+    Note About Transactions
   </a>
   
 </li>
@@ -756,8 +768,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-load-environment-data_1" title="1. Load Environment Data" class="md-nav__link">
-    1. Load Environment Data
+  <a href="#note-about-transactions" title="Note About Transactions" class="md-nav__link">
+    Note About Transactions
   </a>
   
 </li>
@@ -1028,7 +1040,7 @@
 <p>Looking at the <strong>loans.pact</strong> file could be a helpful way to understand what you are trying to do in the <strong>loans.repl</strong> file. This file exists in the project directory under <strong>3-finish</strong>.</p>
 </div>
 <hr />
-<h2 id="1-load-environment-data_1"><strong>1. Load Environment Data</strong><a class="headerlink" href="#1-load-environment-data_1" title="Permanent link">&para;</a></h2>
+<h2 id="note-about-transactions"><strong>Note About Transactions</strong><a class="headerlink" href="#note-about-transactions" title="Permanent link">&para;</a></h2>
 <p>Before moving on, there’s an important note to make about transactions. </p>
 <p>When working within REPL files, you can make as many calls to the pact code within a transaction as you like. Any command sent to the blockchain is a transaction, but a command too can have multiple calls, for instance, defining a module with <code>module</code> and creating its tables with <code>create-table</code> calls.</p>
 <p>To successfully execute a transaction you need to both begin the transaction and commit the transaction. This is done using <strong>begin-tx</strong> and <strong>commit-tx</strong>.</p>
