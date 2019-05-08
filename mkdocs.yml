@@ -55,7 +55,7 @@ nav:
         - 'Keysets': './beginner/pact-keysets.md'
         - 'Schemas and Tables': './beginner/pact-schemas-and-tables.md'
         - 'Accounts and Transfers': './beginner/pact-accounts-and-transfers.md'
-        # - 'Contract Interaction': './beginner/pact-contract-interaction.md'
+        - 'Contract Interaction': './beginner/contract-interaction.md'
         - 'Atom SDK': './beginner/pact-on-atom-sdk.md'
         - 'Test in the SDK': './beginner/testing-pact-code-in-the-sdk.md'
         - 'Project: Rotatable Wallet': './beginner/project-rotatable-wallet.md'

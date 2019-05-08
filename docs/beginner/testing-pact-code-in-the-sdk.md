@@ -157,7 +157,7 @@ To set up this environment using the .repl file, you will use two separate built
 
 ___
 
-## **1. Load Environment Data**
+## **Note About Transactions**
 
 Before moving on, there’s an important note to make about transactions. 
 
