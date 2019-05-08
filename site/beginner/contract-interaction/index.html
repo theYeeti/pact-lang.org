@@ -1,0 +1,1290 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Pact Developer Tutorials">
+      
+      
+      
+        <meta name="author" content="Kadena">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+    
+    
+      
+        <title>Contract Interaction - Pact Developer Tutorials</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#00bcd4">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.8c900955.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica:300,400,400i,700|Helvetica">
+        <style>body,input{font-family:"Helvetica","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Helvetica","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="cyan" data-md-color-accent="cyan">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#pact-contract-interaction" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Pact Developer Tutorials" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Pact Developer Tutorials
+              </span>
+              <span class="md-header-nav__topic">
+                Contract Interaction
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/kadena-io/pact/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      kadena-io/pact
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../welcome-to-pact/" title="Beginner" class="md-tabs__link md-tabs__link--active">
+          Beginner
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../intermediate/coming-soon/" title="Intermediate" class="md-tabs__link">
+          Intermediate
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../advanced/coming-soon/" title="Advanced" class="md-tabs__link">
+          Advanced
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Pact Developer Tutorials" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Pact Developer Tutorials
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/kadena-io/pact/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      kadena-io/pact
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Beginner
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Beginner
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../welcome-to-pact/" title="Welcome to Pact" class="md-nav__link">
+      Welcome to Pact
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../online-editor/" title="Online Editor" class="md-nav__link">
+      Online Editor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hello-world-with-pact/" title="Hello World" class="md-nav__link">
+      Hello World
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-language-basics/" title="Language Basics" class="md-nav__link">
+      Language Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-modules/" title="Modules" class="md-nav__link">
+      Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-keysets/" title="Keysets" class="md-nav__link">
+      Keysets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-schemas-and-tables/" title="Schemas and Tables" class="md-nav__link">
+      Schemas and Tables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-accounts-and-transfers/" title="Accounts and Transfers" class="md-nav__link">
+      Accounts and Transfers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Contract Interaction
+      </label>
+    
+    <a href="./" title="Contract Interaction" class="md-nav__link md-nav__link--active">
+      Contract Interaction
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pact-contract-interaction-overview" title="Pact Contract Interaction Overview" class="md-nav__link">
+    Pact Contract Interaction Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-overview" title="Project Overview" class="md-nav__link">
+    Project Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-environment-setup" title="Project Environment Setup" class="md-nav__link">
+    Project Environment Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-auth-pact-file" title="1. Auth Pact File" class="md-nav__link">
+    1. Auth Pact File
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-enforce-user-auth" title="1.1 Enforce User Auth" class="md-nav__link">
+    1.1 Enforce User Auth
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-payments-pact-file" title="2. Payments Pact File" class="md-nav__link">
+    2. Payments Pact File
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-use-auth" title="2.1 Use Auth" class="md-nav__link">
+    2.1 Use Auth
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-create-account" title="2.2 Create Account" class="md-nav__link">
+    2.2 Create Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-get-balance" title="2.3 Get Balance" class="md-nav__link">
+    2.3 Get Balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-pay" title="2.4 Pay" class="md-nav__link">
+    2.4 Pay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-payments-repl-file" title="3. Payments REPL File" class="md-nav__link">
+    3. Payments REPL File
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-load-auth-module" title="3.1 Load Auth Module" class="md-nav__link">
+    3.1 Load Auth Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-load-payments-module" title="3.2 Load Payments Module" class="md-nav__link">
+    3.2 Load Payments Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-use-auth-module" title="3.3 Use Auth Module" class="md-nav__link">
+    3.3 Use Auth Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-use-payments-module" title="3.4 Use Payments Module" class="md-nav__link">
+    3.4 Use Payments Module
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-run-repl-file" title="4. Run REPL File" class="md-nav__link">
+    4. Run REPL File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review" title="Review" class="md-nav__link">
+    Review
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-on-atom-sdk/" title="Atom SDK" class="md-nav__link">
+      Atom SDK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../testing-pact-code-in-the-sdk/" title="Test in the SDK" class="md-nav__link">
+      Test in the SDK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../project-rotatable-wallet/" title="Project: Rotatable Wallet" class="md-nav__link">
+      Project: Rotatable Wallet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../project-loans/" title="Project: Loans" class="md-nav__link">
+      Project: Loans
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Intermediate
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Intermediate
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../intermediate/coming-soon/" title="Coming Soon" class="md-nav__link">
+      Coming Soon
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/coming-soon/" title="Coming Soon" class="md-nav__link">
+      Coming Soon
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pact-contract-interaction-overview" title="Pact Contract Interaction Overview" class="md-nav__link">
+    Pact Contract Interaction Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-overview" title="Project Overview" class="md-nav__link">
+    Project Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-environment-setup" title="Project Environment Setup" class="md-nav__link">
+    Project Environment Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-auth-pact-file" title="1. Auth Pact File" class="md-nav__link">
+    1. Auth Pact File
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-enforce-user-auth" title="1.1 Enforce User Auth" class="md-nav__link">
+    1.1 Enforce User Auth
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-payments-pact-file" title="2. Payments Pact File" class="md-nav__link">
+    2. Payments Pact File
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-use-auth" title="2.1 Use Auth" class="md-nav__link">
+    2.1 Use Auth
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-create-account" title="2.2 Create Account" class="md-nav__link">
+    2.2 Create Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-get-balance" title="2.3 Get Balance" class="md-nav__link">
+    2.3 Get Balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-pay" title="2.4 Pay" class="md-nav__link">
+    2.4 Pay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-payments-repl-file" title="3. Payments REPL File" class="md-nav__link">
+    3. Payments REPL File
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-load-auth-module" title="3.1 Load Auth Module" class="md-nav__link">
+    3.1 Load Auth Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-load-payments-module" title="3.2 Load Payments Module" class="md-nav__link">
+    3.2 Load Payments Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-use-auth-module" title="3.3 Use Auth Module" class="md-nav__link">
+    3.3 Use Auth Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-use-payments-module" title="3.4 Use Payments Module" class="md-nav__link">
+    3.4 Use Payments Module
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-run-repl-file" title="4. Run REPL File" class="md-nav__link">
+    4. Run REPL File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review" title="Review" class="md-nav__link">
+    Review
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kadena-io/pact/edit/master/docs/beginner/contract-interaction.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="pact-contract-interaction">Pact Contract Interaction<a class="headerlink" href="#pact-contract-interaction" title="Permanent link">&para;</a></h1>
+<p>Welcome to this tutorial on Pact Contract Interaction!</p>
+<p><strong>Topics covered in this tutorial</strong></p>
+<ul>
+<li>Pact Contract Interaction Overview</li>
+<li>Project Overview</li>
+<li>Project Environment Setup</li>
+<li>Auth Pact File</li>
+<li>Payments Pact File</li>
+<li>Payments REPL File</li>
+<li>Run the Smart Contract</li>
+<li>Review</li>
+</ul>
+<p>The goal of this tutorial is to learn the basics of building interactions between modules in Pact. You will go over some of the fundamentals, then build a smart contract that allows users to both make and authorize payments using multiple Pact modules. </p>
+<div class="admonition summary">
+<p class="admonition-title">Key Takeaway</p>
+<p>Modules can make use of functions within other modules. This is done first with <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#use" target="_blank">use</a>, and then by calling the functions from within the module you are using. Each of these files are then loaded into the REPL where you can specify function calls and test interactions between these modules. </p>
+</div>
+<hr />
+<h2 id="pact-contract-interaction-overview"><strong>Pact Contract Interaction Overview</strong><a class="headerlink" href="#pact-contract-interaction-overview" title="Permanent link">&para;</a></h2>
+<p>Contract interaction allows you to set up more complex smart contracts by working with modules across multiple files. Having access to separate files allows you to break up your smart contracts into more manageable sizes. It also allows you to use helpful files that others have created. </p>
+<p>In the image below, you can see that there are 2 files, <strong>module-1</strong> and <strong>module-2</strong>. In this case, <strong>module-2</strong> is using <strong>module-1</strong> to call functions that exist within the module. The REPL file then loads and uses both of these modules to call functions and facilitate the interaction. </p>
+<p><img alt="1-overview" src="../../assets/beginner-tutorials/contract-interaction/1-overview.png" /></p>
+<p>The three most helpful Pact functions to keep in mind for Contract Interaction are <strong>load</strong>, <strong>use</strong>, and <strong>function calls</strong>. </p>
+<p><strong>Load</strong></p>
+<p>Load and evaluate a file.</p>
+<div class="codehilite"><pre><span></span>(load &quot;file.repl&quot;)
+</pre></div>
+
+
+<p><strong>Use</strong></p>
+<p>Import an existing module into a namespace.</p>
+<div class="codehilite"><pre><span></span>(use MODULE)
+</pre></div>
+
+
+<p>Once the interaction is set up between files, all function calls can be done the same as if the function existed within that file. </p>
+<hr />
+<h2 id="project-overview"><strong>Project Overview</strong><a class="headerlink" href="#project-overview" title="Permanent link">&para;</a></h2>
+<p>The idea of working with multiple modules and files is easiest to demonstrate with an example. For that reason, the rest of this tutorial is focused on getting you up and running with your own project. </p>
+<p>Before getting started with this application, take a look at the visual overview. This provides a summary of each of the features you will be creating for the Pact Contract Interaction project.</p>
+<p><img alt="2-project" src="../../assets/beginner-tutorials/contract-interaction/2-project.png" /></p>
+<p>The goal of this project is to write a function in <strong>auth.pact</strong> to use within <strong>payments.pact</strong>. <strong>Payments.pact</strong> will then use <strong>auth.pact</strong> to call specific functions. You will then load modules from both of these files into the <strong>payments.repl</strong> file to run the interaction between these contracts.</p>
+<p><strong>Project Files</strong></p>
+<p>Each number in the image corresponds to one of the files you will work with.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>auth.pact</strong></td>
+<td>Responsible for authorizing users.</td>
+</tr>
+<tr>
+<td><strong>payments.pact</strong></td>
+<td>Responsible for handling payments between users.</td>
+</tr>
+<tr>
+<td><strong>Payments.repl</strong></td>
+<td>Loads and runs modules from both auth.pact and payments.pact.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Both auth.pact and payments.pact are smart contracts that you have worked with in previous tutorials. If you would like to learn more about these smart contracts, feel free to view each of their tutorials.</p>
+<ul>
+<li><strong>Auth Module:</strong> <a href="https://pactlang.org/beginner/project-rotatable-wallet/" target="_blank">Project: Rotatable Wallet</a></li>
+<li><strong>Payments Module:</strong> <a href="https://pactlang.org/beginner/pact-accounts-and-transfers/" target="_blank">Accounts and Transfers</a></li>
+</ul>
+</div>
+<p>There’s not much code to write for this project. Most of it has been written previously in the tutorials linked above. For this tutorial, focus on understanding the interactions between the smart contracts, and to take some time to study how the functions are interacting with each other. </p>
+<p>Making the conceptual leap toward understanding the interactions between modules is going to be extremely valuable as you make more complicated smart contracts.</p>
+<hr />
+<h2 id="project-environment-setup"><strong>Project Environment Setup</strong><a class="headerlink" href="#project-environment-setup" title="Permanent link">&para;</a></h2>
+<p>To get started, choose a project directory and clone the project resources into your local environment. </p>
+<div class="codehilite"><pre><span></span>git clone https://github.com/kadena-io/pact-lang.org-code.git
+</pre></div>
+
+
+<p>Change into the <strong>interaction</strong> directory to begin working on this project.</p>
+<div class="codehilite"><pre><span></span>cd pact-lang.org-code/interaction
+</pre></div>
+
+
+<p>Open this directory in atom to see each of the files provided.</p>
+<div class="codehilite"><pre><span></span>atom .
+</pre></div>
+
+
+<p>As you’ll see, there are a few separate folders available to you.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>start</strong></td>
+<td>Provides a starting point with all comments for every challenge.</td>
+</tr>
+<tr>
+<td><strong>challenges</strong></td>
+<td>Challenges in the demo are broken out into separate files, allowing you to build your application over time while having the flexibility to experiment with your own ideas.</td>
+</tr>
+<tr>
+<td><strong>finish</strong></td>
+<td>Includes all comments and code for the final application.</td>
+</tr>
+<tr>
+<td><strong>loans</strong></td>
+<td>Includes final application without the challenge comments.</td>
+</tr>
+</tbody>
+</table>
+<p>Each of these options are meant to help support you as you work through these challenges. Feel free to use them however you’d like.</p>
+<hr />
+<h2 id="1-auth-pact-file"><strong>1. Auth Pact File</strong><a class="headerlink" href="#1-auth-pact-file" title="Permanent link">&para;</a></h2>
+<p>The first step of this project is to write the function that you will call from the <strong>payments</strong> smart contract. You will write this function within the <strong>auth</strong> smart contract.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Navigate to <strong>1-start/auth.pact</strong> or to <strong>2-challenges/1-auth-pact</strong> depending on how you prefer to follow along. </p>
+</div>
+<h3 id="11-enforce-user-auth"><strong>1.1 Enforce User Auth</strong><a class="headerlink" href="#11-enforce-user-auth" title="Permanent link">&para;</a></h3>
+<p>The function you will write will enforce user authentication for payments made with accounts. This will be a valuable function for restricting access to either admins or account users, ensuring each user is the only person that has control over their account.</p>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Define a function enforce-user-auth that you can use to verify user authorization.</p>
+<ul>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/1-auth-pact/1.1-enforce-user-auth/challenge.pact" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/1-auth-pact/1.1-enforce-user-auth/solution.pact" target="_blank">Solution</a></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A function similar to this is covered in Challenge <a href="https://pactlang.org/beginner/project-rotatable-wallet/#42-enforce-user" target="_blank">4.2 in Project Rotatable Wallet</a>. You can look back to this challenge for more information to help get you started.</p>
+</div>
+<hr />
+<h2 id="2-payments-pact-file"><strong>2. Payments Pact File</strong><a class="headerlink" href="#2-payments-pact-file" title="Permanent link">&para;</a></h2>
+<p>Next, you will work on the <strong>payments.pact</strong> file. </p>
+<p>The goal is to use the <strong>auth</strong> module, then call the function you wrote within the <strong>payments</strong> module to specify authorization for users.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Navigate to <strong>1-start/payments.pact or to 2-challenges/2-payments-pact</strong> depending on how you prefer to follow along. </p>
+</div>
+<h3 id="21-use-auth"><strong>2.1 Use Auth</strong><a class="headerlink" href="#21-use-auth" title="Permanent link">&para;</a></h3>
+<p>The first step is to get access to the <strong>auth</strong> module. You can do this with the Pact special form <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#use" target="_blank">use</a>.</p>
+<p>The syntax for <strong>use</strong> looks like this.</p>
+<div class="codehilite"><pre><span></span>(use MODULE)
+</pre></div>
+
+
+<p>It’s simple but extremely powerful! This is what will allow you to call functions from the <strong>auth</strong> module.</p>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Take a moment now to <strong>use</strong> the <strong>auth</strong> module from within the <strong>payments</strong> module.</p>
+<ul>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/2-payments-pact/2.1-use-auth/challenge.pact" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/2-payments-pact/2.1-use-auth/solution.pact" target="_blank">Solution</a></li>
+</ul>
+</div>
+<h3 id="22-create-account"><strong>2.2 Create Account</strong><a class="headerlink" href="#22-create-account" title="Permanent link">&para;</a></h3>
+<p>For this application, it’s important that only the administrator has access to create an account. This is a good use case for the <strong>enforce-user-auth</strong> function you wrote in the <strong>auth</strong> module.</p>
+<p>Since you now have access to the auth module, you can begin working with its functions. You can call these functions the same as you would call any other function.</p>
+<div class="codehilite"><pre><span></span><span class="p">(</span><span class="nf">function-name</span> <span class="nv">parameter</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Take some time now to add this new functionality to your smart contract.</p>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Call <strong>enforce-user-auth</strong> from within the <strong>create-account</strong> function to authorize that the user is an administrator.</p>
+<ul>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/2-payments-pact/2.2-create-account/challenge.pact" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/2-payments-pact/2.2-create-account/solution.pact" target="_blank">Solution</a></li>
+</ul>
+</div>
+<h3 id="23-get-balance"><strong>2.3 Get Balance</strong><a class="headerlink" href="#23-get-balance" title="Permanent link">&para;</a></h3>
+<p>Another time you may want to authorize a user is when checking the balance of an account. </p>
+<p>The <strong>payment</strong> modules <strong>get-balance</strong> function is an excellent use case for this. This time, both the administrator and the owner of the account should have access to view the account balance. </p>
+<p>Similar to before, check for authorization within the <strong>get-balance</strong> function.</p>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Call <strong>enforce-user-auth</strong> from within the <strong>get-balance</strong> function to authorize that function is called by the administrator. </p>
+<ul>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/2-payments-pact/2.3-get-balance/challenge.pact" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/2-payments-pact/2.3-get-balance/solution.pact" target="_blank">Solution</a></li>
+</ul>
+</div>
+<h3 id="24-pay"><strong>2.4 Pay</strong><a class="headerlink" href="#24-pay" title="Permanent link">&para;</a></h3>
+<p>Finally, it’s important that payments are authorized by the owner of the account. This will ensure that only the person who has the money is able to send it to others.</p>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Finish off the <strong>payment</strong> module by authorizing that the payment is being sent by the owner of the account. </p>
+<ul>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/2-payments-pact/2.4-pay/challenge.pact" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/2-payments-pact/2.4-pay/solution.pact" target="_blank">Solution</a></li>
+</ul>
+</div>
+<p>That completes the payment module. </p>
+<p>You are now ready to set up this contract interaction using the <strong>payments.repl</strong> file!</p>
+<hr />
+<h2 id="3-payments-repl-file"><strong>3. Payments REPL File</strong><a class="headerlink" href="#3-payments-repl-file" title="Permanent link">&para;</a></h2>
+<p>You can now finish this project by completing on the <strong>payments.repl</strong> file. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Navigate to <strong>1-start/payments.repl</strong> or to <strong>2-challenges/3-payments-repl</strong> depending on how you prefer to follow along. </p>
+</div>
+<p>The goal is to use both the <strong>auth</strong> and <strong>payments</strong> module, then coordinate interactions between them.</p>
+<h3 id="31-load-auth-module"><strong>3.1 Load Auth Module</strong><a class="headerlink" href="#31-load-auth-module" title="Permanent link">&para;</a></h3>
+<p>To get started, you need access to the <strong>auth</strong> module from within the <strong>payments.repl</strong> file.</p>
+<p>This is done using <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=load#load" target="_blank">load</a>.</p>
+<div class="codehilite"><pre><span></span><span class="p">(</span><span class="nb">load </span><span class="s">&quot;file.pact&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Try using <strong>load</strong> to complete the code challenge.</p>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Load the <strong>auth</strong> module into the <strong>payments.repl</strong> file.</p>
+<ul>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/3-payments-repl/3.1-load-auth-module/challenge.repl" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/3-payments-repl/3.1-load-auth-module/solution.repl" target="_blank">Solution</a></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Transactions and loading are covered in more detail in <a href="https://pactlang.org/beginner/testing-pact-code-in-the-sdk/" target="_blank">Testing Pact Code in the SDK</a>.</p>
+</div>
+<h3 id="32-load-payments-module"><strong>3.2 Load Payments Module</strong><a class="headerlink" href="#32-load-payments-module" title="Permanent link">&para;</a></h3>
+<p>Next, you need to load the <strong>payments</strong> module into the <strong>payments.repl</strong> file.</p>
+<p>This can be done the same way as you did with the <strong>auth</strong> module. </p>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Load the <strong>payments</strong> module into the <strong>payments.repl</strong> file.</p>
+<ul>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/3-payments-repl/3.2-load-payments-module/challenge.repl" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/3-payments-repl/3.2-load-payments-module/solution.repl" target="_blank">Solution</a></li>
+</ul>
+</div>
+<h3 id="33-use-auth-module"><strong>3.3 Use Auth Module</strong><a class="headerlink" href="#33-use-auth-module" title="Permanent link">&para;</a></h3>
+<p>You now have access to both the auth and payments module from within the <strong>payments.repl</strong> file. After loading each file, you also need to specify that you are using them. </p>
+<p>Like before, this can be done with the special form <strong>use</strong>. </p>
+<div class="codehilite"><pre><span></span><span class="p">(</span><span class="nf">use</span> <span class="nv">MODULE</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Use the <strong>auth</strong> module from within the <strong>payments.repl</strong> file.</p>
+<ul>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/3-payments-repl/3.3-use-auth-module/challenge.repl" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/3-payments-repl/3.3-use-auth-module/solution.repl" target="_blank">Solution</a></li>
+</ul>
+</div>
+<h3 id="34-use-payments-module"><strong>3.4 Use Payments Module</strong><a class="headerlink" href="#34-use-payments-module" title="Permanent link">&para;</a></h3>
+<p>Finally, you need to use the payments module. Write one final line of code that uses the payments module and completes your set up for contract interaction. </p>
+<div class="admonition warning">
+<p class="admonition-title">Code Challenge</p>
+<p>Use the <strong>payments</strong> module from within the <strong>payments.repl</strong> file.</p>
+<ul>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/3-payments-repl/3.4-use-payments-module/challenge.repl" target="_blank">Challenge</a></li>
+<li><a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/3-payments-repl/3.4-use-payments-module/solution.repl" target="_blank">Solution</a></li>
+</ul>
+</div>
+<p>You are now finished setting up your contract interaction. Congratulations! </p>
+<hr />
+<h2 id="4-run-repl-file"><strong>4. Run REPL File</strong><a class="headerlink" href="#4-run-repl-file" title="Permanent link">&para;</a></h2>
+<p>After completing your contract interaction project, you can now see it all work together. </p>
+<p>To do this, navigate back to your terminal. </p>
+<p>From the terminal, you can navigate into <strong>1-start</strong> folder if you have worked within this directory. If not, you can also navigate to the <strong>3-finish</strong> folder for an example of the completed application.</p>
+<div class="codehilite"><pre><span></span>cd 3-finish 
+</pre></div>
+
+
+<p>Open Pact.</p>
+<div class="codehilite"><pre><span></span>pact
+</pre></div>
+
+
+<p>Load the <strong>payments.repl</strong> file.</p>
+<div class="codehilite"><pre><span></span>(load &quot;payments.repl&quot;)
+</pre></div>
+
+
+<p>The output to your terminal should look similar to the image shown below.</p>
+<p><img alt="3-load-payments" src="../../assets/beginner-tutorials/contract-interaction/3-load-payments.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more information on running files from the terminal, view <a href="https://pactlang.org/beginner/testing-pact-code-in-the-sdk/#run-repl-file" target="_blank">Testing Pact Code in the SDK</a>.</p>
+</div>
+<hr />
+<h2 id="review"><strong>Review</strong><a class="headerlink" href="#review" title="Permanent link">&para;</a></h2>
+<p>Congratulations on completing this introduction to Pact Contract Interaction!</p>
+<p>In this tutorial, you learned the basics of contract interaction and built a smart contract that allowed users to both make and authorize payments. This allowed you to extend the functionality of your smart contract to include multiple files, and you can now use this to build more complex smart contracts in any project.</p>
+<p>Take a look back at some of the modules you have written or examples that you’ve come across. Are there any interesting new ways that you think these contracts could work together? Give it a try and see if you can come up with an entirely new smart contract that combines these interesting features in new ways!</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../pact-accounts-and-transfers/" title="Accounts and Transfers" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Accounts and Transfers
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../pact-on-atom-sdk/" title="Atom SDK" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Atom SDK
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 - 2019 Kadena
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/kadena-io" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/kadena_io" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.b41f3d20.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-127512784-3","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+  </body>
+</html>
