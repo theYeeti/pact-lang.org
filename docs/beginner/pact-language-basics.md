@@ -2,7 +2,7 @@
 
 Welcome to this tutorial on the Pact Language Basics!
 
-In this tutorial you'll learn some fundamental ideas needed started with Pact. You’ll review some of the built-in functions Pact provides, review the language syntax, and write a few functions for yourself.
+In this tutorial you'll learn some fundamental concepts you need to get started with Pact. You’ll review some of the built-in functions Pact provides, review the language syntax, and write a few functions for yourself.
 
 **Topics covered in this tutorial**
 
