@@ -47,20 +47,19 @@ markdown_extensions:
 
 nav:    
 - Beginner:
-        - 'Welcome to Pact': './beginner/welcome-to-pact.md'        
-        - 'Online Editor': './beginner/online-editor.md'
-        - 'Hello World': './beginner/hello-world-with-pact.md'
-        - 'Language Basics': './beginner/pact-language-basics.md'
-        - 'Modules': './beginner/pact-modules.md'
-        - 'Keysets': './beginner/pact-keysets.md'
-        - 'Schemas and Tables': './beginner/pact-schemas-and-tables.md'
-        - 'Accounts and Transfers': './beginner/pact-accounts-and-transfers.md'
-        - 'Contract Interaction': './beginner/contract-interaction.md'
-        - 'Atom SDK': './beginner/pact-on-atom-sdk.md'
-        - 'Test in the SDK': './beginner/testing-pact-code-in-the-sdk.md'
-        - 'Project: Rotatable Wallet': './beginner/project-rotatable-wallet.md'
-        - 'Project: Loans': './beginner/project-loans.md'
-        
+        - '1. Welcome to Pact': './beginner/welcome-to-pact.md'        
+        - '2. Online Editor': './beginner/online-editor.md'
+        - '3. Hello World': './beginner/hello-world-with-pact.md'
+        - '4. Language Basics': './beginner/pact-language-basics.md'
+        - '5. Modules': './beginner/pact-modules.md'
+        - '6. Keysets': './beginner/pact-keysets.md'
+        - '7. Schemas and Tables': './beginner/pact-schemas-and-tables.md'
+        - '8. Atom SDK': './beginner/pact-on-atom-sdk.md'
+        - '9. Accounts and Transfers': './beginner/pact-accounts-and-transfers.md'
+        - '10. Contract Interaction': './beginner/contract-interaction.md'
+        - '11. Project: Rotatable Wallet': './beginner/project-rotatable-wallet.md'
+        - '12. Project: Loans': './beginner/project-loans.md'
+        - '13. Test in the SDK': './beginner/testing-pact-code-in-the-sdk.md'
       
 - Intermediate:
         - 'Coming Soon': './intermediate/coming-soon.md'        

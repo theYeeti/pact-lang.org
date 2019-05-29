@@ -19,6 +19,14 @@ The goal of this tutorial is to learn the basics of building interactions betwee
       Modules can make use of functions within other modules. This is done first with <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#use" target="_blank">use</a>, and then by calling the functions from within the module you are using. Each of these files are then loaded into the REPL where you can specify function calls and test interactions between these modules. 
 ___
 
+## **Pact Contract Interaction Tutorial**
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/wCFq5KakaYc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Subscribe to our <a href="https://www.youtube.com/channel/UCB6-MaxD2hlcGLL70ukHotA" target="_blank">YouTube channel </a> to access the latest Pact tutorials.
+
+___
+
 ## **Pact Contract Interaction Overview**
 
 Contract interaction allows you to set up more complex smart contracts by working with modules across multiple files. Having access to separate files allows you to break up your smart contracts into more manageable sizes. It also allows you to use helpful files that others have created. 

@@ -17,6 +17,14 @@ This tutorial introduces another essential feature in Pact known as keysets. Weâ
 
 ___
 
+## **Pact Keysets Tutorial**
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/LfuitZfYEXk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Subscribe to our <a href="https://www.youtube.com/channel/UCB6-MaxD2hlcGLL70ukHotA" target="_blank">YouTube channel </a> to access the latest Pact tutorials.
+
+___
+
 ### **Introduction to Keysets**
 
 Pact <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#confidential-keysets" target="_blank">Keysets</a> specify authorization to different parts of the smart contract. They determine which accounts have access to and update various parts of the program.

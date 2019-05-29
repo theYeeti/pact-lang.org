@@ -20,6 +20,14 @@ The goal of this tutorial is to help you build an application that transfers val
 
 ___
 
+## **Pact Accounts and Transfers**
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/uYVLLivwKlI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Subscribe to our <a href="https://www.youtube.com/channel/UCB6-MaxD2hlcGLL70ukHotA" target="_blank">YouTube channel </a> to access the latest Pact tutorials.
+
+___
+
 ## **Project Overview**
 
 To get started with this application, take a look at the visual overview. This provides a summary of each of the features you will be creating for the simple payment smart contract.

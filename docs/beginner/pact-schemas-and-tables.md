@@ -14,6 +14,15 @@ The goal of this tutorial is to get you familiar with what schemas and tables ar
 
 !!! Summary "Key Takeaway"
       Tables are one of the three core elements of Pact smart contracts. Tables are defined using **deftable**, which references a schema defined by **defschema**, and are later created using **create-table**. There are many ways to build functions that store, manipulate, and read data from smart contract tables.
+
+___
+
+## **Pact Schemas and Tables**
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/MwzsAvEyaQk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Subscribe to our <a href="https://www.youtube.com/channel/UCB6-MaxD2hlcGLL70ukHotA" target="_blank">YouTube channel </a> to access the latest Pact tutorials.
+
 ___
 
 ## **Introduction to Tables and Schemas**
