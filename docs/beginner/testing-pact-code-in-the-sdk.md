@@ -20,7 +20,7 @@ In this tutorial, you will learn the basics of testing in the SDK to build your 
 
 ___
 
-## **Pact Contract Interaction Tutorial**
+## **Testing Pact Code in the SDK Tutorial**
 
 <iframe width="720" height="405" src="https://www.youtube.com/embed/tiq80p40oqs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
