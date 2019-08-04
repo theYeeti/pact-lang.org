@@ -1,0 +1,1426 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Pact Developer Tutorials">
+      
+      
+      
+        <meta name="author" content="Kadena">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+    
+    
+      
+        <title>1. Deploy to a Local Server - Pact Developer Tutorials</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#00bcd4">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.8c900955.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica:300,400,400i,700|Helvetica">
+        <style>body,input{font-family:"Helvetica","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Helvetica","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="cyan" data-md-color-accent="cyan">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#set-up-and-deploy-a-local-test-server" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Pact Developer Tutorials" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Pact Developer Tutorials
+              </span>
+              <span class="md-header-nav__topic">
+                1. Deploy to a Local Server
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/kadena-io/pact/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      kadena-io/pact
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../beginner/welcome-to-pact/" title="Beginner" class="md-tabs__link">
+          Beginner
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="Intermediate" class="md-tabs__link md-tabs__link--active">
+          Intermediate
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../advanced/coming-soon/" title="Advanced" class="md-tabs__link">
+          Advanced
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Pact Developer Tutorials" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Pact Developer Tutorials
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/kadena-io/pact/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      kadena-io/pact
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Beginner
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Beginner
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../beginner/welcome-to-pact/" title="1. Welcome to Pact" class="md-nav__link">
+      1. Welcome to Pact
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../beginner/online-editor/" title="2. Online Editor" class="md-nav__link">
+      2. Online Editor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../beginner/hello-world-with-pact/" title="3. Hello World" class="md-nav__link">
+      3. Hello World
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../beginner/pact-language-basics/" title="4. Language Basics" class="md-nav__link">
+      4. Language Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../beginner/pact-modules/" title="5. Modules" class="md-nav__link">
+      5. Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../beginner/pact-keysets/" title="6. Keysets" class="md-nav__link">
+      6. Keysets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../beginner/pact-schemas-and-tables/" title="7. Schemas and Tables" class="md-nav__link">
+      7. Schemas and Tables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../beginner/pact-on-atom-sdk/" title="8. Atom SDK" class="md-nav__link">
+      8. Atom SDK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../beginner/pact-accounts-and-transfers/" title="9. Accounts and Transfers" class="md-nav__link">
+      9. Accounts and Transfers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../beginner/contract-interaction/" title="10. Contract Interaction" class="md-nav__link">
+      10. Contract Interaction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../beginner/project-rotatable-wallet/" title="11. Project: Rotatable Wallet" class="md-nav__link">
+      11. Project: Rotatable Wallet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../beginner/project-loans/" title="12. Project: Loans" class="md-nav__link">
+      12. Project: Loans
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../beginner/testing-pact-code-in-the-sdk/" title="13. Test in the SDK" class="md-nav__link">
+      13. Test in the SDK
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Intermediate
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Intermediate
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        1. Deploy to a Local Server
+      </label>
+    
+    <a href="./" title="1. Deploy to a Local Server" class="md-nav__link md-nav__link--active">
+      1. Deploy to a Local Server
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-and-deploy-a-local-test-server-tutorial" title="Set up and Deploy a Local Test Server Tutorial" class="md-nav__link">
+    Set up and Deploy a Local Test Server Tutorial
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-dependencies" title="Install Dependencies" class="md-nav__link">
+    Install Dependencies
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-pact" title="Install Pact" class="md-nav__link">
+    Install Pact
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-pact-lang-api" title="Install pact-lang-API" class="md-nav__link">
+    Install pact-lang-API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-overview" title="Project Overview" class="md-nav__link">
+    Project Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-demonstration" title="Project Demonstration" class="md-nav__link">
+    Project Demonstration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-project-files" title="Create Project files" class="md-nav__link">
+    Create Project files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#populate-project-files" title="Populate Project Files" class="md-nav__link">
+    Populate Project Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configyaml-details" title="Config.yaml Details" class="md-nav__link">
+    Config.yaml Details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exampleyaml-details" title="Example.yaml Details" class="md-nav__link">
+    Example.yaml Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-log-folder" title="Create Log folder" class="md-nav__link">
+    Create Log folder
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoint-types" title="Endpoint types" class="md-nav__link">
+    Endpoint types
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#send-demo" title="/send demo" class="md-nav__link">
+    /send demo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-format" title="JSON Format" class="md-nav__link">
+    JSON Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-send" title="Use /send" class="md-nav__link">
+    Use /send
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poll-demo" title="/poll demo" class="md-nav__link">
+    /poll demo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listen-demo" title="/listen demo" class="md-nav__link">
+    /listen demo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-listen" title="Why /listen?" class="md-nav__link">
+    Why /listen?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-demo" title="/local demo" class="md-nav__link">
+    /local demo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-local" title="Why /local?" class="md-nav__link">
+    Why /local?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-write-a-yaml-file" title="EXERCISE: Write a YAML File" class="md-nav__link">
+    EXERCISE: Write a YAML File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review" title="Review" class="md-nav__link">
+    Review
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pact-and-javascript/" title="2. Pact and Javascript" class="md-nav__link">
+      2. Pact and Javascript
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/coming-soon/" title="Coming Soon" class="md-nav__link">
+      Coming Soon
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-and-deploy-a-local-test-server-tutorial" title="Set up and Deploy a Local Test Server Tutorial" class="md-nav__link">
+    Set up and Deploy a Local Test Server Tutorial
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-dependencies" title="Install Dependencies" class="md-nav__link">
+    Install Dependencies
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-pact" title="Install Pact" class="md-nav__link">
+    Install Pact
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-pact-lang-api" title="Install pact-lang-API" class="md-nav__link">
+    Install pact-lang-API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-overview" title="Project Overview" class="md-nav__link">
+    Project Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-demonstration" title="Project Demonstration" class="md-nav__link">
+    Project Demonstration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-project-files" title="Create Project files" class="md-nav__link">
+    Create Project files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#populate-project-files" title="Populate Project Files" class="md-nav__link">
+    Populate Project Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configyaml-details" title="Config.yaml Details" class="md-nav__link">
+    Config.yaml Details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exampleyaml-details" title="Example.yaml Details" class="md-nav__link">
+    Example.yaml Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-log-folder" title="Create Log folder" class="md-nav__link">
+    Create Log folder
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoint-types" title="Endpoint types" class="md-nav__link">
+    Endpoint types
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#send-demo" title="/send demo" class="md-nav__link">
+    /send demo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-format" title="JSON Format" class="md-nav__link">
+    JSON Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-send" title="Use /send" class="md-nav__link">
+    Use /send
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poll-demo" title="/poll demo" class="md-nav__link">
+    /poll demo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listen-demo" title="/listen demo" class="md-nav__link">
+    /listen demo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-listen" title="Why /listen?" class="md-nav__link">
+    Why /listen?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-demo" title="/local demo" class="md-nav__link">
+    /local demo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-local" title="Why /local?" class="md-nav__link">
+    Why /local?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-write-a-yaml-file" title="EXERCISE: Write a YAML File" class="md-nav__link">
+    EXERCISE: Write a YAML File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review" title="Review" class="md-nav__link">
+    Review
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kadena-io/pact/edit/master/docs/intermediate/deploy-local-server.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="set-up-and-deploy-a-local-test-server">Set up and Deploy a Local Test Server<a class="headerlink" href="#set-up-and-deploy-a-local-test-server" title="Permanent link">&para;</a></h1>
+<p>Welcome to this introduction to the Pact local Test server!</p>
+<p>The goal of this tutorial is to help you run and deploy a working Pact test server locally.</p>
+<p><strong>Topics covered in this tutorial</strong></p>
+<ul>
+<li>Install Dependencies</li>
+<li>Package.json</li>
+<li>YAML API Request</li>
+<li>Endpoint Types</li>
+<li>Exercise: Write a YAML file</li>
+</ul>
+<p>In this tutorial you will go into depth on the <strong>pact-lang-api</strong> including topics like yaml API requests and endpoint types. Aside from letting you explore even more of pact’s functionality, it puts you in a good position to complete our next tutorial, Pact and Javascript. In that tutorial you bring all the pieces together and get your first look at developing your first full stack blockchain application with pact.</p>
+<hr />
+<h2 id="set-up-and-deploy-a-local-test-server-tutorial"><strong>Set up and Deploy a Local Test Server Tutorial</strong><a class="headerlink" href="#set-up-and-deploy-a-local-test-server-tutorial" title="Permanent link">&para;</a></h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/fbZpsQAqz48" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Subscribe to our <a href="https://www.youtube.com/channel/UCB6-MaxD2hlcGLL70ukHotA" target="_blank">YouTube channel </a> to access the latest Pact tutorials.</p>
+<hr />
+<h2 id="install-dependencies"><strong>Install Dependencies</strong><a class="headerlink" href="#install-dependencies" title="Permanent link">&para;</a></h2>
+<p>Pact and the pact-lang-api are required to successfully complete this tutorial. If you haven’t already installed these, follow the steps below to install each of them on your device.</p>
+<h3 id="install-pact"><strong>Install Pact</strong><a class="headerlink" href="#install-pact" title="Permanent link">&para;</a></h3>
+<p>First, install Pact on your computer using homebrew by running the following code in your terminal.</p>
+<div class="codehilite"><pre><span></span>brew install kadena-io/pact/pact
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more information on installing Pact, you can view the <a href="https://github.com/kadena-io/pact" target="_blank">Pact GitHub page</a>. You can also view <a href="https://pactlang.org/beginner/pact-on-atom-sdk/" target="_blank">8. Atom SDK </a>from the Pact Beginner tutorial series for more information.</p>
+</div>
+<h3 id="install-pact-lang-api"><strong>Install pact-lang-API</strong><a class="headerlink" href="#install-pact-lang-api" title="Permanent link">&para;</a></h3>
+<p>Install the pact-lang-api by running the following code in your terminal.</p>
+<div class="codehilite"><pre><span></span>npm install pact-lang-api
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can view more about installing the Pact Lang API <a href="https://github.com/kadena-io/pact#quick-start-pact-rest-api-server" target="_blank">here</a>. Further details about the pact-lang-api are <a href="https://www.npmjs.com/package/pact-lang-api" target="_blank">here</a>.</p>
+</div>
+<hr />
+<h2 id="project-overview"><strong>Project Overview</strong><a class="headerlink" href="#project-overview" title="Permanent link">&para;</a></h2>
+<p>To get started, here is a brief overview of the project you will build. The goal is to run a Pact server locally that you can communicate with using various pact-lang-api commands from your terminal.</p>
+<p><img alt="1-overview" src="../../assets/intermediate-tutorials/deploy-local-server/1-overview.png" /></p>
+<p>Starting in your terminal, you will create a project directory along with an <strong>example.yaml</strong> and a <strong>config.yaml</strong> file to store your code. The <strong>example.yaml</strong> file will include the program you are trying to run, and the <strong>config.yaml</strong> file will specify things such as the port, which will be on <strong>8080</strong>, and the path to the log folder that will log the data.</p>
+<p>Next, you will populate each of the yaml files, create the <strong>log</strong> folder, and run the <strong>Pact server</strong>.</p>
+<p>After the server is running you will need a way to send the code in the example.yaml file to the pact server. This is done by first converting the code into JSON, then by sending this json to the server using a variety of commands including send, local, listen, or poll depending on your needs.</p>
+<p>I’ll show you each of these commands in more detail as we go through the tutorial. For now, this hopefully helped you organize some of your thoughts around what we are planning to build.</p>
+<p>Let’s start building!</p>
+<hr />
+<h2 id="project-demonstration"><strong>Project Demonstration</strong><a class="headerlink" href="#project-demonstration" title="Permanent link">&para;</a></h2>
+<p>To begin your project, open your terminal and navigate to your preferred project directory.</p>
+<p>Within that directory, create a new directory named deploy-tutorial to house your project files.</p>
+<div class="codehilite"><pre><span></span>mkdir deploy-tutorial
+</pre></div>
+
+
+<h3 id="create-project-files"><strong>Create Project files</strong><a class="headerlink" href="#create-project-files" title="Permanent link">&para;</a></h3>
+<p>Navigate into the folder and create both a <strong>config.yaml</strong> file and an <strong>example.yaml</strong> file.</p>
+<div class="codehilite"><pre><span></span>cd deploy-tutorial
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>touch config.yaml
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>touch example.yaml
+</pre></div>
+
+
+<h3 id="populate-project-files"><strong>Populate Project Files</strong><a class="headerlink" href="#populate-project-files" title="Permanent link">&para;</a></h3>
+<p>The config.yaml file follows a standard format, and you can find the code for this <a href="https://github.com/kadena-io/pact/blob/master/config.yaml" target="_blank">here</a>. It is also included below.</p>
+<p>Copy the code below into your <strong>config.yaml</strong> and save the file.</p>
+<div class="codehilite"><pre><span></span># Config file for pact http server. Launch with `pact -s config.yaml`
+
+# HTTP server port
+port: 8080
+
+# directory for HTTP logs
+logDir: log
+
+# persistence directory
+persistDir: log
+
+# SQLite pragmas for pact back-end
+pragmas: []
+
+# verbose: provide log output
+verbose: True
+</pre></div>
+
+
+<p>Next, populate the <strong>example.yaml</strong> file with the example provided below. This code is also included in the Pact language documentation <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#api-request-formatter" target="_blank">here</a>.</p>
+<p>Copy this text, paste it into your <strong>example.yaml</strong> file, and save the file.</p>
+<div class="codehilite"><pre><span></span>code: &quot;(+ 1 2)&quot;
+data:
+  name: Stuart
+  language: Pact
+keyPairs:
+  - public: ba54b224d1924dd98403f5c751abdd10de6cd81b0121800bf7bdbdcfaec7388d
+    secret: 8693e641ae2bbe9ea802c736f42027b03f86afe63cae315e7169c9c496c17332
+</pre></div>
+
+
+<h3 id="configyaml-details"><strong>Config.yaml Details</strong><a class="headerlink" href="#configyaml-details" title="Permanent link">&para;</a></h3>
+<p>Navigate back to the config.yaml file to view the details of this code.</p>
+<p>Here you can see 5 fields.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP Server</th>
+<th>The HTTP server port specifies 8080. This can change depending on which port you need but we often use 8080 in our examples so you can leave this as it is for now.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logdir/PersistDir</td>
+<td>The directory and persistence directory for http logs states where the applications data will be stored. This specifies a folder location that you will create for yourself shortly.</td>
+</tr>
+<tr>
+<td>Sqlite Pragmas</td>
+<td>The SQLite pragmas.</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>Specifies whether or not you want to provide log output using true or false.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exampleyaml-details"><strong>Example.yaml Details</strong><a class="headerlink" href="#exampleyaml-details" title="Permanent link">&para;</a></h3>
+<p>Navigate back to the <strong>example.yaml</strong> file to view the details of this code.</p>
+<p>Here you can see the code that will be running on the Pact server. In this case it includes the code <code>1 + 2</code>, the name <code>Stuart</code>, and the language <code>Pact</code>. You can also view the keyPairs for this code.</p>
+<p>This code is formatted using the <strong>Request YAML file format</strong> specified in the Pact language documentation <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#request-yaml-file-format" target="_blank">here</a>.</p>
+<div class="codehilite"><pre><span></span><span class="n">code</span><span class="o">:</span> <span class="n">Transaction</span> <span class="n">code</span>
+<span class="n">codeFile</span><span class="o">:</span> <span class="n">Transaction</span> <span class="n">code</span> <span class="n">file</span>
+<span class="n">data</span><span class="o">:</span> <span class="n">JSON</span> <span class="n">transaction</span> <span class="n">data</span>
+<span class="n">dataFile</span><span class="o">:</span> <span class="n">JSON</span> <span class="n">transaction</span> <span class="n">data</span> <span class="n">file</span>
+<span class="n">keyPairs</span><span class="o">:</span> <span class="n">list</span> <span class="n">of</span> <span class="n">key</span> <span class="n">pairs</span> <span class="k">for</span> <span class="n">signing</span> <span class="o">(</span><span class="n">use</span> <span class="n">pact</span> <span class="o">-</span><span class="n">g</span> <span class="n">to</span> <span class="n">generate</span><span class="o">):</span> <span class="o">[</span>
+  <span class="kd">public</span><span class="o">:</span> <span class="n">base</span> <span class="mi">16</span> <span class="kd">public</span> <span class="n">key</span>
+  <span class="n">secret</span><span class="o">:</span> <span class="n">base</span> <span class="mi">16</span> <span class="n">secret</span> <span class="n">key</span>
+  <span class="o">]</span>
+<span class="n">nonce</span><span class="o">:</span> <span class="n">optional</span> <span class="n">request</span> <span class="n">nonce</span><span class="o">,</span> <span class="n">will</span> <span class="n">use</span> <span class="n">current</span> <span class="n">time</span> <span class="k">if</span> <span class="n">not</span> <span class="n">provided</span>
+<span class="n">from</span><span class="o">:</span> <span class="n">entity</span> <span class="n">name</span> <span class="k">for</span> <span class="n">addressing</span> <span class="kd">private</span> <span class="n">messages</span>
+<span class="n">to</span><span class="o">:</span> <span class="n">entity</span> <span class="n">names</span> <span class="k">for</span> <span class="n">addressing</span> <span class="kd">private</span> <span class="n">messages</span>
+</pre></div>
+
+
+<p>Here you’ll see that the format includes keys such as code, codefile, data, datafile, keypairs, nonce, from, and to.  </p>
+<p>Each of these have their own use case but only the <strong>code</strong> and <strong>keypairs</strong> are required. Looking at your example.yaml file, you can see that these 2 keys are included.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some things to note are that if you use the data key it defaults to an empty object, and nonce defaults to the current date and time. Other details about each of these keys can be found in the <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#request-yaml-file-format" target="_blank">documentation</a>.</p>
+</div>
+<hr />
+<h2 id="create-log-folder"><strong>Create Log folder</strong><a class="headerlink" href="#create-log-folder" title="Permanent link">&para;</a></h2>
+<p>Having seen the code, you can now focus on working from the terminal.</p>
+<p>To start, you’ll need to create the log folder that was specified in the <strong>config.yaml</strong> file as the log directory.</p>
+<p>From your terminal, create a log folder in your project directory.</p>
+<div class="codehilite"><pre><span></span>mkdir log
+</pre></div>
+
+
+<p>Next, check the directory to make sure you’re all set up with your log and yaml files.</p>
+<div class="codehilite"><pre><span></span>ls
+</pre></div>
+
+
+<p>Finally, run pact -s (-s stands for serve) and provide it the <strong>config.yaml</strong> file.</p>
+<div class="codehilite"><pre><span></span>pact -s config.yaml
+</pre></div>
+
+
+<p>After running this you can see that you initialized a pact server and that it’s currently running on port 8080.</p>
+<p>You can now run API calls on the server.</p>
+<hr />
+<h2 id="endpoint-types"><strong>Endpoint types</strong><a class="headerlink" href="#endpoint-types" title="Permanent link">&para;</a></h2>
+<p>The Pact server contains multiple endpoint types that you can access using the pact-lang-api.</p>
+<table>
+<thead>
+<tr>
+<th>Send</th>
+<th>/send takes in cmd object and returns tx hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Listen</td>
+<td>/listen takes in a hash and returns tx result.</td>
+</tr>
+<tr>
+<td>Poll</td>
+<td>/poll is similar to listen but works with multiple hashes and returns multiple tx results.</td>
+</tr>
+<tr>
+<td>Local</td>
+<td>/local takes in cmd object with code that queries from blockchain. It only runs in local server and does not impact the blockchain - and returns tx result.</td>
+</tr>
+</tbody>
+</table>
+<p>To get more familiar with each of these endpoints, we can run each of them from our terminal now.</p>
+<hr />
+<h3 id="send-demo"><strong>/send demo</strong><a class="headerlink" href="#send-demo" title="Permanent link">&para;</a></h3>
+<p>Now that the Pact server is running, you use your terminal and the pact-lang-api to /send code to the Pact endpoint. /send takes in cmd object and returns tx hash. To run this command you need to do 2 things. First, you will format the existing <strong>example.yaml</strong> file into JSON. Next, you will send it to the Pact end point.</p>
+<h4 id="json-format"><strong>JSON Format</strong><a class="headerlink" href="#json-format" title="Permanent link">&para;</a></h4>
+<p>In a new terminal window within the same directory, run the following code.</p>
+<div class="codehilite"><pre><span></span>pact -a example.yaml
+</pre></div>
+
+
+<p>This line formats the example file into type JSON.</p>
+<p>After running this command, you should see the JSON data appear in the terminal.</p>
+<p>Looking at the data you’ll see the hash, the signature, the payload and a few other details. Something you may recognize is that within the payload you’ll see the data including name <code>Stuart</code>, language <code>Pact</code>, and the code <code>(+ 1 2)</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default -a formats the YAML file into API requests for the /send endpoint. Adding the -l flag after the command formats the api request for the local endpoint.</p>
+</div>
+<p>Now that you have the data in the format you need you can send it to the REST endpoint.</p>
+<h4 id="use-send"><strong>Use /send</strong><a class="headerlink" href="#use-send" title="Permanent link">&para;</a></h4>
+<p>To send data to the REST endpoint, you need to use a curl command with a header of content type application json along with server and endpoint.</p>
+<p>Run the following command in your terminal to /send data to the REST endpoint.</p>
+<div class="codehilite"><pre><span></span>pact -a example.yaml | curl -H &quot;Content-Type: application/json&quot; -d @- http://localhost:8080/api/v1/send
+</pre></div>
+
+
+<p>This command starts with the code you ran previously and adds on a few important details.</p>
+<p>First, it states the content type as <code>application/json</code>. It then sets the destination of the API call. In this case it sends an API call to the <code>localhost</code> on port <code>8080/</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By running this full command you’re both converting the file to JSON and making an API request call to the /send endpoint.</p>
+</div>
+<p>After running this command, you will receive request key as the response. This is the hash value of the command you sent to the REST endpoint.</p>
+<div class="codehilite"><pre><span></span>{&quot;requestKeys&quot;:[&quot;5Fu1m0crUk7MKL0Yyjg3gMPGcKuC0U4dx5Z5kBEQUz8&quot;]}
+</pre></div>
+
+
+<p>Note: The hash value shown above is different than the one you will receive.</p>
+<hr />
+<h3 id="poll-demo"><strong>/poll demo</strong><a class="headerlink" href="#poll-demo" title="Permanent link">&para;</a></h3>
+<p>Using the pact-lang-api, you can also run code and return the result of running that code.</p>
+<p>This is done using another command, known as <strong>/poll</strong>.</p>
+<p><strong>/poll</strong> is similar to listen but works with multiple hashes and returns multiple tx results.</p>
+<p>Run the following command in your terminal. Note that you will need to include the requestKeys by pasting the key you received when running /send into the space labeled <REQUEST-KEY>.</p>
+<div class="codehilite"><pre><span></span>curl -H &quot;Content-Type: application/json&quot; -d &#39;{&quot;requestKeys&quot;:[&quot;&lt;REQUEST-KEY&gt;&quot;]}&#39; -X POST
+http://localhost:8080/api/v1/poll
+</pre></div>
+
+
+<p>The code you run should look end up looking similar to the command shown below.</p>
+<div class="codehilite"><pre><span></span>curl -H &quot;Content-Type: application/json&quot; -d &#39;{&quot;requestKeys&quot;:[&quot;18_CToCa_JXDvOPIHF-CceDw9gCpEMbpJKgLmot7I9M&quot;]}&#39; -X POST
+http://localhost:8080/api/v1/poll
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As you may have noticed, you don’t need to convert the yaml file into JSON as you did when using /send. This is because you are sending the request key which is already in JSON format.</p>
+</div>
+<p>This command will return the result of the request made in the /send demo as shown below.</p>
+<div class="codehilite"><pre><span></span>{&quot;5Fu1m0crUk7MKL0Yyjg3gMPGcKuC0U4dx5Z5kBEQUz8&quot;:{&quot;gas&quot;:0,&quot;result&quot;:{&quot;status&quot;:&quot;success&quot;,&quot;data&quot;:3},&quot;reqKey&quot;:&quot;5Fu1m0crUk7MKL0Yyjg3gMPGcKuC0U4dx5Z5kBEQUz8&quot;,&quot;logs&quot;:&quot;wsATyGqckuIvlm89hhd2j4t6RMkCrcwJe_oeCYr7Th8&quot;,&quot;metaData&quot;:null,&quot;continuation&quot;:null,&quot;txId&quot;:1}}
+</pre></div>
+
+
+<hr />
+<h3 id="listen-demo"><strong>/listen demo</strong><a class="headerlink" href="#listen-demo" title="Permanent link">&para;</a></h3>
+<p>Listen is similar to poll in that it can request the result of a transaction.</p>
+<p><strong>/listen</strong> takes in a hash and returns tx result.</p>
+<p>The difference between these commands is subtle but important. You would use /listen when working with a single hash to return the result, and /poll when working with multiple hashes to return multiple transaction results.</p>
+<p>The format of a /listen command looks like this.</p>
+<div class="codehilite"><pre><span></span>curl -H &quot;Content-Type: application/json&quot; -d &#39;{&quot;listen&quot;:&quot;pdjiSC6IN_enbolWiuLVynXYVv1os8E9YfptltXjckU
+&quot;}&#39; -X POST http://localhost:8080/api/v1/listen
+</pre></div>
+
+
+<p>This command returns the result of the request made in the <strong>/send</strong> demo.</p>
+<div class="codehilite"><pre><span></span>{&quot;gas&quot;:0,&quot;result&quot;:{&quot;status&quot;:&quot;success&quot;,&quot;data&quot;:3},&quot;reqKey&quot;:&quot;5Fu1m0crUk7MKL0Yyjg3gMPGcKuC0U4dx5Z5kBEQUz8&quot;,&quot;logs&quot;:&quot;wsATyGqckuIvlm89hhd2j4t6RMkCrcwJe_oeCYr7Th8&quot;,&quot;metaData&quot;:null,&quot;continuation&quot;:null,&quot;txId&quot;:1}
+</pre></div>
+
+
+<h4 id="why-listen"><strong>Why /listen?</strong><a class="headerlink" href="#why-listen" title="Permanent link">&para;</a></h4>
+<p>As you may have noticed, <strong>/listen</strong> is similar <strong>/poll</strong>.</p>
+<p>The difference here is that you are listening to the hash value and that you are making an API request to the listen endpoint.</p>
+<p>What you’ll get back, like with poll, is the result of running the code, which is again 3.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>/listen and /poll are very similar in this case but use /listen in cases that you only need to take in the result of a single hash and return a single transaction result. Use /poll if you need multiple hash values and multiple results.</p>
+</div>
+<hr />
+<h3 id="local-demo"><strong>/local demo</strong><a class="headerlink" href="#local-demo" title="Permanent link">&para;</a></h3>
+<p>The final command you can use to access the Pact REST endpoint is /local.</p>
+<p>/local takes in cmd object with code that queries from blockchain - only runs in local server and does not impact the blockchain - and returns tx result.</p>
+<p>The format of a /local command looks like this.</p>
+<div class="codehilite"><pre><span></span>pact -a example.yaml -l | curl -H &quot;Content-Type: application/json&quot; -d @- http://localhost:8080/api/v1/local
+</pre></div>
+
+
+<p>This command is structured very similar to send. It converts the exampl.yaml file to JSON then makes an API request to the local endpoint. When running this, you’ll see that it returns data along with the request key.</p>
+<h4 id="why-local"><strong>Why /local?</strong><a class="headerlink" href="#why-local" title="Permanent link">&para;</a></h4>
+<p>/local takes in the cmd object with code that queries from blockchain. It only runs in the local server and does not impact the blockchain when returning tx results.</p>
+<p>This is helpful to use when running a function that doesn’t need to touch the blockchain. This is different than <strong>/send</strong>, which you would use when changing data in the blockchain, or when deploying contracts. Local is a great choice when you are working with simple functions or fetching data from the blockchain.</p>
+<hr />
+<h2 id="exercise-write-a-yaml-file"><strong>EXERCISE: Write a YAML File</strong><a class="headerlink" href="#exercise-write-a-yaml-file" title="Permanent link">&para;</a></h2>
+<p>At this point you hopefully have a local Pact server running and have some practice with running commands to access the variety of endpoints available to you.</p>
+<p>We’ve set up a challenge to help you get even more familiar with setting up YAML files for your local pact server deployments.</p>
+<p>On the Kadena GitHub page, there is a repo named pact-lang.org-code found <a href="https://github.com/kadena-io/pact-lang.org-code" target="_blank">here</a> that includes the code samples and challenges used throughout our tutorials.</p>
+<p>You can clone this folder to get started with this challenge.</p>
+<div class="codehilite"><pre><span></span>git clone https://github.com/kadena-io/pact-lang.org-code.git
+</pre></div>
+
+
+<p>From there navigate into the folder <strong>intermediate &gt; set-up-and-deploy &gt; challenge</strong>.</p>
+<p>Your challenge is to acclimate yourself to the project structure and use what you’ve learned to both deploy the smart contract and call the <strong>helloWorld</strong> function.</p>
+<hr />
+<h2 id="review"><strong>Review</strong><a class="headerlink" href="#review" title="Permanent link">&para;</a></h2>
+<p>Here’s a quick recap of what you accomplished throughout this tutorial.</p>
+<p><img alt="1-overview" src="../../assets/intermediate-tutorials/deploy-local-server/1-overview.png" /></p>
+<p>Starting in your terminal, you created a project directory along with an <strong>example.yaml</strong> and a <strong>config.yaml</strong> file to store your code. You then populated each of these files with their code. You then created a <strong>log</strong> folder that holds the data from the Pact server and then ran the server on port <strong>8080</strong>.</p>
+<p>After the server was running you converted the <strong>example.yaml</strong> file into JSON, then used curl commands to send it to the Pact server; either to store the data or to read the result of running it’s code.</p>
+<p>And that’s everything you need to know to set up and deploy your local test server.</p>
+<p>Good luck with your challenge, and when you’re ready, I’ll see you in the next tutorial.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../beginner/testing-pact-code-in-the-sdk/" title="13. Test in the SDK" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                13. Test in the SDK
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../pact-and-javascript/" title="2. Pact and Javascript" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2. Pact and Javascript
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 - 2019 Kadena
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/kadena-io" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/kadena_io" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.b41f3d20.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-127512784-3","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+  </body>
+</html>
