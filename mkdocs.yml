@@ -36,7 +36,7 @@ extra:
 google_analytics:
   - 'UA-127512784-3'
   - 'auto'
-  
+
 # Extensions
 markdown_extensions:
   - admonition
@@ -45,9 +45,9 @@ markdown_extensions:
   - toc:
       permalink: true
 
-nav:    
+nav:
 - Beginner:
-        - '1. Welcome to Pact': './beginner/welcome-to-pact.md'        
+        - '1. Welcome to Pact': './beginner/welcome-to-pact.md'
         - '2. Online Editor': './beginner/online-editor.md'
         - '3. Hello World': './beginner/hello-world-with-pact.md'
         - '4. Language Basics': './beginner/pact-language-basics.md'
@@ -60,10 +60,10 @@ nav:
         - '11. Project: Rotatable Wallet': './beginner/project-rotatable-wallet.md'
         - '12. Project: Loans': './beginner/project-loans.md'
         - '13. Test in the SDK': './beginner/testing-pact-code-in-the-sdk.md'
-      
+
 - Intermediate:
-        - 'Coming Soon': './intermediate/coming-soon.md'        
+        # - 'Coming Soon': './intermediate/coming-soon.md'
+        - '1. Deploy to a Local Server': './intermediate/deploy-local-server.md'
+        - '2. Pact and Javascript': './intermediate/pact-and-javascript.md'
 - Advanced:
-        - 'Coming Soon': './advanced/coming-soon.md'        
-        
-       
+        - 'Coming Soon': './advanced/coming-soon.md'
