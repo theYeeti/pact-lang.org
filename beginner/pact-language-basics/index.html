@@ -793,6 +793,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../intermediate/safety-with-pact/" title="3. Safety with Pact" class="md-nav__link">
+      3. Safety with Pact
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1421,10 +1433,6 @@ Scratchy
 
 <h3 id="bind"><strong>Bind</strong><a class="headerlink" href="#bind" title="Permanent link">&para;</a></h3>
 <p><a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=at#bind" target="_blank"><strong>Bind</strong></a> allows you to map a variable to a value from within an object.  </p>
-<div class="codehilite"><pre><span></span>(bind { source-object } {object-value := variable} variable)
-</pre></div>
-
-
 <p>To create a binding, use the keyword <strong>bind</strong> followed by a source object. Follow this object with another object containing a specific value within the source using the := symbol. </p>
 <div class="codehilite"><pre><span></span>pact &gt; (bind { &quot;a&quot;: 1, &quot;b&quot;: 2 } { &quot;a&quot; := a-value } a-value)
 1
