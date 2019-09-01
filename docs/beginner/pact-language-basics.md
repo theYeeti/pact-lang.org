@@ -299,9 +299,6 @@ Scratchy
 ### **Bind**
 <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=at#bind" target="_blank">**Bind**</a> allows you to map a variable to a value from within an object.  
 
-``` terminal
-(bind { source-object } {object-value := variable} variable)
-```
 To create a binding, use the keyword **bind** followed by a source object. Follow this object with another object containing a specific value within the source using the := symbol. 
 
 ``` terminal
