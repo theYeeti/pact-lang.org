@@ -65,6 +65,7 @@ nav:
         # - 'Coming Soon': './intermediate/coming-soon.md'
         - '1. Deploy to a Local Server': './intermediate/deploy-local-server.md'
         - '2. Pact and Javascript': './intermediate/pact-and-javascript.md'
-        - '3. Safety with Pact': './intermediate/safety-with-pact.md'
+        - '3. Safety Using Control Flow': './intermediate/safety-with-pact.md'
+        - '4. Interfaces with Pact': './intermediate/interfaces-with-pact.md'
 - Advanced:
         - 'Coming Soon': './advanced/coming-soon.md'

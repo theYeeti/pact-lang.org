@@ -1,6 +1,6 @@
-# Safety with Pact
+# Safety Using Control Flow
 
-Welcome to this tutorial on Safety with Pact.
+Welcome to this tutorial on **Safety Using Control Flow** with Pact.
 
 While Pact is already a simple and safe language for smart contracts, there are a few patterns and recommendations you can follow to make it even simpler and even safer. Throughout the next few tutorials, we’ll discuss a few of these patterns.
 
