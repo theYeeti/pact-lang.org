@@ -4,7 +4,7 @@ Welcome to this tutorial on **Safety Using Control Flow** with Pact.
 
 While Pact is already a simple and safe language for smart contracts, there are a few patterns and recommendations you can follow to make it even simpler and even safer. Throughout the next few tutorials, we’ll discuss a few of these patterns.
 
-In this tutorial, we’ll focus specifically on how Pact avoids control flow to ensure safety.
+In this tutorial, we’ll focus specifically on how Pact approaches control flow to ensure safety.
 
 **Topics covered in this tutorial**
 
@@ -15,6 +15,14 @@ In this tutorial, we’ll focus specifically on how Pact avoids control flow to 
 
 !!! Summary "Key Takeaway"
       When writing Pact smart contracts, avoid using <a href="https://pact-language.readthedocs.io/en/stable/pact-functions.html#if" target="_blank">if</a> statements. Instead, use <a href="https://pact-language.readthedocs.io/en/stable/pact-functions.html#enforce" target="_blank">enforce</a> to ensure your code is both simpler and safer.
+___
+
+## **Safety Using Control Flow Tutorial**
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/YHwE08g_bSI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Subscribe to our <a href="https://www.youtube.com/channel/UCB6-MaxD2hlcGLL70ukHotA" target="_blank">YouTube channel </a> to access the latest Pact tutorials.
+
 ___
 
 ## **Control Flow**
