@@ -30,7 +30,7 @@ ___
 
 The Pact Online Editor is a web-based REPL that allows you to write Pact code, manage keysets, deploy smart contracts, and explore other smart contracts. These and many other features make the online editor an ideal place to build, test, and deploy your smart contracts.
 
-To get started with the Pact Online Editor, navigate to <a href="https://pact.kadena.io/" target="_blank">pact.kadena.io/</a>. 
+To get started with the Pact Online Editor, navigate to <a href="https://chainweaver.kadena.network/" target="_blank">chainweaver.kadena.network/</a>. 
 
 ![1-pact-kadena](../assets/beginner-tutorials/pact-online-editor/1-pact-kadena.jpeg)
 
@@ -231,7 +231,7 @@ The example contracts section allows you to load example contracts directly into
 
 
 
-When you first loaded <a href="https://pact.kadena.io/" target="_blank">pact.kadena.io/</a> the Formal Verification contract shown here is automatically loaded. Select **view > open** to reload this contract.
+When you first loaded <a href="https://chainweaver.kadena.network/" target="_blank">chainweaver.kadena.network/</a> the Formal Verification contract shown here is automatically loaded. Select **view > open** to reload this contract.
 
 !!! Tip "View other Smart Contracts"
       You can also view other smart contracts. Select **View > Open** on any smart contract to load its code into the code editor.
