@@ -242,6 +242,7 @@ When loading the contract to the REPL you were able to get away without having t
 
 You can create a key by completing the following steps.
 
+* Head over to the **Keys** section
 * Select **Enter Key Name**
 * Type the **Key name**
 * Click **Generate**
